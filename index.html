@@ -1,1031 +1,1632 @@
 <!DOCTYPE html>
-<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
-
-   <!--- basic page needs
-   ================================================== -->
-   <meta charset="utf-8">
-	<title>Kards</title>
-	<meta name="description" content="">  
-	<meta name="author" content="">
-
-   <!-- mobile specific metas
-   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
- 	<!-- CSS
-   ================================================== -->
-   <link rel="stylesheet" href="css/base.css">  
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/vendor.css">     
-
-   <!-- script
-   ================================================== -->   
-	<script src="js/modernizr.js"></script>
-	<script src="js/pace.min.js"></script>
-
-   <!-- favicons
-	================================================== -->
-	<link rel="icon" type="image/png" href="favicon.png">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav Ratnawat | Lead Software Engineer</title>
+    <meta name="description" content="Lead Software Engineer specializing in Data Pipelines, Kafka, Microservices & Real-time Systems">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="css/pipeline-style.css">
 </head>
-
-<body id="top">
-
-	<!-- header 
-   ================================================== -->
-   <header>   	
-   	<div class="row">
-
-   		<div class="top-bar">
-   			<a class="menu-toggle" href="#"><span>Menu</span></a>
-
-	   		<div class="logo">
-		         <a href="index.html">KARDS</a>
-		      </div>		      
-
-		   	<nav id="main-nav-wrap">
-					<ul class="main-navigation">
-						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
-						<li><a class="smoothscroll"  href="#about" title="">About</a></li>
-						<li><a class="smoothscroll"  href="#resume" title="">Resume</a></li>
-						<li><a class="smoothscroll"  href="#portfolio" title="">Portfolio</a></li>
-						<li><a class="smoothscroll"  href="#services" title="">Services</a></li>					
-						<li><a class="smoothscroll"  href="#contact" title="">Contact</a></li>	
-						<li><a href="styles.html" title="">Style Demo</a></li>				
-					</ul>
-				</nav>    		
-   		</div> <!-- /top-bar --> 
-   		
-   	</div> <!-- /row --> 		
-   </header> <!-- /header -->
-
-	<!-- intro section
-   ================================================== -->
-   <section id="intro">   
-
-   	<div class="intro-overlay"></div>	
-
-   	<div class="intro-content">
-   		<div class="row">
-
-   			<div class="col-twelve">
-
-	   			<h5>Hello, World.</h5>
-	   			<h1>I'm Juan Dela Cruz.</h1>
-
-	   			<p class="intro-position">
-	   				<span>Front-end Developer</span>
-	   				<span>UI/UX Designer</span> 
-	   			</p>
-
-	   			<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
-
-	   		</div>  
-   			
-   		</div>   		 		
-   	</div> <!-- /intro-content --> 
-
-   	<ul class="intro-social">        
-         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-         <li><a href="#"><i class="fa fa-behance"></i></a></li>
-         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-      </ul> <!-- /intro-social -->      	
-
-   </section> <!-- /intro -->
-
-
-   <!-- about section
-   ================================================== -->
-   <section id="about">  
-
-   	<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<h5>About</h5>
-   			<h1>Let me introduce myself.</h1>
-
-   			<div class="intro-info">
-
-   				<img src="images/profile-pic.jpg" alt="Profile Picture">
-
-   				<p class="lead">Lorem ipsum Exercitation culpa qui dolor consequat exercitation fugiat laborum ex ea eiusmod ad do aliqua occaecat nisi ad irure sunt id pariatur Duis laboris amet exercitation veniam labore consectetur ea id quis eiusmod.</p>
-   			</div>   			
-
-   		</div>   		
-   	</div> <!-- /section-intro -->
-
-   	<div class="row about-content">
-
-   		<div class="col-six tab-full">
-
-   			<h3>Profile</h3>
-   			<p>Lorem ipsum Qui veniam ut consequat ex ullamco nulla in non ut esse in magna sint minim officia consectetur nisi commodo ea magna pariatur nisi cillum.</p>
-
-   			<ul class="info-list">
-   				<li>
-   					<strong>Fullname:</strong>
-   					<span>Juan Dela Cruz</span>
-   				</li>
-   				<li>
-   					<strong>Birth Date:</strong>
-   					<span>September 28, 1987</span>
-   				</li>
-   				<li>
-   					<strong>Job:</strong>
-   					<span>Freelancer, Frontend Developer</span>
-   				</li>
-   				<li>
-   					<strong>Website:</strong>
-   					<span>www.kardswebsite.com</span>
-   				</li>
-   				<li>
-   					<strong>Email:</strong>
-   					<span>me@kardswebsite.com</span>
-   				</li>
-
-   			</ul> <!-- /info-list -->
-
-   		</div>
-
-   		<div class="col-six tab-full">
-
-   			<h3>Skills</h3>
-   			<p>Lorem ipsum Qui veniam ut consequat ex ullamco nulla in non ut esse in magna sint minim officia consectetur nisi commodo ea magna pariatur nisi cillum.</p>
-
-				<ul class="skill-bars">
-				   <li>
-				   	<div class="progress percent90"><span>90%</span></div>
-				   	<strong>HTML5</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent85"><span>85%</span></div>
-				   	<strong>CSS3</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent70"><span>70%</span></div>
-				   	<strong>JQuery</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent95"><span>95%</span></div>
-				   	<strong>PHP</strong>
-				   </li>
-				   <li>
-
-				   	<div class="progress percent75"><span>75%</span></div>
-				   	<strong>Wordpress</strong>
-				   </li>
-      
-				</ul> <!-- /skill-bars -->		
-
-   		</div>
-
-   	</div>
-
-   	<div class="row button-section">
-   		<div class="col-twelve">
-   			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Hire Me</a>
-   			<a href="#" title="Download CV" class="button button-primary">Download CV</a>
-   		</div>   		
-   	</div>
-
-   </section> <!-- /process-->    
-
-
-   <!-- resume Section
-   ================================================== -->
-	<section id="resume" class="grey-section">
-
-		<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<h5>Resume</h5>
-   			<h1>More of my credentials.</h1>
-
-   			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
-
-   		</div>   		
-   	</div> <!-- /section-intro--> 
-
-   	<div class="row resume-timeline">
-
-   		<div class="col-twelve resume-header">
-
-   			<h2>Work Experience</h2>
-
-   		</div> <!-- /resume-header -->
-
-   		<div class="col-twelve">
-
-   			<div class="timeline-wrap">
-
-   				<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>UI Designer</h3>
-	   					<p>July 2015 - Present</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Awesome Studio</h4>
-	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-	   			<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Front-end Developer</h3>
-	   					<p>July 2014 - June 2015</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Super Cool Agency</h4>
-	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-	   			<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Web Designer</h3>
-	   					<p>May 2013 - June 2014</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Great Designs Studio</h4>
-	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-   			</div> <!-- /timeline-wrap -->   			
-
-   		</div> <!-- /col-twelve -->
-   		
-   	</div> <!-- /resume-timeline -->
-   	
-   	<div class="row resume-timeline">
-
-   		<div class="col-twelve resume-header">
-
-   			<h2>Education</h2>
-
-   		</div> <!-- /resume-header -->
-
-   		<div class="col-twelve">
-
-   			<div class="timeline-wrap">
-
-   				<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-briefcase"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Master Degree</h3>
-	   					<p>July 2015 - Present</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>University of Life</h4>
-	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-	   			<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-briefcase"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Bachelor Degree</h3>
-	   					<p>July 2014 - June 2015</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>State Design University</h4>
-	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-	   			<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-briefcase"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Bachelor Degree</h3>
-	   					<p>May 2013 - June 2014</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Design College</h4>
-	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-   			</div> <!-- /timeline-wrap -->   			
-
-   		</div> <!-- /col-twelve -->
-   		
-   	</div> <!-- /resume-timeline -->
-		
-	</section> <!-- /features -->
-
-
-	<!-- Portfolio Section
-   ================================================== -->
-	<section id="portfolio">
-
-		<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<h5>Portfolio</h5>
-   			<h1>Check Out Some of My Works.</h1>
-
-   			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
-
-   		</div>   		
-   	</div> <!-- /section-intro--> 
-
-   	<div class="row portfolio-content">
-
-   		<div class="col-twelve">
-
-   			<!-- portfolio-wrapper -->
-	         <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
-
-	         	<div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/liberty.jpg" alt="Liberty">
-	                  <a href="#modal-01" class="overlay">	                  	           
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-		     					       <h3 class="folio-title">Liberty</h3>	     					    
-		     					    	 <span class="folio-types">
-		     					       	  Graphic Design
-		     					       </span>
-		     					   </div>	                      	
-	                     </div>                    
-	                  </a>
-	               </div>	               
-	        		</div> <!-- /folio-item -->
-
-	        		<div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/shutterbug.jpg" alt="Shutterbug">
-	               	<a href="#modal-02" class="overlay">              		                  
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-	                     		<h3 class="folio-title">Shutterbug</h3>	     					    
-		     					    	<span class="folio-types">
-		     					       	  Web Design
-		     					      </span>		     		
-		     					   </div> 	                      	
-	                     </div>                    
-	                  </a>
-	               </div>
-	        		</div> <!-- /folio-item -->
-
-	            <div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/clouds.jpg"alt="Clouds">
-	                  <a href="#modal-03" class="overlay">             		                  
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-	                     		<h3 class="folio-title">Clouds</h3>	     					    
-		     					    	<span class="folio-types">
-		     					       	  Web Design
-		     					      </span>		     		
-		     					   </div> 	                      	
-	                     </div>                    
-	                  </a>
-	               </div>
-	        		</div> <!-- /folio-item -->
-
-	            <div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/beetle.jpg" alt="Beetle">
-	                  <a href="#modal-04" class="overlay">                  	                 
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-	                     		<h3 class="folio-title">Beetle</h3>	     					    
-		     					    	<span class="folio-types">
-		     					       	  Branding
-		     					      </span>		     		
-		     					   </div>  	                      	
-	                     </div>                    
-	                  </a>
-	               </div>
-	        		</div> <!-- /folio-item -->     
-
-	        		<div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/lighthouse.jpg" alt="Lighthouse">
-	                  <a href="#modal-05" class="overlay">             		                  
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-	                     		<h3 class="folio-title">Lighthouse</h3>	     					    
-		     					    	<span class="folio-types">
-		     					       	  Web Development
-		     					      </span>		     		
-		     					   </div> 	                      	
-	                     </div>                    
-	                  </a>
-	               </div>
-	        		</div> <!-- /folio-item -->
-
-	            <div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/salad.jpg" alt="Salad">
-	                  <a href="#modal-06" class="overlay">
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-	                     		<h3 class="folio-title">Salad</h3>	     					    
-		     					    	<span class="folio-types">
-		     					       	  Branding
-		     					      </span>		     		
-		     					   </div>	                      	
-	                     </div>                    
-	                  </a>
-	               </div>
-	        		</div> <!-- /folio-item -->   
-
-	            <!-- modal popups - begin
-	            ============================================================= -->
-	            <div id="modal-01" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/modals/m-liberty.jpg" alt="" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>Liberty</h4>		      
-					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-
-					      <div class="categories">Web Development</div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <a href="http://www.behance.net">Details</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
-
-				   </div> <!-- /modal-01 -->
-
-				   <div id="modal-02" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/modals/m-shutterbug.jpg" alt="" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>Shutterbug</h4>		      
-					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-
-					      <div class="categories">Web Design</div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <a href="http://www.behance.net">Details</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
-
-				   </div> <!-- /modal-02 -->
-
-				   <div id="modal-03" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/modals/m-clouds.jpg" alt="" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>Clouds</h4>		      
-					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-
-					      <div class="categories">Web Design</div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <a href="http://www.behance.net">Details</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
-
-				   </div> <!-- /modal-03 -->
-
-				   <div id="modal-04" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/modals/m-beetle.jpg" alt="" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>Beetle</h4>		      
-					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-
-					      <div class="categories">Branding</div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <a href="http://www.behance.net">Details</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
-
-				   </div> <!-- /modal-04 -->
-
-				   <div id="modal-05" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/modals/m-lighthouse.jpg" alt="" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>Lighthouse</h4>		      
-					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-
-					      <div class="categories">Web Development</div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <a href="http://www.behance.net">Details</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
-
-				   </div> <!-- /modal-05 -->
-
-				   <div id="modal-06" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/modals/m-salad.jpg" alt="" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>Salad</h4>		      
-					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-
-					      <div class="categories">Branding</div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <a href="http://www.behance.net">Details</a>
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		      
-
-				   </div> <!-- /modal-06 -->
-
-
-				   <!-- modal popups - end
-	            ============================================================= -->
-
-	         </div> <!-- /portfolio-wrapper --> 
-
-   		</div>  <!-- /twelve -->   
-
-   	</div> <!-- /portfolio-content --> 
-		
-	</section> <!-- /portfolio --> 
-
-
-	<!-- CTA Section
-   ================================================== -->
-	<section id="cta" class="grey-section">
-
-   	<div class="row cta-content">
-
-   		<div class="col-twelve section-ads">  
-
-	     		<h2 class="h01"><a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Styleshout Recommends Dreamhost.</a></h2>
-
-		      <p class="lead">
-		      Looking for an awesome and reliable webhosting? Try <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT"><span>DreamHost</span></a>.
-				Get <span>$50 off</span> when you sign up with the promocode <span>styleshout</span>. 
-				<!-- Simply type	the promocode in the box labeled “Promo Code” when placing your order. -->	
-				</p>
-
-				<div class="action">
-			      <a class="button button-primary large" href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Sign Up Now</a>
-		      </div>		     	
-
-   		</div>
-
-   	</div> <!-- /cta-content -->
-
-   </section> <!-- /cta --> 
-
-	
-	<!-- services Section
-   ================================================== -->
-	<section id="services">
-
-		<div class="overlay"></div>
-
-		<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<h5>Services</h5>
-   			<h1>What Can I Do For You?</h1>
-
-   			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
-
-   		</div>   		
-   	</div> <!-- /section-intro -->
-
-   	<div class="row services-content">
-
-   		<div id="owl-slider" class="owl-carousel services-list">
-
-	      	<div class="service">	
-
-	      		<span class="icon"><i class="icon-earth"></i></span>            
-
-	            <div class="service-content">	
-
-	            	 <h3>Webdesign</h3>
-
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         		</p>
-	         		
-	         	</div> 	         	 
-
-				</div> <!-- /service -->
-
-				<div class="service">	
-
-					<span class="icon"><i class="icon-window"></i></span>                          
-
-	            <div class="service-content">	
-
-	            	<h3>Web Development</h3>  
-
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         		</p>
-
-	            </div>	                          
-
-			   </div> <!-- /service -->
-
-			   <div class="service">
-
-			   	<span class="icon"><i class="icon-paint-brush"></i></span>		            
-
-	            <div class="service-content">
-
-	            	<h3>Branding</h3>
-
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	        			</p> 
-
-	            </div> 	            	               
-
-			   </div> <!-- /service -->
-
-				<div class="service">
-
-					<span class="icon"><i class="icon-toggles"></i></span>	              
-
-	            <div class="service-content">
-
-	            	<h3>UI/UX Design</h3>
-
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         		</p> 
-	         		
-	            </div>                
-
-				</div> <!-- /service -->
-
-			   <div class="service">
-
-			   	<span class="icon"><i class="icon-image"></i></span>	            
-
-	            <div class="service-content">
-
-	            	<h3>Graphics Design</h3>
-
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	        			</p> 
-
-	            </div>	               
-
-			   </div> <!-- /service -->
-
-			   <div class="service">
-
-			   	<span class="icon"><i class="icon-chat"></i></span>	   	           
-
-	            <div class="service-content">
-
-	            	 <h3>Consultancy</h3>
-
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	        			</p> 
-	        			
-	            </div>	               
-
-			   </div> <!-- /service -->
-
-	      </div> <!-- /services-list -->
-   		
-   	</div> <!-- /services-content -->
-		
-	</section> <!-- /services -->	
-
-
-	<!-- stats Section
-   ================================================== -->
-	<section id="stats" class="count-up">
-
-		<div class="row">
-			<div class="col-twelve">
-
-				<div class="block-1-6 block-s-1-3 block-tab-1-2 block-mob-full stats-list">
-
-					<div class="bgrid stat">
-
-						<div class="icon-part">
-							<i class="icon-pencil-ruler"></i>
-						</div>
-
-						<h3 class="stat-count">
-							1500
-						</h3>
-
-						<h5 class="stat-title">
-							Projects Completed
-						</h5>
-
-					</div> <!-- /stat -->					
-
-					<div class="bgrid stat">
-
-						<div class="icon-part">
-							<i class="icon-users"></i>
-						</div>
-
-						<h3 class="stat-count">
-							900
-						</h3>
-
-						<h5 class="stat-title">
-							Happy Clients
-						</h5>
-
-					</div> <!-- /stat -->
-
-					<div class="bgrid stat">
-
-						<div class="icon-part">
-							<i class="icon-badge"></i>
-						</div>
-
-						<h3 class="stat-count">
-							200
-						</h3>
-
-						<h5 class="stat-title">
-							Awards Received
-						</h5>
-
-					</div> <!-- /stat -->									
-
-					<div class="bgrid stat">
-
-						<div class="icon-part">
-							<i class="icon-light-bulb"></i>
-						</div>
-
-						<h3 class="stat-count">
-							120
-						</h3>
-
-						<h5 class="stat-title">
-							Crazy Ideas
-						</h5>
-
-					</div> <!-- /stat -->
-
-					<div class="bgrid stat">
-
-						<div class="icon-part">
-							<i class="icon-cup"></i>
-						</div>
-
-						<h3 class="stat-count">
-							1500
-						</h3>
-
-						<h5 class="stat-title">
-							Coffee Cups
-						</h5>
-
-					</div> <!-- /stat -->
-
-					<div class="bgrid stat">
-
-						<div class="icon-part">
-							<i class="icon-clock"></i>
-						</div>
-
-						<h3 class="stat-count">
-							7200
-						</h3>
-
-						<h5 class="stat-title">
-							Hours
-						</h5>
-
-					</div> <!-- /stat -->
-
-				</div> <!-- /stats-list -->
-
-			</div> <!-- /twelve -->
-		</div> <!-- /row -->
-
-	</section> <!-- /stats -->
-
-	
-   <!-- contact
-   ================================================== -->
-	<section id="contact">
-
-		<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<h5>Contact</h5>
-   			<h1>I'd Love To Hear From You.</h1>
-
-   			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
-
-   		</div> 
-   	</div> <!-- /section-intro -->
-
-   	<div class="row contact-form">
-
-   		<div class="col-twelve">
-
-            <!-- form -->
-            <form name="contactForm" id="contactForm" method="post" action="">
-      			<fieldset>
-
-                  <div class="form-field">
- 						   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
-                  </div>
-                  <div class="form-field">
-	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
-	               </div>
-                  <div class="form-field">
-	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
-	               </div>                       
-                  <div class="form-field">
-	                 	<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
-	               </div>                      
-                 <div class="form-field">
-                     <button class="submitform">Submit</button>
-                     <div id="submit-loader">
-                        <div class="text-loader">Sending...</div>                             
-       				      <div class="s-loader">
-								  	<div class="bounce1"></div>
-								  	<div class="bounce2"></div>
-								  	<div class="bounce3"></div>
-								</div>
-							</div>
-                  </div>
-
-      			</fieldset>
-      		</form> <!-- Form End -->
-
-            <!-- contact-warning -->
-            <div id="message-warning">            	
-            </div>            
-            <!-- contact-success -->
-      		<div id="message-success">
-               <i class="fa fa-check"></i>Your message was sent, thank you!<br>
-      		</div>
-
-         </div> <!-- /col-twelve -->
-   		
-   	</div> <!-- /contact-form -->
-
-   	<div class="row contact-info">
-
-   		<div class="col-four tab-full">
-
-   			<div class="icon">
-   				<i class="icon-pin"></i>
-   			</div>
-
-   			<h5>Where to find me</h5>
-
-   			<p>
-            1600 Amphitheatre Parkway<br>
-            Mountain View, CA<br>
-            94043 US
-            </p>
-
-   		</div>
-
-   		<div class="col-four tab-full collapse">
-
-   			<div class="icon">
-   				<i class="icon-mail"></i>
-   			</div>
-
-   			<h5>Email Me At</h5>
-
-   			<p>someone@kardswebsite.com<br>
-			   	info@kardswebsite.com			     
-			   </p>
-
-   		</div>
-
-   		<div class="col-four tab-full">
-
-   			<div class="icon">
-   				<i class="icon-phone"></i>
-   			</div>
-
-   			<h5>Call Me At</h5>
-
-   			<p>Phone: (+63) 555 1212<br>
-			   	Mobile: (+63) 555 0100<br>
-			     	Fax: (+63) 555 0101
-			   </p>
-
-   		</div>
-   		
-   	</div> <!-- /contact-info -->
-		
-	</section> <!-- /contact -->
-
-
-   <!-- footer
-   ================================================== -->
-
-   <footer>
-     	<div class="row">
-
-     		<div class="col-six tab-full pull-right social">
-
-     			<ul class="footer-social">        
-			      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-			      <li><a href="#"><i class="fa fa-behance"></i></a></li>
-			      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-			      <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-			      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-			   </ul> 
-	      		
-	      </div>
-
-      	<div class="col-eight tab-full">
-	      	<div class="copyright">
-		        	<span>© Copyright 2018 </span> 
-		        	<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span> 
-		        	<span>Distributed by <a href="https://themewagon.com/">themewagon</a></span>	         	
-		         </div>		                  
-	      	</div>
-
-	      	<div id="go-top">
-		         <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
-		      </div>
-
-      	</div> <!-- /row -->     	
-   </footer>  
-
-   <div id="preloader"> 
-    	<div id="loader"></div>
-   </div> 
-
-   <!-- Java Script
-   ================================================== --> 
-   <script src="js/jquery-2.1.3.min.js"></script>
-   <script src="js/plugins.js"></script>
-   <script src="js/main.js"></script>
-
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="terminal-loader">
+                <span class="loading-text">Initializing Pipeline...</span>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="loading-logs">
+                    <p>$ Connecting to data sources...</p>
+                    <p>$ Loading Kafka streams...</p>
+                    <p>$ Establishing WebSocket connections...</p>
+                    <p>$ Pipeline ready ✓</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div id="main-container" class="hidden">
+
+        <!-- Navigation / Control Panel -->
+        <nav class="control-panel">
+            <div class="nav-brand">
+                <span class="terminal-prompt">$</span> gaurav.ratnawat
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link" data-node="input">About</a>
+                <a href="#skills" class="nav-link" data-node="processing">Skills</a>
+                <a href="#experience" class="nav-link" data-node="enrichment">Experience</a>
+                <a href="#projects" class="nav-link" data-node="output">Projects</a>
+                <a href="#contact" class="nav-link" data-node="monitoring">Contact</a>
+            </div>
+            <div class="system-status">
+                <span class="status-indicator"></span>
+                <span class="status-text">ONLINE</span>
+            </div>
+        </nav>
+
+        <!-- Hero Section - Pipeline Visualization -->
+        <section id="hero" class="hero-section">
+            <div class="pipeline-canvas">
+                <!-- Animated background grid -->
+                <div class="grid-background"></div>
+
+                <!-- Data packets animation -->
+                <div class="data-packets">
+                    <div class="packet"></div>
+                    <div class="packet"></div>
+                    <div class="packet"></div>
+                </div>
+
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="glitch-text" data-text="GAURAV RATNAWAT">GAURAV RATNAWAT</h1>
+                        <h2 class="subtitle">
+                            <span class="type-writer">Lead Software Engineer @ N26</span>
+                        </h2>
+                        <p class="hero-description">
+                            Building scalable event-driven systems | 500M+ transactions/month | 99.99% uptime
+                        </p>
+
+                        <!-- Live Metrics Dashboard -->
+                        <div class="metrics-dashboard">
+                            <div class="metric-card">
+                                <div class="metric-value" data-target="9">0</div>
+                                <div class="metric-label">Years Experience</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value" data-target="500">0</div>
+                                <div class="metric-label">M+ Transactions/Month</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value" data-target="99.99">0</div>
+                                <div class="metric-label">% Uptime</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value" data-target="1500">0</div>
+                                <div class="metric-label">RPS Peak Load</div>
+                            </div>
+                        </div>
+
+                        <div class="cta-buttons">
+                            <a href="#projects" class="btn btn-primary">
+                                <span>Explore Pipeline</span>
+                                <i class="arrow">→</i>
+                            </a>
+                            <a href="Gaurav Ratnawat Resume Engg.pdf" class="btn btn-secondary" download>
+                                <span>Download Resume</span>
+                                <i class="icon">↓</i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Visual Pipeline Diagram - ENHANCED INTERACTIVE VERSION -->
+                    <div class="pipeline-visual">
+                        <!-- Canvas for flowing particles -->
+                        <canvas id="pipeline-canvas" class="pipeline-canvas-element"></canvas>
+
+                        <svg viewBox="0 0 600 400" class="pipeline-svg">
+                            <!-- Animated flow paths -->
+                            <defs>
+                                <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#00ff88;stop-opacity:0" />
+                                    <stop offset="50%" style="stop-color:#00ff88;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0" />
+                                </linearGradient>
+                            </defs>
+
+                            <!-- Connections with flow animation -->
+                            <path class="pipeline-path flow-path" d="M 50 200 L 150 200" stroke="url(#flowGradient)" />
+                            <path class="pipeline-path flow-path" d="M 150 200 L 250 200" stroke="url(#flowGradient)" />
+                            <path class="pipeline-path flow-path" d="M 250 200 L 350 200" stroke="url(#flowGradient)" />
+                            <path class="pipeline-path flow-path" d="M 350 200 L 450 200" stroke="url(#flowGradient)" />
+                            <path class="pipeline-path flow-path" d="M 450 200 L 550 200" stroke="url(#flowGradient)" />
+
+                            <!-- Interactive Nodes -->
+                            <g class="pipeline-node interactive-node" data-section="about" data-stage="input">
+                                <circle cx="150" cy="200" r="30" class="node-circle" />
+                                <circle cx="150" cy="200" r="35" class="node-pulse" />
+                                <text x="150" y="205" class="node-text">INPUT</text>
+                                <text x="150" y="245" class="node-label">About</text>
+                            </g>
+                            <g class="pipeline-node interactive-node" data-section="skills" data-stage="process">
+                                <circle cx="250" cy="200" r="30" class="node-circle" />
+                                <circle cx="250" cy="200" r="35" class="node-pulse" />
+                                <text x="250" y="205" class="node-text">PROCESS</text>
+                                <text x="250" y="245" class="node-label">Skills</text>
+                            </g>
+                            <g class="pipeline-node interactive-node" data-section="experience" data-stage="enrich">
+                                <circle cx="350" cy="200" r="30" class="node-circle" />
+                                <circle cx="350" cy="200" r="35" class="node-pulse" />
+                                <text x="350" y="205" class="node-text">ENRICH</text>
+                                <text x="350" y="245" class="node-label">Experience</text>
+                            </g>
+                            <g class="pipeline-node interactive-node" data-section="projects" data-stage="output">
+                                <circle cx="450" cy="200" r="30" class="node-circle" />
+                                <circle cx="450" cy="200" r="35" class="node-pulse" />
+                                <text x="450" y="205" class="node-text">OUTPUT</text>
+                                <text x="450" y="245" class="node-label">Projects</text>
+                            </g>
+                            <g class="pipeline-node interactive-node" data-section="contact" data-stage="monitor">
+                                <circle cx="550" cy="200" r="30" class="node-circle" />
+                                <circle cx="550" cy="200" r="35" class="node-pulse" />
+                                <text x="550" y="205" class="node-text">MONITOR</text>
+                                <text x="550" y="245" class="node-label">Contact</text>
+                            </g>
+                        </svg>
+
+                        <!-- Pipeline tooltip -->
+                        <div class="pipeline-tooltip" id="pipeline-tooltip">
+                            <div class="tooltip-content">
+                                <strong class="tooltip-title"></strong>
+                                <p class="tooltip-desc"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section - Input Stream -->
+        <section id="about" class="section input-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// INPUT_STREAM</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="stream-indicator">
+                        <span class="pulse-dot"></span>
+                        <span>Live Stream Active</span>
+                    </div>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-card terminal-card">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">about.sh</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p class="terminal-line"><span class="prompt">$</span> whoami</p>
+                            <p class="output">
+                                A software developer with <strong>9+ years of experience</strong> solving complex business problems,
+                                and seamlessly delivering high-quality software products in a fast-paced environment using
+                                agile methodologies and CI/CD practices.
+                            </p>
+                            <p class="terminal-line"><span class="prompt">$</span> location</p>
+                            <p class="output">📍 Berlin, Germany</p>
+                            <p class="terminal-line"><span class="prompt">$</span> current_role</p>
+                            <p class="output">🚀 Lead Software Engineer @ N26 Bank</p>
+                            <p class="terminal-line"><span class="prompt">$</span> specialization</p>
+                            <p class="output">💡 Event-driven architectures, Real-time data pipelines, Microservices</p>
+                            <p class="terminal-line"><span class="prompt">$</span> passion</p>
+                            <p class="output">
+                                Building scalable systems that handle millions of transactions while mentoring teams
+                                and fostering business relationships. Excel in team building and love solving
+                                complex distributed systems challenges.
+                            </p>
+                            <p class="terminal-line"><span class="prompt cursor">$</span></p>
+                        </div>
+                    </div>
+
+                    <div class="profile-visual">
+                        <div class="profile-image-wrapper">
+                            <img src="images/profile-pic.jpg" alt="Gaurav Ratnawat" class="profile-image">
+                            <div class="profile-ring"></div>
+                        </div>
+                        <div class="quick-links">
+                            <a href="https://www.linkedin.com/in/ratnawatgaurav/" target="_blank" class="social-link">
+                                <span class="icon">in</span>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="mailto:de.gratnawat@gmail.com" class="social-link">
+                                <span class="icon">@</span>
+                                <span>Email</span>
+                            </a>
+                            <a href="tel:+4915510055601" class="social-link">
+                                <span class="icon">📞</span>
+                                <span>+49-15510055601</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section - Processing Layer -->
+        <section id="skills" class="section processing-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// PROCESSING_LAYER</span>
+                    <h2 class="section-title">Tech Stack & Skills</h2>
+                    <div class="stream-indicator">
+                        <span class="pulse-dot"></span>
+                        <span>Processing Active</span>
+                    </div>
+                </div>
+
+                <!-- PHASE 2: Skill Radar Chart Visualization -->
+                <div class="skill-radar-wrapper">
+                    <div class="skill-radar-container"></div>
+                    <div class="skill-legend">
+                        <h4>Expertise Levels</h4>
+                        <div class="legend-item">
+                            <span class="legend-dot" style="background: #00ff88;"></span>
+                            <span>Expert (90-100%)</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot" style="background: #00d4ff;"></span>
+                            <span>Advanced (80-89%)</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot" style="background: #fbbf24;"></span>
+                            <span>Intermediate (70-79%)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-architecture">
+                    <!-- Architecture Diagram Style -->
+                    <div class="arch-layer">
+                        <h3 class="layer-title">Languages & Frameworks</h3>
+                        <div class="tech-grid">
+                            <div class="tech-badge" data-level="expert">
+                                <span class="tech-icon">☕</span>
+                                <span class="tech-name">Kotlin</span>
+                            </div>
+                            <div class="tech-badge" data-level="expert">
+                                <span class="tech-icon">☕</span>
+                                <span class="tech-name">Java 17</span>
+                            </div>
+                            <div class="tech-badge" data-level="expert">
+                                <span class="tech-icon">🍃</span>
+                                <span class="tech-name">Spring Boot 3</span>
+                            </div>
+                            <div class="tech-badge" data-level="intermediate">
+                                <span class="tech-icon">🟢</span>
+                                <span class="tech-name">NestJS</span>
+                            </div>
+                            <div class="tech-badge" data-level="intermediate">
+                                <span class="tech-icon">🔷</span>
+                                <span class="tech-name">GoLang</span>
+                            </div>
+                            <div class="tech-badge" data-level="intermediate">
+                                <span class="tech-icon">💚</span>
+                                <span class="tech-name">VueJS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="arch-layer">
+                        <h3 class="layer-title">Data & Streaming</h3>
+                        <div class="tech-grid">
+                            <div class="tech-badge" data-level="expert">
+                                <span class="tech-icon">📨</span>
+                                <span class="tech-name">Kafka</span>
+                            </div>
+                            <div class="tech-badge" data-level="expert">
+                                <span class="tech-icon">🐘</span>
+                                <span class="tech-name">PostgreSQL</span>
+                            </div>
+                            <div class="tech-badge" data-level="expert">
+                                <span class="tech-icon">⚡</span>
+                                <span class="tech-name">Redis</span>
+                            </div>
+                            <div class="tech-badge" data-level="expert">
+                                <span class="tech-icon">🏠</span>
+                                <span class="tech-name">Lakehouse</span>
+                            </div>
+                            <div class="tech-badge" data-level="intermediate">
+                                <span class="tech-icon">🍃</span>
+                                <span class="tech-name">MongoDB</span>
+                            </div>
+                            <div class="tech-badge" data-level="intermediate">
+                                <span class="tech-icon">📊</span>
+                                <span class="tech-name">Flink</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="arch-layer">
+                        <h3 class="layer-title">Cloud & Infrastructure</h3>
+                        <div class="tech-grid">
+                            <div class="tech-badge" data-level="expert">
+                                <span class="tech-icon">☁️</span>
+                                <span class="tech-name">AWS</span>
+                            </div>
+                            <div class="tech-badge" data-level="expert">
+                                <span class="tech-icon">⎈</span>
+                                <span class="tech-name">Kubernetes</span>
+                            </div>
+                            <div class="tech-badge" data-level="intermediate">
+                                <span class="tech-icon">🔷</span>
+                                <span class="tech-name">Azure</span>
+                            </div>
+                            <div class="tech-badge" data-level="intermediate">
+                                <span class="tech-icon">🔶</span>
+                                <span class="tech-name">GCP</span>
+                            </div>
+                            <div class="tech-badge" data-level="expert">
+                                <span class="tech-icon">📈</span>
+                                <span class="tech-name">Datadog</span>
+                            </div>
+                            <div class="tech-badge" data-level="expert">
+                                <span class="tech-icon">🔍</span>
+                                <span class="tech-name">OpenSearch</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="arch-layer">
+                        <h3 class="layer-title">Practices & Architecture</h3>
+                        <div class="tech-grid">
+                            <div class="tech-badge" data-level="expert">
+                                <span class="tech-icon">🔄</span>
+                                <span class="tech-name">Microservices</span>
+                            </div>
+                            <div class="tech-badge" data-level="expert">
+                                <span class="tech-icon">📡</span>
+                                <span class="tech-name">Event-Driven</span>
+                            </div>
+                            <div class="tech-badge" data-level="expert">
+                                <span class="tech-icon">🧪</span>
+                                <span class="tech-name">TDD</span>
+                            </div>
+                            <div class="tech-badge" data-level="expert">
+                                <span class="tech-icon">🚀</span>
+                                <span class="tech-name">CI/CD</span>
+                            </div>
+                            <div class="tech-badge" data-level="expert">
+                                <span class="tech-icon">📋</span>
+                                <span class="tech-name">Agile</span>
+                            </div>
+                            <div class="tech-badge" data-level="expert">
+                                <span class="tech-icon">🎯</span>
+                                <span class="tech-name">REST APIs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section - Data Enrichment -->
+        <section id="experience" class="section enrichment-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// DATA_ENRICHMENT</span>
+                    <h2 class="section-title">Work Experience</h2>
+                    <div class="stream-indicator">
+                        <span class="pulse-dot"></span>
+                        <span>Enriching Data</span>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <!-- N26 -->
+                    <div class="timeline-item active">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="company">N26 GmbH</h3>
+                                    <h4 class="role">Lead Software Engineer</h4>
+                                </div>
+                                <div class="timeline-date">
+                                    <span class="badge-primary">Sep 2022 - Present</span>
+                                    <span class="location">📍 Berlin, Germany</span>
+                                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="role-summary">
+                                    Leading development of event-driven data platforms processing 500M+ transactions/month.
+                                    Architecting scalable systems using Kafka, Kubernetes, and microservices while mentoring
+                                    team of 5 engineers and collaborating with cross-functional stakeholders.
+                                </p>
+
+                                <!-- Key Impact -->
+                                <div class="impact-highlights">
+                                    <div class="impact-item">
+                                        <span class="impact-icon">⚡</span>
+                                        <span class="impact-text"><strong>60%</strong> reduction in processing time</span>
+                                    </div>
+                                    <div class="impact-item">
+                                        <span class="impact-icon">📊</span>
+                                        <span class="impact-text"><strong>99.99%</strong> uptime achieved</span>
+                                    </div>
+                                    <div class="impact-item">
+                                        <span class="impact-icon">🚀</span>
+                                        <span class="impact-text"><strong>500M+</strong> transactions/month</span>
+                                    </div>
+                                    <div class="impact-item">
+                                        <span class="impact-icon">👥</span>
+                                        <span class="impact-text">Led team of <strong>5 engineers</strong></span>
+                                    </div>
+                                </div>
+
+                                <div class="tech-tags">
+                                    <span class="tag">Kotlin</span>
+                                    <span class="tag">Spring Boot 3</span>
+                                    <span class="tag">Kafka</span>
+                                    <span class="tag">PostgreSQL</span>
+                                    <span class="tag">Kubernetes</span>
+                                    <span class="tag">AWS</span>
+                                    <span class="tag">Datadog</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ThoughtWorks -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="company">ThoughtWorks</h3>
+                                    <h4 class="role">Senior Application Developer / Tech Lead</h4>
+                                </div>
+                                <div class="timeline-date">
+                                    <span class="badge-secondary">Mar 2020 - Sep 2022</span>
+                                    <span class="location">📍 Gurgaon, India</span>
+                                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="role-summary">
+                                    Tech Lead for Dealer Locator Service - led team of 4, built RESTful microservices for geolocation services, optimized performance with read replica auto-scaling, and conducted weekly client meetings.
+                                </p>
+
+                                <ul class="achievement-list">
+                                    <li>🏗️ Built Dealer Locator Service for major US construction equipment manufacturer</li>
+                                    <li>⚡ Improved TPS from <strong>48 to 126</strong> with read replica auto-scaling</li>
+                                    <li>📊 Developed <strong>10+ CloudWatch dashboards</strong> for production monitoring</li>
+                                    <li>🚀 Set up CI/CD pipeline, improved run time by <strong>5 mins</strong></li>
+                                    <li>👥 Onboarded and mentored <strong>2 new team members</strong></li>
+                                </ul>
+                                <div class="tech-tags">
+                                    <span class="tag">Spring Boot</span>
+                                    <span class="tag">Java 11</span>
+                                    <span class="tag">PostgreSQL</span>
+                                    <span class="tag">AWS</span>
+                                    <span class="tag">Azure DevOps</span>
+                                    <span class="tag">Microservices</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q3 Technologies -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="company">Q3 Technologies</h3>
+                                    <h4 class="role">Senior Developer</h4>
+                                </div>
+                                <div class="timeline-date">
+                                    <span class="badge-secondary">Dec 2017 - Mar 2020</span>
+                                    <span class="location">📍 Gurgaon, India</span>
+                                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="role-summary">
+                                    Full-stack development for UK transport sector - built 12+ applications for rail, bus, and fleet management. Integrated IoT devices, customized Sitewhere framework, and migrated applications to Azure cloud.
+                                </p>
+
+                                <ul class="achievement-list">
+                                    <li>🌐 Developed <strong>12+ applications</strong> for UK transport sector</li>
+                                    <li>📝 Reviewed <strong>3-4 IoT device specifications</strong> and created feature stories</li>
+                                    <li>🔧 Customized Sitewhere open-source IoT framework</li>
+                                    <li>☁️ Successfully migrated multiple applications to Azure cloud</li>
+                                    <li>📱 Built real-time data applications with ActiveMQ and WebSockets</li>
+                                </ul>
+                                <div class="tech-tags">
+                                    <span class="tag">Java 8</span>
+                                    <span class="tag">Spring Boot</span>
+                                    <span class="tag">Sitewhere</span>
+                                    <span class="tag">MongoDB</span>
+                                    <span class="tag">SQL Server</span>
+                                    <span class="tag">ActiveMQ</span>
+                                    <span class="tag">Azure</span>
+                                    <span class="tag">IoT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Earlier Experience -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="company">Amdocs</h3>
+                                    <h4 class="role">Software Engineer</h4>
+                                </div>
+                                <div class="timeline-date">
+                                    <span class="badge-secondary">May 2017 - Dec 2017</span>
+                                    <span class="location">📍 Gurgaon, India</span>
+                                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="role-summary">
+                                    CRM product development for multiple global clients - built RESTful and SOAP web services, improved API performance, and delivered quick production hot-fixes.
+                                </p>
+
+                                <ul class="achievement-list">
+                                    <li>💼 Worked on CRM product for multiple global clients</li>
+                                    <li>🔧 Exposed RESTful (JAX-RS) and SOAP (JAX-WS) web services</li>
+                                    <li>⚡ Improved performance of older APIs</li>
+                                </ul>
+                                <div class="tech-tags">
+                                    <span class="tag">Java 1.8</span>
+                                    <span class="tag">JAX-RS</span>
+                                    <span class="tag">Oracle 11g</span>
+                                    <span class="tag">WebLogic</span>
+                                    <span class="tag">Kafka</span>
+                                    <span class="tag">Cassandra</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TCS -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="company">Tata Consultancy Services</h3>
+                                    <h4 class="role">Engineer - Technology</h4>
+                                </div>
+                                <div class="timeline-date">
+                                    <span class="badge-secondary">Oct 2015 - Apr 2017</span>
+                                    <span class="location">📍 Gurgaon, India</span>
+                                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="role-summary">
+                                    Built intranet websites for Swiss pharmaceutical company - implemented Hibernate ORM to improve database latency, redesigned utility tools, and performed testing activities.
+                                </p>
+
+                                <ul class="achievement-list">
+                                    <li>🏥 Built intranet websites for Swiss pharmaceutical company</li>
+                                    <li>🔧 Implemented Hibernate ORM improving database latency</li>
+                                    <li>📊 Worked on performance testing and system integration</li>
+                                </ul>
+                                <div class="tech-tags">
+                                    <span class="tag">Java 1.6</span>
+                                    <span class="tag">Spring</span>
+                                    <span class="tag">Hibernate</span>
+                                    <span class="tag">MySQL</span>
+                                    <span class="tag">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section - Output APIs -->
+        <section id="projects" class="section output-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// OUTPUT_APIS</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="stream-indicator">
+                        <span class="pulse-dot"></span>
+                        <span>Serving Requests</span>
+                    </div>
+                </div>
+
+                <!-- Project Filter Tabs -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="featured">Featured</button>
+                    <button class="filter-btn" data-filter="n26">N26</button>
+                    <button class="filter-btn" data-filter="thoughtworks">ThoughtWorks</button>
+                    <button class="filter-btn" data-filter="q3">Q3 Technologies</button>
+                    <button class="filter-btn" data-filter="other">Other</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Transaction Data Platform -->
+                    <div class="project-card featured" data-category="featured n26">
+                        <div class="project-header">
+                            <div class="project-icon">🏦</div>
+                            <div class="project-status">
+                                <span class="status-badge live">LIVE</span>
+                                <span class="uptime">99.99% uptime</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Transaction Data Platform</h3>
+                        <p class="project-company">N26 Bank</p>
+                        <p class="project-description">
+                            Designed and led development of a scalable, event-driven Transaction Data Platform
+                            unifying access to enriched, real-time transaction data across compliance, product,
+                            and regulatory use cases.
+                        </p>
+
+                        <!-- Roles & Responsibilities -->
+                        <div class="project-roles">
+                            <h4>👨‍💼 Role & Responsibilities:</h4>
+                            <ul>
+                                <li><strong>Technical Leadership:</strong> Led team of 5 engineers, designed system architecture</li>
+                                <li><strong>System Design:</strong> Architected event-driven platform using Kafka & Kubernetes</li>
+                                <li><strong>Performance Optimization:</strong> Reduced processing time by 60% through batching & async workflows</li>
+                                <li><strong>Stakeholder Management:</strong> Collaborated with compliance, product, and regulatory teams</li>
+                                <li><strong>Monitoring & SRE:</strong> Implemented comprehensive observability stack (Datadog, OpenSearch)</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">500M+</span>
+                                <span class="metric-label">Transactions/Month</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">10M+</span>
+                                <span class="metric-label">Daily Events</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">&lt;1s</span>
+                                <span class="metric-label">E2E Latency</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">1.5K</span>
+                                <span class="metric-label">Peak RPS</span>
+                            </div>
+                        </div>
+                        <div class="project-highlights">
+                            <h4>Key Achievements:</h4>
+                            <ul>
+                                <li>✅ Migrated legacy services to centralized platform (5+ consumers)</li>
+                                <li>✅ 60% reduction in enrichment processing time</li>
+                                <li>✅ Integrated with Lakehouse (S3 + Glue + Athena)</li>
+                                <li>✅ GDPR-compliant deletion across 20+ systems</li>
+                                <li>✅ Reduced MTTR by 30% with actionable alerts</li>
+                            </ul>
+                        </div>
+
+                        <!-- Technical Deep Dive -->
+                        <div class="tech-deep-dive">
+                            <details>
+                                <summary>🔍 Technical Deep Dive</summary>
+                                <div class="deep-dive-content">
+                                    <p><strong>Architecture:</strong> Microservices-based event-driven platform with active-passive deployments</p>
+                                    <p><strong>Data Flow:</strong> Kafka → Enrichment Pipeline → PostgreSQL Aurora → REST APIs → Lakehouse (S3/Athena)</p>
+                                    <p><strong>Scalability:</strong> Auto-scaling K8s pods, read replicas, Redis caching for hot data</p>
+                                    <p><strong>Reliability:</strong> Circuit breakers, retry mechanisms, dead letter queues, multi-region failover</p>
+                                </div>
+                            </details>
+                        </div>
+
+                        <div class="project-tech">
+                            <span class="tech-pill">Kotlin</span>
+                            <span class="tech-pill">Spring Boot 3</span>
+                            <span class="tech-pill">Kafka</span>
+                            <span class="tech-pill">PostgreSQL</span>
+                            <span class="tech-pill">Kubernetes</span>
+                            <span class="tech-pill">AWS</span>
+                            <span class="tech-pill">Datadog</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: N26 Assistance -->
+                    <div class="project-card" data-category="n26">
+                        <div class="project-header">
+                            <div class="project-icon">🤖</div>
+                            <div class="project-status">
+                                <span class="status-badge live">LIVE</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">N26 Assistance Application</h3>
+                        <p class="project-company">N26 Bank</p>
+                        <p class="project-description">
+                            Banking assistance system with internal/external service integrations.
+                            Identifies user intent and routes requests to appropriate systems with automated workflows.
+                        </p>
+
+                        <div class="project-roles">
+                            <h4>👨‍💼 Role & Responsibilities:</h4>
+                            <ul>
+                                <li><strong>Backend Development:</strong> Built microservices for intent recognition & routing</li>
+                                <li><strong>Integration:</strong> Connected 15+ internal/external banking services</li>
+                                <li><strong>Workflow Automation:</strong> Designed automated assistance workflows</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-highlights">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>✅ Intent recognition and smart routing</li>
+                                <li>✅ Multi-service integration layer</li>
+                                <li>✅ End-to-end workflow automation</li>
+                                <li>✅ Real-time response handling</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-pill">Kotlin</span>
+                            <span class="tech-pill">Spring Boot</span>
+                            <span class="tech-pill">Microservices</span>
+                            <span class="tech-pill">REST APIs</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Location Finder / Dealer Locator -->
+                    <div class="project-card" data-category="featured thoughtworks">
+                        <div class="project-header">
+                            <div class="project-icon">📍</div>
+                            <div class="project-status">
+                                <span class="status-badge completed">COMPLETED</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Location Finder (Dealer Locator Service)</h3>
+                        <p class="project-company">Major Construction Equipment Manufacturer (USA) - ThoughtWorks</p>
+                        <p class="project-description">
+                            Built and migrated 2 legacy microservices for geolocation-based search for stores and dealers
+                            providing parts or services within geographical boundaries specified by geo-JSON.
+                        </p>
+
+                        <div class="project-roles">
+                            <h4>👨‍💼 Role & Responsibilities:</h4>
+                            <ul>
+                                <li><strong>Tech Lead:</strong> Led team of 4, conducted code reviews & technical design</li>
+                                <li><strong>Migration:</strong> Migrated 2 legacy microservices to modern architecture</li>
+                                <li><strong>API Development:</strong> Built 3 RESTful APIs for geocoding (address, IP, coordinates)</li>
+                                <li><strong>Performance Tuning:</strong> Implemented read replica auto-scaling, optimized queries</li>
+                                <li><strong>Monitoring:</strong> Created 10+ CloudWatch dashboards for production trends</li>
+                                <li><strong>Client Communication:</strong> Weekly meetings with TPO for requirements</li>
+                                <li><strong>DevOps:</strong> Set up CI/CD pipeline in Azure DevOps, improved runtime by 5 mins</li>
+                                <li><strong>Mentoring:</strong> Onboarded 2 new team members on domain & agile practices</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">126</span>
+                                <span class="metric-label">TPS (from 48)</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">163%</span>
+                                <span class="metric-label">Performance Gain</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">10+</span>
+                                <span class="metric-label">CloudWatch Dashboards</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">5min</span>
+                                <span class="metric-label">Pipeline Improvement</span>
+                            </div>
+                        </div>
+
+                        <div class="project-highlights">
+                            <h4>Key Achievements:</h4>
+                            <ul>
+                                <li>✅ 163% TPS improvement (48→126) via RDS auto-scaling</li>
+                                <li>✅ Migrated 2 legacy services to modern microservices</li>
+                                <li>✅ Developed 3 geocoding RESTful APIs</li>
+                                <li>✅ Custom CloudWatch metrics & 10+ dashboards</li>
+                                <li>✅ Implemented PostGIS for geospatial queries</li>
+                                <li>✅ CI/CD optimization reducing pipeline time</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-tech">
+                            <span class="tech-pill">Spring Boot</span>
+                            <span class="tech-pill">Java 11</span>
+                            <span class="tech-pill">PostgreSQL</span>
+                            <span class="tech-pill">PostGIS</span>
+                            <span class="tech-pill">Jooq</span>
+                            <span class="tech-pill">AWS</span>
+                            <span class="tech-pill">Azure DevOps</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Telematics IoT -->
+                    <div class="project-card" data-category="q3">
+                        <div class="project-header">
+                            <div class="project-icon">🚗</div>
+                            <div class="project-status">
+                                <span class="status-badge completed">COMPLETED</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Telematics IoT Platform</h3>
+                        <p class="project-company">Q3 Technologies | Apr 2019 - Jun 2020</p>
+                        <p class="project-description">
+                            Fleet management solution based on GPS tracking and real-time vehicle monitoring and control.
+                            Helps businesses manage drivers and vehicles through actionable intelligence from historical trip data.
+                        </p>
+
+                        <div class="project-roles">
+                            <h4>👨‍💼 Role & Responsibilities:</h4>
+                            <ul>
+                                <li><strong>IoT Development:</strong> Integrated 3-4 different IoT device types</li>
+                                <li><strong>Framework Customization:</strong> Modified Sitewhere open-source framework</li>
+                                <li><strong>Requirements Analysis:</strong> Reviewed device specs and created user stories</li>
+                                <li><strong>Real-time Processing:</strong> Built data ingestion pipelines for GPS tracking</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-tech">
+                            <span class="tech-pill">Java 8</span>
+                            <span class="tech-pill">Sitewhere</span>
+                            <span class="tech-pill">MongoDB</span>
+                            <span class="tech-pill">ActiveMQ</span>
+                            <span class="tech-pill">IoT</span>
+                            <span class="tech-pill">GPS</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Java UML Generator -->
+                    <div class="project-card" data-category="other">
+                        <div class="project-header">
+                            <div class="project-icon">📊</div>
+                            <div class="project-status">
+                                <span class="status-badge open-source">OPEN SOURCE</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Java UML Generator (JUG)</h3>
+                        <p class="project-company">University Project - RGTU | May 2014 - Present</p>
+                        <p class="project-description">
+                            Fast, flexible, and extensible tool for automatic generation of UML Class Diagrams from Java files.
+                            Helps developers visualize code structure and relationships.
+                        </p>
+
+                        <div class="project-tech">
+                            <span class="tech-pill">Java</span>
+                            <span class="tech-pill">UML</span>
+                            <span class="tech-pill">Parser</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Document Distribution Application -->
+                    <div class="project-card" data-category="q3">
+                        <div class="project-header">
+                            <div class="project-icon">📄</div>
+                            <div class="project-status">
+                                <span class="status-badge completed">COMPLETED</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Document Distribution Application</h3>
+                        <p class="project-company">Q3 Technologies | Feb 2018 - Jan 2020</p>
+                        <p class="project-description">
+                            Document management system for UK-based Train/Bus company staff. Senior managers upload documents
+                            about train engines and panels, which are shared with staff drivers/operators via Android app.
+                            Tracks document downloads and usage status.
+                        </p>
+
+                        <div class="project-tech">
+                            <span class="tech-pill">Java/J2EE</span>
+                            <span class="tech-pill">Spring</span>
+                            <span class="tech-pill">Hibernate</span>
+                            <span class="tech-pill">REST APIs</span>
+                            <span class="tech-pill">SQL Server 2008</span>
+                            <span class="tech-pill">Android</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 7: Customer Assistance Rail -->
+                    <div class="project-card" data-category="q3">
+                        <div class="project-header">
+                            <div class="project-icon">🚂</div>
+                            <div class="project-status">
+                                <span class="status-badge completed">COMPLETED</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Customer Assistance Rail</h3>
+                        <p class="project-company">Q3 Technologies | Feb 2018 - Dec 2019</p>
+                        <p class="project-description">
+                            Real-time UK train data application with 5 dashboards: Route, Destination, Departure, Arrival,
+                            and Journey Planner. Users configure location, TOC (Train Operating Company), and dashboard stations.
+                        </p>
+
+                        <div class="project-tech">
+                            <span class="tech-pill">Java/J2EE</span>
+                            <span class="tech-pill">Spring</span>
+                            <span class="tech-pill">Hibernate</span>
+                            <span class="tech-pill">SQL Server 2008</span>
+                            <span class="tech-pill">Real-time Data</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 8: FirstGroup Smart Audit -->
+                    <div class="project-card" data-category="q3">
+                        <div class="project-header">
+                            <div class="project-icon">✅</div>
+                            <div class="project-status">
+                                <span class="status-badge completed">COMPLETED</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">FirstGroup Smart Audit Application</h3>
+                        <p class="project-company">Q3 Technologies | Mar 2018 - Nov 2019</p>
+                        <p class="project-description">
+                            Web and mobile audit management system enabling admins to create, share audits with targeted user groups.
+                            Features multiple sections, question types, risk association, and comprehensive reporting.
+                            Faults reported into connected FirstGroup applications.
+                        </p>
+
+                        <div class="project-tech">
+                            <span class="tech-pill">Spring Boot</span>
+                            <span class="tech-pill">Hibernate</span>
+                            <span class="tech-pill">Spring JPA</span>
+                            <span class="tech-pill">Maven</span>
+                            <span class="tech-pill">SQL Server 2012</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 9: Applications Azure Migration -->
+                    <div class="project-card" data-category="q3">
+                        <div class="project-header">
+                            <div class="project-icon">☁️</div>
+                            <div class="project-status">
+                                <span class="status-badge completed">COMPLETED</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Applications Azure Migration</h3>
+                        <p class="project-company">Q3 Technologies | Sep 2018 - May 2019</p>
+                        <p class="project-description">
+                            End-to-end cloud migration project moving applications to Azure. Managed complex data migration,
+                            conversion, and modeling. Provided monitoring, troubleshooting, and issue resolution for cloud-hosted services.
+                        </p>
+
+                        <div class="project-roles">
+                            <h4>👨‍💼 Key Activities:</h4>
+                            <ul>
+                                <li><strong>Azure Services:</strong> IaaS, PaaS, SaaS implementation</li>
+                                <li><strong>Data Migration:</strong> End-to-end complex data migration & modeling</li>
+                                <li><strong>Monitoring:</strong> Daily management & troubleshooting of cloud resources</li>
+                                <li><strong>Security:</strong> Ensured security in reporting and data warehousing</li>
+                                <li><strong>BI Solutions:</strong> Delivered innovative BI & Data warehouse solutions</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-tech">
+                            <span class="tech-pill">Azure</span>
+                            <span class="tech-pill">IaaS</span>
+                            <span class="tech-pill">PaaS</span>
+                            <span class="tech-pill">Data Migration</span>
+                            <span class="tech-pill">BI</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 10: Amdocs CRM Product Development -->
+                    <div class="project-card" data-category="other">
+                        <div class="project-header">
+                            <div class="project-icon">💼</div>
+                            <div class="project-status">
+                                <span class="status-badge completed">COMPLETED</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Amdocs CRM Product Development</h3>
+                        <p class="project-company">Amdocs | May 2017 - Nov 2017</p>
+                        <p class="project-description">
+                            CRM product development & delivery for multiple global clients. Developed, enhanced, and tested new features.
+                            Exposed web services using RESTful (JAX-RS) and SOAP (JAX-WS).
+                        </p>
+
+                        <div class="project-roles">
+                            <h4>👨‍💼 Responsibilities:</h4>
+                            <ul>
+                                <li><strong>Feature Development:</strong> New features within Amdocs CRM product</li>
+                                <li><strong>Web Services:</strong> RESTful (JAX-RS) and SOAP (JAX-WS) implementation</li>
+                                <li><strong>Testing:</strong> JUnit, Mockito framework, SoapUI test suites</li>
+                                <li><strong>Performance:</strong> Improved older API performance</li>
+                                <li><strong>Hot Fixes:</strong> Quick defect fixing for production</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-tech">
+                            <span class="tech-pill">Java 1.8</span>
+                            <span class="tech-pill">JAX-RS</span>
+                            <span class="tech-pill">JAX-WS</span>
+                            <span class="tech-pill">Oracle 11g</span>
+                            <span class="tech-pill">WebLogic</span>
+                            <span class="tech-pill">Kafka</span>
+                            <span class="tech-pill">Cassandra</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 11: Swiss Pharmaceutical Intranet -->
+                    <div class="project-card" data-category="other">
+                        <div class="project-header">
+                            <div class="project-icon">🏥</div>
+                            <div class="project-status">
+                                <span class="status-badge completed">COMPLETED</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Swiss Pharmaceutical Company Intranet</h3>
+                        <p class="project-company">Tata Consultancy Services | Jan 2016 - Mar 2017</p>
+                        <p class="project-description">
+                            Intranet websites for Swiss-based pharmaceutical company. Redesigned and implemented new utility tools.
+                            Implemented Hibernate ORM framework to improve database latency and code readability.
+                        </p>
+
+                        <div class="project-roles">
+                            <h4>👨‍💼 Key Activities:</h4>
+                            <ul>
+                                <li><strong>Redesign:</strong> Modified and implemented utility tools in Core Java</li>
+                                <li><strong>ORM Implementation:</strong> Hibernate for improved latency & readability</li>
+                                <li><strong>Testing:</strong> Performance testing, UAT, system integration</li>
+                                <li><strong>JavaScript Development:</strong> 3 months frontend work</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-tech">
+                            <span class="tech-pill">Java 1.6</span>
+                            <span class="tech-pill">J2EE</span>
+                            <span class="tech-pill">Spring</span>
+                            <span class="tech-pill">Hibernate</span>
+                            <span class="tech-pill">MySQL</span>
+                            <span class="tech-pill">JavaScript</span>
+                            <span class="tech-pill">Linux</span>
+                        </div>
+                    </div>
+
+                    <!-- Additional Q3 Projects (Smaller Cards) -->
+                    <div class="project-card compact" data-category="q3">
+                        <div class="project-icon-small">💳</div>
+                        <h3 class="project-title-small">Smart Card</h3>
+                        <p class="project-period">Aug 2018 - Dec 2019</p>
+                        <div class="project-tech-compact">
+                            <span class="tech-pill-sm">Spring Boot</span>
+                            <span class="tech-pill-sm">Hibernate</span>
+                            <span class="tech-pill-sm">SQL Server 2012</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card compact" data-category="q3">
+                        <div class="project-icon-small">📊</div>
+                        <h3 class="project-title-small">Highest Standard</h3>
+                        <p class="project-period">Oct 2018 - Jun 2019</p>
+                        <div class="project-tech-compact">
+                            <span class="tech-pill-sm">Spring Boot</span>
+                            <span class="tech-pill-sm">Java 1.8</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card compact" data-category="q3">
+                        <div class="project-icon-small">🚉</div>
+                        <h3 class="project-title-small">Rail Replacement</h3>
+                        <p class="project-period">Dec 2018 - May 2019</p>
+                        <div class="project-tech-compact">
+                            <span class="tech-pill-sm">Spring Boot</span>
+                            <span class="tech-pill-sm">SQL Server</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card compact" data-category="q3">
+                        <div class="project-icon-small">👥</div>
+                        <h3 class="project-title-small">Passenger Count</h3>
+                        <p class="project-period">Mar 2018 - Mar 2019</p>
+                        <div class="project-tech-compact">
+                            <span class="tech-pill-sm">Spring MVC</span>
+                            <span class="tech-pill-sm">Hibernate</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card compact" data-category="q3">
+                        <div class="project-icon-small">🅿️</div>
+                        <h3 class="project-title-small">Car Park</h3>
+                        <p class="project-period">Oct 2018 - Feb 2019</p>
+                        <div class="project-tech-compact">
+                            <span class="tech-pill-sm">Spring Boot</span>
+                            <span class="tech-pill-sm">Java 1.8</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card compact" data-category="q3">
+                        <div class="project-icon-small">⏱️</div>
+                        <h3 class="project-title-small">Dwell Time</h3>
+                        <p class="project-period">Jul 2018 - Sep 2018</p>
+                        <div class="project-tech-compact">
+                            <span class="tech-pill-sm">Spring Boot</span>
+                            <span class="tech-pill-sm">ActiveMQ</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card compact" data-category="q3">
+                        <div class="project-icon-small">📊</div>
+                        <h3 class="project-title-small">Data Conductor</h3>
+                        <p class="project-period">Sep 2018 - May 2019</p>
+                        <div class="project-tech-compact">
+                            <span class="tech-pill-sm">Spring Boot</span>
+                            <span class="tech-pill-sm">SQL Server</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section certifications-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// CREDENTIALS</span>
+                    <h2 class="section-title">Certifications & Education</h2>
+                    <div class="stream-indicator">
+                        <span class="pulse-dot"></span>
+                        <span>Verified</span>
+                    </div>
+                </div>
+
+                <div class="certifications-grid">
+                    <!-- Featured/Recent Certifications -->
+                    <div class="cert-card featured">
+                        <div class="cert-badge">
+                            <span class="cert-icon">📨</span>
+                        </div>
+                        <h3 class="cert-title">Spoud Kafka Developer Training</h3>
+                        <p class="cert-issuer">Spoud</p>
+                        <p class="cert-date">Issued Dec 2025</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                            <span class="cert-id">ID: f91eecd7</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">🔒</span>
+                        </div>
+                        <h3 class="cert-title">Introduction Badge</h3>
+                        <p class="cert-issuer">PentesterLab</p>
+                        <p class="cert-date">Issued Jul 2022</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                            <span class="cert-id">ID: PTLN19932</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">☁️</span>
+                        </div>
+                        <h3 class="cert-title">Microsoft Certified: Azure Fundamentals</h3>
+                        <p class="cert-issuer">Microsoft</p>
+                        <p class="cert-date">Issued Jul 2020</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">🌐</span>
+                        </div>
+                        <h3 class="cert-title">Aviatrix Certified Engineer</h3>
+                        <p class="cert-issuer">Multi-Cloud Network Associate</p>
+                        <p class="cert-date">Issued Jun 2020</p>
+                        <div class="cert-status">
+                            <span class="expired-badge">⚠ Expired Jun 2023</span>
+                        </div>
+                    </div>
+
+                    <!-- AWS Certifications -->
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">🔶</span>
+                        </div>
+                        <h3 class="cert-title">AWS Fundamentals: Addressing Security Risk</h3>
+                        <p class="cert-issuer">Coursera</p>
+                        <p class="cert-date">Issued Apr 2020</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                            <span class="cert-id">ID: RXKGSTES6DJD</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">🔶</span>
+                        </div>
+                        <h3 class="cert-title">AWS Fundamentals: Going Cloud-Native</h3>
+                        <p class="cert-issuer">Coursera</p>
+                        <p class="cert-date">Issued Apr 2020</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                            <span class="cert-id">ID: ELFTVV496KKL</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">🔶</span>
+                        </div>
+                        <h3 class="cert-title">AWS Fundamentals: Building Serverless Applications</h3>
+                        <p class="cert-issuer">Coursera</p>
+                        <p class="cert-date">Issued Mar 2020</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                            <span class="cert-id">ID: RLM3BER8X3KL</span>
+                        </div>
+                    </div>
+
+                    <!-- IoT & Stanford Certifications -->
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">📡</span>
+                        </div>
+                        <h3 class="cert-title">Introduction to Internet of Things (XEE100)</h3>
+                        <p class="cert-issuer">Stanford University School of Engineering</p>
+                        <p class="cert-date">Issued May 2020</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                            <span class="cert-id">ID: X531415</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">🔶</span>
+                        </div>
+                        <h3 class="cert-title">AWS IoT Security Primer</h3>
+                        <p class="cert-issuer">Amazon Web Services (AWS)</p>
+                        <p class="cert-date">Issued Mar 2020</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">🔶</span>
+                        </div>
+                        <h3 class="cert-title">AWS IoT Security Series</h3>
+                        <p class="cert-issuer">Amazon Web Services (AWS)</p>
+                        <p class="cert-date">Issued Mar 2020</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">🔶</span>
+                        </div>
+                        <h3 class="cert-title">AWS IoT Rules Engine</h3>
+                        <p class="cert-issuer">Amazon Web Services (AWS)</p>
+                        <p class="cert-date">Issued Feb 2020</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">🔶</span>
+                        </div>
+                        <h3 class="cert-title">Managing AWS IoT Devices: Fleet Indexing</h3>
+                        <p class="cert-issuer">Amazon Web Services (AWS)</p>
+                        <p class="cert-date">Issued Feb 2020</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                        </div>
+                    </div>
+
+                    <!-- IoT Specialization & Coursera -->
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">📡</span>
+                        </div>
+                        <h3 class="cert-title">Introduction to Programming IoT Specialization</h3>
+                        <p class="cert-issuer">Coursera</p>
+                        <p class="cert-date">Issued Mar 2020</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                            <span class="cert-id">ID: FEWX57CWRQUQ</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">📡</span>
+                        </div>
+                        <h3 class="cert-title">Programming for IoT Project</h3>
+                        <p class="cert-issuer">Coursera</p>
+                        <p class="cert-date">Issued Mar 2020</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                            <span class="cert-id">ID: FD7R4Y7V5PYP</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">🔶</span>
+                        </div>
+                        <h3 class="cert-title">Industrial IoT on Google Cloud Platform</h3>
+                        <p class="cert-issuer">Coursera</p>
+                        <p class="cert-date">Issued Jan 2020</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                            <span class="cert-id">ID: GE92DNFE52KB</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">📡</span>
+                        </div>
+                        <h3 class="cert-title">Introduction and Programming with IoT Boards</h3>
+                        <p class="cert-issuer">Coursera</p>
+                        <p class="cert-date">Issued Jan 2020</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                            <span class="cert-id">ID: 5RZA4C9V69B6</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">📡</span>
+                        </div>
+                        <h3 class="cert-title">Programming with Cloud IoT Platforms</h3>
+                        <p class="cert-issuer">Coursera</p>
+                        <p class="cert-date">Issued Jan 2020</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                            <span class="cert-id">ID: HDA3KKEPP8XF</span>
+                        </div>
+                    </div>
+
+                    <!-- Raspberry Pi & Arduino Certifications -->
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">🍓</span>
+                        </div>
+                        <h3 class="cert-title">Interfacing with the Raspberry Pi</h3>
+                        <p class="cert-issuer">Coursera</p>
+                        <p class="cert-date">Issued Dec 2019</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                            <span class="cert-id">ID: FZV5FT43QCP9</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">🍓</span>
+                        </div>
+                        <h3 class="cert-title">Raspberry Pi Platform and Python Programming</h3>
+                        <p class="cert-issuer">Coursera</p>
+                        <p class="cert-date">Issued Nov 2019</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                            <span class="cert-id">ID: 7BAPMMYX99AE</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">🔄</span>
+                        </div>
+                        <h3 class="cert-title">Building Scalable Java Microservices</h3>
+                        <p class="cert-issuer">Spring Boot & Spring Cloud - Coursera</p>
+                        <p class="cert-date">Issued Nov 2019</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                            <span class="cert-id">ID: NQB7U89X9FPS</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">🔧</span>
+                        </div>
+                        <h3 class="cert-title">Interfacing with the Arduino</h3>
+                        <p class="cert-issuer">Coursera</p>
+                        <p class="cert-date">Issued Nov 2019</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                            <span class="cert-id">ID: B2GF29QQNDFK</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">🔧</span>
+                        </div>
+                        <h3 class="cert-title">The Arduino Platform and C Programming</h3>
+                        <p class="cert-issuer">Coursera</p>
+                        <p class="cert-date">Issued Oct 2019</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                            <span class="cert-id">ID: CQ5CFG8JZ8NL</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">📡</span>
+                        </div>
+                        <h3 class="cert-title">Introduction to IoT and Embedded Systems</h3>
+                        <p class="cert-issuer">Coursera</p>
+                        <p class="cert-date">Issued Sep 2019</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                            <span class="cert-id">ID: CWTS6UCA8ZXP</span>
+                        </div>
+                    </div>
+
+                    <!-- Lynda.com / LinkedIn Learning Certifications -->
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <span class="cert-icon">📚</span>
+                        </div>
+                        <h3 class="cert-title">Git Essential Training</h3>
+                        <p class="cert-issuer">Lynda.com</p>
+                        <p class="cert-date">Issued Mar 2017</p>
+                        <div class="cert-status">
+                            <span class="verified-badge">✓ Verified</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card compact">
+                        <div class="cert-icon-small">💻</div>
+                        <h4 class="cert-title-small">HTML Essential Training</h4>
+                        <p class="cert-issuer-small">Lynda.com • Oct 2016</p>
+                    </div>
+
+                    <div class="cert-card compact">
+                        <div class="cert-icon-small">☕</div>
+                        <h4 class="cert-title-small">Java Essential Training</h4>
+                        <p class="cert-issuer-small">Lynda.com • Sep 2016</p>
+                    </div>
+
+                    <div class="cert-card compact">
+                        <div class="cert-icon-small">🐘</div>
+                        <h4 class="cert-title-small">Hadoop Fundamentals</h4>
+                        <p class="cert-issuer-small">Lynda.com • Sep 2016</p>
+                    </div>
+
+                    <div class="cert-card compact">
+                        <div class="cert-icon-small">🧠</div>
+                        <h4 class="cert-title-small">Critical Thinking</h4>
+                        <p class="cert-issuer-small">Lynda.com • Sep 2016</p>
+                    </div>
+
+                    <div class="cert-card compact">
+                        <div class="cert-icon-small">💡</div>
+                        <h4 class="cert-title-small">Creativity Bootcamp</h4>
+                        <p class="cert-issuer-small">Lynda.com • Sep 2016</p>
+                    </div>
+
+                    <div class="cert-card compact">
+                        <div class="cert-icon-small">👥</div>
+                        <h4 class="cert-title-small">Coaching and Developing Employees</h4>
+                        <p class="cert-issuer-small">Lynda.com • Sep 2016</p>
+                    </div>
+
+                    <div class="cert-card compact">
+                        <div class="cert-icon-small">🤝</div>
+                        <h4 class="cert-title-small">Building Business Relationships</h4>
+                        <p class="cert-issuer-small">Lynda.com • Sep 2016</p>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="education-section">
+                    <h3 class="education-title">🎓 Education</h3>
+                    <div class="education-card">
+                        <div class="education-icon">🎓</div>
+                        <div class="education-details">
+                            <h4>Bachelor of Technology in Computer Science and Engineering</h4>
+                            <p class="university">IIST, Indore (M.P.) - RGTU</p>
+                            <p class="year">Class of 2015</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section - Monitoring Dashboard -->
+        <section id="contact" class="section monitoring-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// MONITORING_DASHBOARD</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="stream-indicator">
+                        <span class="pulse-dot"></span>
+                        <span>All Systems Operational</span>
+                    </div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Let's Connect</h3>
+                        <p class="contact-description">
+                            Interested in building scalable systems, discussing event-driven architectures,
+                            or exploring collaboration opportunities? Let's talk!
+                        </p>
+
+                        <div class="contact-methods">
+                            <a href="mailto:de.gratnawat@gmail.com" class="contact-card">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <p>de.gratnawat@gmail.com</p>
+                                </div>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/ratnawatgaurav/" target="_blank" class="contact-card">
+                                <div class="contact-icon">💼</div>
+                                <div class="contact-details">
+                                    <h4>LinkedIn</h4>
+                                    <p>linkedin.com/in/ratnawatgaurav</p>
+                                </div>
+                            </a>
+
+                            <a href="tel:+4915510055601" class="contact-card">
+                                <div class="contact-icon">📱</div>
+                                <div class="contact-details">
+                                    <h4>Phone</h4>
+                                    <p>+49-15510055601</p>
+                                </div>
+                            </a>
+
+                            <div class="contact-card">
+                                <div class="contact-icon">📍</div>
+                                <div class="contact-details">
+                                    <h4>Location</h4>
+                                    <p>Berlin, Germany</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="download-section">
+                            <a href="Gaurav Ratnawat Resume Engg.pdf" class="btn btn-download" download>
+                                <span>📄 Download Full Resume</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="terminal-contact">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">system_status.log</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p class="log-line success">[OK] Pipeline Status: <span class="status-ok">OPERATIONAL</span></p>
+                            <p class="log-line success">[OK] Services: <span class="status-ok">ALL HEALTHY</span></p>
+                            <p class="log-line success">[OK] Latency: <span class="status-ok">&lt; 1s</span></p>
+                            <p class="log-line success">[OK] Throughput: <span class="status-ok">1.5K RPS</span></p>
+                            <p class="log-line success">[OK] Error Rate: <span class="status-ok">0.01%</span></p>
+                            <p class="log-line">&nbsp;</p>
+                            <p class="log-line info">[INFO] Open to opportunities...</p>
+                            <p class="log-line info">[INFO] Available for: Consulting, Architecture Reviews, Tech Talks</p>
+                            <p class="log-line">&nbsp;</p>
+                            <p class="log-line">&gt; Waiting for connection...</p>
+                            <p class="log-line cursor">_</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p>&copy; 2025 Gaurav Ratnawat. Built with ❤️ and lots of ☕</p>
+                    <p class="footer-tech">Powered by: HTML5 • CSS3 • Vanilla JS • No Framework Required</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/pipeline-main.js"></script>
 </body>
-
 </html>
+

@@ -661,7 +661,6 @@
             // Update active section
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
                 if (window.scrollY >= (sectionTop - 200)) {
                     current = section.getAttribute('id');
                 }
@@ -846,24 +845,6 @@
         });
     }
 
-    // ===================================
-    // Terminal Typing Effect
-    // ===================================
-
-    function typeWriter(element, text, speed = 50) {
-        let i = 0;
-        element.textContent = '';
-
-        function type() {
-            if (i < text.length) {
-                element.textContent += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
-            }
-        }
-
-        type();
-    }
 
     // ===================================
     // Data Packet Animation
@@ -1163,12 +1144,14 @@
                     const categories = card.getAttribute('data-category');
 
                     if (filter === 'all' || categories.includes(filter)) {
-                        setTimeout(() => {
-                            card.style.display = 'flex';
-                            card.style.animation = 'fadeIn 0.5s ease-out';
-                        }, index * 50);
+                        // Show the card
+                        card.style.display = 'flex';
+                        card.style.opacity = '1';
+                        card.style.animation = 'fadeIn 0.5s ease-out';
                     } else {
+                        // Hide the card
                         card.style.opacity = '0';
+                        card.style.animation = 'none';
                         setTimeout(() => {
                             card.style.display = 'none';
                         }, 300);

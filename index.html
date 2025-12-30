@@ -7,21 +7,22 @@
     <meta name="description" content="Lead Software Engineer specializing in Data Pipelines, Kafka, Microservices & Real-time Systems">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="css/pipeline-style.css">
+    <link rel="stylesheet" href="css/missing-styles-patch.css">
 </head>
 <body>
     <!-- Loading Screen -->
     <div id="loading-screen">
         <div class="loading-content">
             <div class="terminal-loader">
-                <span class="loading-text">Initializing Pipeline...</span>
+                <span class="loading-text">Initializing Portfolio...</span>
                 <div class="progress-bar">
                     <div class="progress-fill"></div>
                 </div>
                 <div class="loading-logs">
-                    <p>$ Connecting to data sources...</p>
-                    <p>$ Loading Kafka streams...</p>
-                    <p>$ Establishing WebSocket connections...</p>
-                    <p>$ Pipeline ready ✓</p>
+                    <p>$ Loading profile data...</p>
+                    <p>$ Rendering experience...</p>
+                    <p>$ Compiling projects...</p>
+                    <p>$ Portfolio ready ✓</p>
                 </div>
             </div>
         </div>
@@ -68,26 +69,26 @@
                             <span class="type-writer">Lead Software Engineer @ N26</span>
                         </h2>
                         <p class="hero-description">
-                            Building scalable event-driven systems | 500M+ transactions/month | 99.99% uptime
+                            Architecting scalable distributed systems | Leading high-performance teams | 10+ years of engineering excellence
                         </p>
 
                         <!-- Live Metrics Dashboard -->
                         <div class="metrics-dashboard">
                             <div class="metric-card">
-                                <div class="metric-value" data-target="9">0</div>
-                                <div class="metric-label">Years Experience</div>
+                                <div class="metric-value" data-target="10">0</div>
+                                <div class="metric-label">Years of Experience</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value" data-target="5">0</div>
+                                <div class="metric-label">Companies Worked</div>
                             </div>
                             <div class="metric-card">
                                 <div class="metric-value" data-target="500">0</div>
-                                <div class="metric-label">M+ Transactions/Month</div>
+                                <div class="metric-label">Million Txns/Month</div>
                             </div>
                             <div class="metric-card">
-                                <div class="metric-value" data-target="99.99">0</div>
-                                <div class="metric-label">% Uptime</div>
-                            </div>
-                            <div class="metric-card">
-                                <div class="metric-value" data-target="1500">0</div>
-                                <div class="metric-label">RPS Peak Load</div>
+                                <div class="metric-value" data-target="7">0</div>
+                                <div class="metric-label">Engineers Led</div>
                             </div>
                         </div>
 
@@ -96,7 +97,7 @@
                                 <span>Explore Pipeline</span>
                                 <i class="arrow">→</i>
                             </a>
-                            <a href="Gaurav Ratnawat Resume Engg.pdf" class="btn btn-secondary" download>
+                            <a href="Gaurav Ratnawat Lead Engg Resume.docx.pdf" class="btn btn-secondary" download>
                                 <span>Download Resume</span>
                                 <i class="icon">↓</i>
                             </a>
@@ -108,7 +109,7 @@
                         <!-- Canvas for flowing particles -->
                         <canvas id="pipeline-canvas" class="pipeline-canvas-element"></canvas>
 
-                        <svg viewBox="0 0 600 400" class="pipeline-svg">
+                        <svg viewBox="0 0 700 300" class="pipeline-svg" preserveAspectRatio="xMidYMid meet">
                             <!-- Animated flow paths -->
                             <defs>
                                 <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -119,42 +120,42 @@
                             </defs>
 
                             <!-- Connections with flow animation -->
-                            <path class="pipeline-path flow-path" d="M 50 200 L 150 200" stroke="url(#flowGradient)" />
-                            <path class="pipeline-path flow-path" d="M 150 200 L 250 200" stroke="url(#flowGradient)" />
-                            <path class="pipeline-path flow-path" d="M 250 200 L 350 200" stroke="url(#flowGradient)" />
-                            <path class="pipeline-path flow-path" d="M 350 200 L 450 200" stroke="url(#flowGradient)" />
-                            <path class="pipeline-path flow-path" d="M 450 200 L 550 200" stroke="url(#flowGradient)" />
+                            <path class="pipeline-path flow-path" d="M 70 150 L 170 150" stroke="url(#flowGradient)" />
+                            <path class="pipeline-path flow-path" d="M 170 150 L 270 150" stroke="url(#flowGradient)" />
+                            <path class="pipeline-path flow-path" d="M 270 150 L 420 150" stroke="url(#flowGradient)" />
+                            <path class="pipeline-path flow-path" d="M 420 150 L 520 150" stroke="url(#flowGradient)" />
+                            <path class="pipeline-path flow-path" d="M 520 150 L 630 150" stroke="url(#flowGradient)" />
 
                             <!-- Interactive Nodes -->
                             <g class="pipeline-node interactive-node" data-section="about" data-stage="input">
-                                <circle cx="150" cy="200" r="30" class="node-circle" />
-                                <circle cx="150" cy="200" r="35" class="node-pulse" />
-                                <text x="150" y="205" class="node-text">INPUT</text>
-                                <text x="150" y="245" class="node-label">About</text>
+                                <circle cx="120" cy="150" r="35" class="node-circle" />
+                                <circle cx="120" cy="150" r="40" class="node-pulse" />
+                                <text x="120" y="155" class="node-text">INPUT</text>
+                                <text x="120" y="210" class="node-label">About</text>
                             </g>
                             <g class="pipeline-node interactive-node" data-section="skills" data-stage="process">
-                                <circle cx="250" cy="200" r="30" class="node-circle" />
-                                <circle cx="250" cy="200" r="35" class="node-pulse" />
-                                <text x="250" y="205" class="node-text">PROCESS</text>
-                                <text x="250" y="245" class="node-label">Skills</text>
+                                <circle cx="220" cy="150" r="35" class="node-circle" />
+                                <circle cx="220" cy="150" r="40" class="node-pulse" />
+                                <text x="220" y="155" class="node-text">PROCESS</text>
+                                <text x="220" y="210" class="node-label">Skills</text>
                             </g>
                             <g class="pipeline-node interactive-node" data-section="experience" data-stage="enrich">
-                                <circle cx="350" cy="200" r="30" class="node-circle" />
-                                <circle cx="350" cy="200" r="35" class="node-pulse" />
-                                <text x="350" y="205" class="node-text">ENRICH</text>
-                                <text x="350" y="245" class="node-label">Experience</text>
+                                <circle cx="350" cy="150" r="35" class="node-circle" />
+                                <circle cx="350" cy="150" r="40" class="node-pulse" />
+                                <text x="350" y="155" class="node-text">ENRICH</text>
+                                <text x="350" y="210" class="node-label">Experience</text>
                             </g>
                             <g class="pipeline-node interactive-node" data-section="projects" data-stage="output">
-                                <circle cx="450" cy="200" r="30" class="node-circle" />
-                                <circle cx="450" cy="200" r="35" class="node-pulse" />
-                                <text x="450" y="205" class="node-text">OUTPUT</text>
-                                <text x="450" y="245" class="node-label">Projects</text>
+                                <circle cx="470" cy="150" r="35" class="node-circle" />
+                                <circle cx="470" cy="150" r="40" class="node-pulse" />
+                                <text x="470" y="155" class="node-text">OUTPUT</text>
+                                <text x="470" y="210" class="node-label">Projects</text>
                             </g>
                             <g class="pipeline-node interactive-node" data-section="contact" data-stage="monitor">
-                                <circle cx="550" cy="200" r="30" class="node-circle" />
-                                <circle cx="550" cy="200" r="35" class="node-pulse" />
-                                <text x="550" y="205" class="node-text">MONITOR</text>
-                                <text x="550" y="245" class="node-label">Contact</text>
+                                <circle cx="580" cy="150" r="35" class="node-circle" />
+                                <circle cx="580" cy="150" r="40" class="node-pulse" />
+                                <text x="580" y="155" class="node-text">MONITOR</text>
+                                <text x="580" y="210" class="node-label">Contact</text>
                             </g>
                         </svg>
 
@@ -193,7 +194,7 @@
                         <div class="terminal-body">
                             <p class="terminal-line"><span class="prompt">$</span> whoami</p>
                             <p class="output">
-                                A software developer with <strong>9+ years of experience</strong> solving complex business problems,
+                                A software developer with <strong>10+ years of experience</strong> solving complex business problems,
                                 and seamlessly delivering high-quality software products in a fast-paced environment using
                                 agile methodologies and CI/CD practices.
                             </p>
@@ -215,7 +216,7 @@
 
                     <div class="profile-visual">
                         <div class="profile-image-wrapper">
-                            <img src="images/profile-pic.jpg" alt="Gaurav Ratnawat" class="profile-image">
+                            <img src="images/gaurav.jpg" alt="Gaurav Ratnawat" class="profile-image">
                             <div class="profile-ring"></div>
                         </div>
                         <div class="quick-links">
@@ -1519,7 +1520,7 @@
                         <div class="education-icon">🎓</div>
                         <div class="education-details">
                             <h4>Bachelor of Technology in Computer Science and Engineering</h4>
-                            <p class="university">IIST, Indore (M.P.) - RGTU</p>
+                            <p class="university">RGTU</p>
                             <p class="year">Class of 2015</p>
                         </div>
                     </div>
@@ -1564,11 +1565,11 @@
                                 </div>
                             </a>
 
-                            <a href="tel:+4915510055601" class="contact-card">
+                            <a href="tel:+4915292604891" class="contact-card">
                                 <div class="contact-icon">📱</div>
                                 <div class="contact-details">
                                     <h4>Phone</h4>
-                                    <p>+49-15510055601</p>
+                                    <p>+49-15292604891</p>
                                 </div>
                             </a>
 
@@ -1582,7 +1583,7 @@
                         </div>
 
                         <div class="download-section">
-                            <a href="Gaurav Ratnawat Resume Engg.pdf" class="btn btn-download" download>
+                            <a href="Gaurav Ratnawat Lead Engg Resume.docx.pdf" class="btn btn-download" download>
                                 <span>📄 Download Full Resume</span>
                             </a>
                         </div>
@@ -1626,6 +1627,7 @@
     </div>
 
     <!-- Scripts -->
+    <script src="js/pipeline-navigation.js"></script>
     <script src="js/pipeline-main.js"></script>
 </body>
 </html>

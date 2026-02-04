@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Be My Valentine? 💕</title>
+  
+  <!-- Access Protection -->
+  <script>
+    (function() {
+      const SECRET_KEY = 'valentine2026'; // Change this to your desired secret key
+      const urlParams = new URLSearchParams(window.location.search);
+      const providedKey = urlParams.get('key');
+      
+      if (providedKey !== SECRET_KEY) {
+        // Redirect to home page if key is missing or incorrect
+        window.location.href = '/index.html';
+      }
+    })();
+  </script>
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ee9ca7 0%, #ffdde1 50%, #ff6b95 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    
+    .floating-hearts {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+    
+    .float-heart {
+      position: absolute;
+      font-size: 2em;
+      animation: floatUp 6s infinite;
+      opacity: 0.6;
+    }
+    
+    @keyframes floatUp {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.6; }
+      90% { opacity: 0.6; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+    
+    .container {
+      text-align: center;
+      padding: 50px 70px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+      position: relative;
+      z-index: 10;
+      max-width: 90vw;
+    }
+    
+    .rose { font-size: 3em; margin-bottom: 10px; }
+    
+    h1 {
+      font-size: 2em;
+      color: #e84a5f;
+      margin-bottom: 5px;
+    }
+    
+    .name {
+      font-size: 2.8em;
+      color: #ff6b95;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(255,107,149,0.3);
+      animation: glow 2s infinite;
+    }
+    
+    @keyframes glow {
+      0%, 100% { text-shadow: 2px 2px 4px rgba(255,107,149,0.3); }
+      50% { text-shadow: 0 0 20px rgba(255,107,149,0.8), 0 0 30px rgba(255,107,149,0.6); }
+    }
+    
+    .heart { animation: pulse 1s infinite; display: inline-block; }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+    
+    .question {
+      font-size: 2em;
+      color: #333;
+      margin: 30px 0;
+    }
+    
+    .question .big-heart {
+      font-size: 1.5em;
+      display: inline-block;
+      animation: heartBeat 0.8s infinite;
+    }
+    
+    .buttons {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 30px;
+      position: relative;
+      min-height: 60px;
+    }
+    
+    .btn {
+      padding: 15px 50px;
+      font-size: 1.3em;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    
+    .yes-btn {
+      background: linear-gradient(135deg, #ff6b95, #ff8e53);
+      color: white;
+      box-shadow: 0 5px 20px rgba(255,107,149,0.5);
+    }
+    
+    .yes-btn:hover {
+      transform: scale(1.15);
+      box-shadow: 0 8px 30px rgba(255,107,149,0.7);
+    }
+    
+    .no-btn {
+      background: linear-gradient(135deg, #a8a8a8, #888);
+      color: white;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      position: absolute;
+      right: 0;
+      transition: none;
+    }
+    
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    
+    .modal.show { display: flex; }
+    
+    .modal-content {
+      background: linear-gradient(135deg, #fff 0%, #ffe6f0 100%);
+      padding: 50px;
+      border-radius: 30px;
+      text-align: center;
+      animation: popIn 0.5s ease;
+      max-width: 500px;
+    }
+    
+    @keyframes popIn {
+      0% { transform: scale(0) rotate(-10deg); opacity: 0; }
+      100% { transform: scale(1) rotate(0); opacity: 1; }
+    }
+    
+    .modal .super-heart {
+      font-size: 5em;
+      animation: heartBeat 0.8s infinite;
+    }
+    
+    @keyframes heartBeat {
+      0%, 100% { transform: scale(1); }
+      25% { transform: scale(1.1); }
+      50% { transform: scale(1); }
+      75% { transform: scale(1.3); }
+    }
+    
+    .modal h2 {
+      font-size: 2.5em;
+      color: #e84a5f;
+      margin: 20px 0;
+    }
+    
+    .modal p {
+      font-size: 1.3em;
+      color: #555;
+      line-height: 1.6;
+    }
+    
+    .modal .love-msg {
+      font-size: 1.4em;
+      color: #ff6b95;
+      font-style: italic;
+      margin-top: 20px;
+    }
+    
+    .confetti {
+      position: fixed;
+      width: 10px; height: 10px;
+      top: -10px;
+      animation: fall 3s linear forwards;
+      z-index: 2000;
+    }
+    
+    @keyframes fall {
+      to { top: 110vh; transform: rotate(720deg); }
+    }
+    
+    .close-btn {
+      margin-top: 30px;
+      padding: 15px 50px;
+      background: linear-gradient(135deg, #ff6b95, #ff8e53);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    
+    .close-btn:hover { transform: scale(1.05); }
+    
+    .sparkle {
+      position: absolute;
+      font-size: 1.5em;
+      animation: sparkle 2s infinite;
+      pointer-events: none;
+    }
+    
+    @keyframes sparkle {
+      0%, 100% { opacity: 0; transform: scale(0); }
+      50% { opacity: 1; transform: scale(1); }
+    }
+    
+    .instruction {
+      font-size: 0.9em;
+      color: #999;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-hearts" id="floatingHearts"></div>
+  
+  <div class="container">
+    <div class="rose">🌹</div>
+    <h1>Hey there,</h1>
+    <div class="name" id="personName">Beautiful</div>
+    <p class="question">
+      Will you be my <span class="big-heart">💕</span> Valentine? <span class="big-heart">💕</span>
+    </p>
+    <div class="buttons">
+      <button class="btn yes-btn" onclick="showModal()">Yes! 💖</button>
+      <button class="btn no-btn" id="noBtn">No 😅</button>
+    </div>
+    <p class="instruction">Add <strong>?name=YourName</strong> to the URL to personalize!</p>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <div class="super-heart">💖</div>
+      <h2>YAAAY! 🎉</h2>
+      <p>You just made me the <strong>HAPPIEST</strong> person in the world!</p>
+      <p class="love-msg">"I promise to be the reason you smile every single day..." 💫</p>
+      <p style="margin-top:20px; font-size:1.8em;">I Love You <span id="modalName">Beautiful</span>! 🦋✨</p>
+      <p style="font-size:2em; margin-top:10px;">💕🌹💕</p>
+      <button class="close-btn" onclick="closeModal()">I Love You Too! 🥰</button>
+    </div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('noBtn');
+    const modal = document.getElementById('modal');
+    const container = document.querySelector('.container');
+    const personName = document.getElementById('personName');
+    const modalName = document.getElementById('modalName');
+    
+    // Get name from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    if (name) {
+      const decodedName = decodeURIComponent(name);
+      personName.textContent = decodedName;
+      modalName.textContent = decodedName;
+    }
+    
+    let attempts = 0;
+    let btnSize = 1;
+    const messages = [
+      "Nice try! 😏",
+      "Nope! 💃",
+      "Can't catch me! 🏃",
+      "Just say YES! 🙏",
+      "Please? 🥺",
+      "Come on! 💕",
+      "Say YES! 😍",
+      "Pretty please? 🌹"
+    ];
+    
+    function moveButton() {
+      const rect = container.getBoundingClientRect();
+      const maxX = rect.width - 150;
+      const maxY = 150;
+      const x = (Math.random() - 0.5) * maxX;
+      const y = (Math.random() - 0.3) * maxY;
+      noBtn.style.transform = `translate(${x}px, ${y}px) scale(${btnSize})`;
+      
+      attempts++;
+      btnSize = Math.max(0.5, btnSize - 0.05);
+      
+      if(attempts % 2 === 0) {
+        noBtn.textContent = messages[Math.floor(Math.random() * messages.length)];
+        setTimeout(() => noBtn.textContent = "No 😅", 600);
+      }
+      
+      if(attempts > 10) {
+        noBtn.style.fontSize = '0.9em';
+        noBtn.style.padding = '10px 30px';
+      }
+    }
+    
+    noBtn.addEventListener('mouseenter', moveButton);
+    noBtn.addEventListener('touchstart', (e) => { e.preventDefault(); moveButton(); });
+    noBtn.addEventListener('click', moveButton);
+    
+    function showModal() {
+      modal.classList.add('show');
+      createConfetti();
+      createHeartBurst();
+    }
+    
+    function closeModal() {
+      modal.classList.remove('show');
+    }
+    
+    function createConfetti() {
+      const colors = ['#ff6b95','#ff8e53','#ffe66d','#ff6b6b','#f38181','#ffb6c1','#ff69b4'];
+      for(let i = 0; i < 80; i++) {
+        setTimeout(() => {
+          const conf = document.createElement('div');
+          conf.className = 'confetti';
+          conf.style.left = Math.random() * 100 + 'vw';
+          conf.style.background = colors[Math.floor(Math.random() * colors.length)];
+          conf.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+          conf.style.width = (5 + Math.random() * 10) + 'px';
+          conf.style.height = conf.style.width;
+          conf.style.animationDuration = (2 + Math.random() * 2) + 's';
+          document.body.appendChild(conf);
+          setTimeout(() => conf.remove(), 4000);
+        }, i * 30);
+      }
+    }
+    
+    function createHeartBurst() {
+      for(let i = 0; i < 20; i++) {
+        setTimeout(() => {
+          const heart = document.createElement('div');
+          heart.textContent = '💕';
+          heart.style.cssText = `
+            position: fixed;
+            font-size: ${1 + Math.random() * 2}em;
+            left: 50%;
+            top: 50%;
+            z-index: 2001;
+            pointer-events: none;
+            animation: burstHeart 1.5s ease-out forwards;
+          `;
+          const angle = (i / 20) * Math.PI * 2;
+          const distance = 100 + Math.random() * 150;
+          heart.style.setProperty('--x', Math.cos(angle) * distance + 'px');
+          heart.style.setProperty('--y', Math.sin(angle) * distance + 'px');
+          document.body.appendChild(heart);
+          setTimeout(() => heart.remove(), 1500);
+        }, i * 50);
+      }
+    }
+    
+    // Add burst animation
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes burstHeart {
+        0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+        100% { transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(1); opacity: 0; }
+      }
+    `;
+    document.head.appendChild(style);
+    
+    // Floating hearts background
+    const heartsContainer = document.getElementById('floatingHearts');
+    const heartEmojis = ['💕', '💖', '💗', '💓', '❤️', '💘', '💝'];
+    
+    function createFloatingHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'float-heart';
+      heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+      heart.style.left = Math.random() * 100 + '%';
+      heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+      heart.style.animationDelay = Math.random() * 2 + 's';
+      heartsContainer.appendChild(heart);
+      setTimeout(() => heart.remove(), 10000);
+    }
+    
+    // Create initial hearts
+    for(let i = 0; i < 15; i++) createFloatingHeart();
+    setInterval(createFloatingHeart, 800);
+    
+    // Sparkles on container
+    setInterval(() => {
+      const sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+      sparkle.textContent = '✨';
+      sparkle.style.left = Math.random() * 100 + '%';
+      sparkle.style.top = Math.random() * 100 + '%';
+      container.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 2000);
+    }, 400);
+  </script>
+</body>
+</html>

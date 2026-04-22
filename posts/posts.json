@@ -1,0 +1,1141 @@
+[
+  {
+    "id": "li-001",
+    "date": "2026-03-19",
+    "title": "I've been using Claude Code daily for the past few months. Love it.",
+    "excerpt": "But I made a costly mistake; I wasn't tracking what I was spending.",
+    "body": "I've been using Claude Code daily for the past few months. Love it.\nBut I made a costly mistake; I wasn't tracking what I was spending.\n\nChecked my bill after 4 days: €330.\n\nLooked at my usage and realized 90% of my spend was wasteful. Using Opus for simple tasks. Re-explaining context every session. Running the same review workflow manually, over and over.\n\nSo I spent some time building tooling/aggrigating to fix it:\n\n→ claudetop — terminal dashboard to see costs in real time\n→ Model switching Opus only when the task actually needs it\n→ Reusable automation for repetitive workflows\n\nWent from a €10K/month trajectory to targeting ~€500. Same productivity.\n\nOpen-sourced the whole thing because every dev I talked to had the same blind spot.\n\nIf you're using Claude Code heavily, worth checking:\n\n```\nnpm install -g claudetop\n\nclaudetop --today\n```\nFull setup: https://lnkd.in/dK_98kRR\n\nimgsource: claude.md",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7440477852820578304",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-002",
+    "date": "2026-03-08",
+    "title": "Was reading Arpit Bhayani's latest piece and realize",
+    "excerpt": "Every database decision you've ever made assumed one thing:",
+    "body": "Was reading Arpit Bhayani's latest piece and realize:\n\nEvery database decision you've ever made assumed one thing:\n\nThe caller is deterministic code. Written by a human. Reviewed by a human. Deployed by a human.\n\nThat assumption held for 40 years.\nAgents just broke it.\n\n• They generate queries no one has ever seen before.\n• They hold connections while the LLM \"thinks.\n• They write data autonomously and retry when they shouldn't.\n• They fail silently. No exception. No alert. Just bad data.\n\nThe wild part?\nThe fixes aren't new technology.\nSoft deletes. Idempotency keys. Append-only logs. Least-privilege roles. Query tagging.\nWe've had these patterns for years.\nWe just kept saying \"we'll get to it.\n\nAgents don't give you that luxury anymore.\nThree things I now treat as non-negotiable:\n→ Role-per-agent-type with hard statement timeouts at the DB level\n→ Separate connection pools agent traffic and human traffic don't mix\n→ Schema designed for LLM legibility, not just developer convenience\n\nThis isn't a prompting problem.\nIt's a database design problem.\nThe database was never designed for this caller.\n\nBut the tools to make it safe; Already in the toolbox.\n\nBlog link in the comments 👇",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7436491035255435264",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-003",
+    "date": "2026-02-28",
+    "title": "We kept hitting a frustrating pattern: AI hallucination referencing Microsoft docs that were outdated or just wrong.",
+    "excerpt": "The fix was simpler than expected:",
+    "body": "We kept hitting a frustrating pattern: AI hallucination referencing Microsoft docs that were outdated or just wrong.\n\nThe fix was simpler than expected:\n🔧 Connected Claude Code to the Microsoft Learn MCP server\n📄 Now it pulls live Microsoft docs at query time not stale training data\n✅ Wrong turns dropped significantly\n⚡ Tickets that took half a day now close faster\n\nBut the bigger lesson here isn't just about Microsoft docs.\n\nAI is only as good as the context you give it. Training data has a cutoff. Your systems don't.\n\nMCP is how you close that gap connect your AI to live sources: docs, APIs, internal tools, databases. The model stays the same. The accuracy changes completely.\n\nMost teams are still using AI like a smart search engine. The ones pulling ahead are treating it like a live system that needs real data to do real work.\nIf you're building with AI and haven't explored MCP yet that's the thing worth 30 minutes of your time. 🚀",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7433591468046458880",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-004",
+    "date": "2026-02-25",
+    "title": "Someone built and open-sourced a real-time global intelligence dashboard and it's genuinely impressive.",
+    "excerpt": "𝗪𝗼𝗿𝗹𝗱 𝗠𝗼𝗻𝗶𝘁𝗼𝗿 tracks news, geopolitics, markets, and infrastructure all in one place, with a 3D globe and local AI support. No cloud, no data leaving your machine.",
+    "body": "Someone built and open-sourced a real-time global intelligence dashboard and it's genuinely impressive.\n\n𝗪𝗼𝗿𝗹𝗱 𝗠𝗼𝗻𝗶𝘁𝗼𝗿 tracks news, geopolitics, markets, and infrastructure all in one place, with a 3D globe and local AI support. No cloud, no data leaving your machine.\n\nA few things I found interesting as an engineer:\n\n• Pulling from dozens of different data sources and making them feel coherent is hard. Most tools fail here.\n• Real-time geospatial rendering at this quality in a browser is not easy to pull off.\n• Local LLM support is a thoughtful call — especially for anything sensitive.\n\nIf you work on real-time pipelines, data aggregation, or local AI — worth a look at the internals.\n→ https://lnkd.in/d4wXQ3yj\nHow do you handle normalising heterogeneous real-time feeds in your systems?",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7432354045727739904",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-005",
+    "date": "2026-02-24",
+    "title": "AI just hit a recursive call without a proper exit condition.",
+    "excerpt": "It was fine when the function read from the  Stack Overflow/web.",
+    "body": "AI just hit a recursive call without a proper exit condition.\nIt was fine when the function read from the  Stack Overflow/web.\nNow the function is calling itself .\n\nSo Stack overflows… but make it policy.",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7432181523136577536",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-006",
+    "date": "2026-02-20",
+    "title": "Google just dropped their Startup Technical Guide for AI Agents.",
+    "excerpt": "Building AI agents isn't a prompting problem.",
+    "body": "Google just dropped their Startup Technical Guide for AI Agents.\n\nMy honest takeaway:\nBuilding AI agents isn't a prompting problem.\nIt's a systems engineering problem.\n\nThe moment you treat:\n• Memory as architecture,\n• Tools as contracts,\n• Orchestration as control flow,\n• Grounding as reliability,\n• Runtime as DevOps,\n\nyou move from demo to product.\n\nLink in comments if you're building in this space.",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7430701478152966145",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-007",
+    "date": "2026-02-18",
+    "title": "Came across an interesting engineering write-up from Agoda that explores how to transform any API into an MCP-compatible interface using…",
+    "excerpt": "What’s technically interesting?",
+    "body": "Came across an interesting engineering write-up from Agoda that explores how to transform any API into an MCP-compatible interface using 𝗔𝗽𝗶𝗔𝗴𝗲𝗻𝘁 without writing additional code or deploying new services.\n\nWhat’s technically interesting?\n\n• Dynamic mapping of MCP requests → existing REST APIs\n• Schema-driven execution instead of handwritten adapters (SQL)\n• No additional microservice layer\n• AI/agent-ready interface on top of legacy APIs\n\nThe idea is simple but powerful.\nClean example of reducing integration friction while keeping infra simple.",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7430000364478734336",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-008",
+    "date": "2026-02-16",
+    "title": "The CEO of Y Combinator shared his CLAUDE.md prompt for Claude Code 🔥",
+    "excerpt": "He uses it to ship 4,000+ line features with full tests in about an hour.",
+    "body": "The CEO of Y Combinator shared his CLAUDE.md prompt for Claude Code 🔥\n\nHe uses it to ship 4,000+ line features with full tests in about an hour.\nThe key isn’t just the output, it’s the process.\nBefore writing code, Claude is asked to:\n\n•Check if the solution is overbuilt, underbuilt, or just right\n• Review test coverage, edge cases, and failure paths\n• Flag performance and scaling risks\n\nInstead of jumping straight into coding, it:\n\n• Reviews architecture → code quality → tests → performance\n• Explains tradeoffs with clear recommendations\n• Waits for feedback before moving ahead\n\nIt’s basically using AI like a senior engineer doing a design review first.\nTwo small hacks I use:\n\n• Ask for an ASCII diagram of the current system. Visualizing workflows or architecture changes makes decisions much clearer.\n• Upload a screenshot and ask for a functional diagram. It labels sections for you, so you can reference elements by name instead of describing them manually.\n\nFor small teams, that’s a big unlock. If you don’t have a staff engineer reviewing every PR, you can build that discipline into your AI workflow.",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7429305069897928705",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-009",
+    "date": "2026-02-07",
+    "title": "𝘛𝘩𝘦 𝘩𝘢𝘳𝘥𝘦𝘴𝘵 𝘭𝘦𝘴𝘴𝘰𝘯 𝘐 𝘭𝘦𝘢𝘳𝘯𝘦𝘥 𝘢𝘴 𝘢 𝘛𝘦𝘤𝘩 𝘓𝘦𝘢𝘥 𝘸𝘢𝘴𝘯'𝘵 𝘢𝘣𝘰𝘶𝘵 𝘵𝘦𝘤𝘩𝘯𝘰𝘭𝘰𝘨𝘺.",
+    "excerpt": "𝘌𝘢𝘳𝘭𝘺 𝘰𝘯, 𝘐 𝘵𝘩𝘰𝘶𝘨𝘩𝘵 𝘮𝘺 𝘫𝘰𝘣 𝘸𝘢𝘴: 𝘶𝘯𝘣𝘭𝘰𝘤𝘬 𝘵𝘩𝘦 𝘵𝘦𝘢𝘮, 𝘥𝘦𝘴𝘪𝘨𝘯 𝘤𝘭𝘦𝘢𝘯 𝘴𝘺𝘴𝘵𝘦𝘮𝘴, 𝘴𝘩𝘪𝘱 𝘧𝘢𝘴𝘵.",
+    "body": "𝘛𝘩𝘦 𝘩𝘢𝘳𝘥𝘦𝘴𝘵 𝘭𝘦𝘴𝘴𝘰𝘯 𝘐 𝘭𝘦𝘢𝘳𝘯𝘦𝘥 𝘢𝘴 𝘢 𝘛𝘦𝘤𝘩 𝘓𝘦𝘢𝘥 𝘸𝘢𝘴𝘯'𝘵 𝘢𝘣𝘰𝘶𝘵 𝘵𝘦𝘤𝘩𝘯𝘰𝘭𝘰𝘨𝘺.\n\n𝘌𝘢𝘳𝘭𝘺 𝘰𝘯, 𝘐 𝘵𝘩𝘰𝘶𝘨𝘩𝘵 𝘮𝘺 𝘫𝘰𝘣 𝘸𝘢𝘴: 𝘶𝘯𝘣𝘭𝘰𝘤𝘬 𝘵𝘩𝘦 𝘵𝘦𝘢𝘮, 𝘥𝘦𝘴𝘪𝘨𝘯 𝘤𝘭𝘦𝘢𝘯 𝘴𝘺𝘴𝘵𝘦𝘮𝘴, 𝘴𝘩𝘪𝘱 𝘧𝘢𝘴𝘵.\n\n𝘛𝘩𝘦𝘯 𝘤𝘢𝘮𝘦 𝘢 𝘱𝘳𝘰𝘫𝘦𝘤𝘵 𝘵𝘩𝘢𝘵 𝘤𝘩𝘢𝘯𝘨𝘦𝘥 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨.\n\n𝘞𝘦 𝘫𝘶𝘴𝘵 𝘯𝘦𝘦𝘥 𝘵𝘩𝘪𝘴 𝘧𝘦𝘢𝘵𝘶𝘳𝘦 𝘲𝘶𝘪𝘤𝘬𝘭𝘺.\n\n𝘕𝘰 𝘴𝘱𝘦𝘤𝘴. 𝘕𝘰 𝘦𝘥𝘨𝘦 𝘤𝘢𝘴𝘦𝘴. 𝘑𝘶𝘴𝘵 𝘶𝘳𝘨𝘦𝘯𝘤𝘺.\n\n𝘐 𝘧𝘪𝘭𝘭𝘦𝘥 𝘪𝘯 𝘵𝘩𝘦 𝘣𝘭𝘢𝘯𝘬𝘴 𝘮𝘺𝘴𝘦𝘭𝘧 𝘢𝘯𝘥 𝘴𝘩𝘪𝘱𝘱𝘦𝘥 𝘦𝘹𝘢𝘤𝘵𝘭𝘺 𝘸𝘩𝘢𝘵 𝘐 𝘵𝘩𝘰𝘶𝘨𝘩𝘵 𝘵𝘩𝘦𝘺 𝘯𝘦𝘦𝘥𝘦𝘥.\n\n𝘛𝘸𝘰 𝘸𝘦𝘦𝘬𝘴 𝘭𝘢𝘵𝘦𝘳:\n→ \"𝘊𝘢𝘯 𝘪𝘵 𝘩𝘢𝘯𝘥𝘭𝘦 𝘵𝘩𝘪𝘴 𝘴𝘤𝘦𝘯𝘢𝘳𝘪𝘰?\"\n→ \"𝘞𝘩𝘺 𝘥𝘪𝘥𝘯'𝘵 𝘸𝘦 𝘮𝘢𝘬𝘦 𝘵𝘩𝘪𝘴 𝘳𝘦𝘶𝘴𝘢𝘣𝘭𝘦?\"\n→ \"𝘊𝘰𝘮𝘱𝘭𝘪𝘢𝘯𝘤𝘦 𝘯𝘦𝘦𝘥𝘴 𝘢𝘯 𝘢𝘶𝘥𝘪𝘵 𝘵𝘳𝘢𝘪𝘭.\n\n𝘛𝘩𝘦 𝘤𝘰𝘥𝘦 𝘸𝘢𝘴𝘯'𝘵 𝘸𝘳𝘰𝘯𝘨. 𝘛𝘩𝘦 𝘦𝘹𝘱𝘦𝘤𝘵𝘢𝘵𝘪𝘰𝘯𝘴 𝘸𝘦𝘳𝘦.\n\n𝘛𝘩𝘢𝘵'𝘴 𝘸𝘩𝘦𝘯 𝘪𝘵 𝘤𝘭𝘪𝘤𝘬𝘦𝘥:\n\n𝘔𝘺 𝘫𝘰𝘣 𝘪𝘴𝘯'𝘵 𝘵𝘰 𝘤𝘰𝘯𝘷𝘦𝘳𝘵 𝘷𝘢𝘨𝘶𝘦 𝘳𝘦𝘲𝘶𝘪𝘳𝘦𝘮𝘦𝘯𝘵𝘴 𝘪𝘯𝘵𝘰 𝘤𝘰𝘥𝘦 𝘧𝘢𝘴𝘵. 𝘐𝘵'𝘴 𝘵𝘰 𝘴𝘭𝘰𝘸 𝘥𝘰𝘸𝘯 𝘢𝘯𝘥 𝘢𝘴𝘬 𝘵𝘩𝘦 𝘳𝘪𝘨𝘩𝘵 𝘲𝘶𝘦𝘴𝘵𝘪𝘰𝘯𝘴—𝘦𝘴𝘱𝘦𝘤𝘪𝘢𝘭𝘭𝘺 𝘸𝘩𝘦𝘯 𝘦𝘷𝘦𝘳𝘺𝘰𝘯𝘦 𝘸𝘢𝘯𝘵𝘴 𝘵𝘰 𝘳𝘶𝘴𝘩.\n\n𝘕𝘰𝘸:\n✓ 𝘈𝘴𝘬 \"𝘸𝘩𝘰 𝘸𝘪𝘭𝘭 𝘢𝘤𝘵𝘶𝘢𝘭𝘭𝘺 𝘶𝘴𝘦 𝘵𝘩𝘪𝘴?\n✓ 𝘋𝘦𝘮𝘢𝘯𝘥 𝘦𝘹𝘢𝘮𝘱𝘭𝘦𝘴, 𝘯𝘰𝘵 𝘢𝘴𝘴𝘶𝘮𝘱𝘵𝘪𝘰𝘯𝘴\n✓ 𝘋𝘰𝘤𝘶𝘮𝘦𝘯𝘵 𝘥𝘦𝘤𝘪𝘴𝘪𝘰𝘯𝘴 𝘣𝘦𝘧𝘰𝘳𝘦 𝘤𝘰𝘥𝘪𝘯𝘨\n✓ 𝘗𝘳𝘰𝘵𝘦𝘤𝘵 𝘮𝘺 𝘵𝘦𝘢𝘮 𝘧𝘳𝘰𝘮 𝘶𝘯𝘤𝘭𝘦𝘢𝘳 𝘢𝘴𝘬𝘴\n\n𝘊𝘭𝘦𝘢𝘳 𝘳𝘦𝘲𝘶𝘪𝘳𝘦𝘮𝘦𝘯𝘵𝘴 𝘥𝘰𝘯'𝘵 𝘴𝘭𝘰𝘸 𝘺𝘰𝘶 𝘥𝘰𝘸𝘯. 𝘛𝘩𝘦𝘺 𝘴𝘢𝘷𝘦 𝘺𝘰𝘶 𝘧𝘳𝘰𝘮 𝘣𝘶𝘪𝘭𝘥𝘪𝘯𝘨 𝘵𝘩𝘦 𝘸𝘳𝘰𝘯𝘨 𝘵𝘩𝘪𝘯𝘨 𝘵𝘩𝘳𝘦𝘦 𝘵𝘪𝘮𝘦𝘴.\n\n#𝘛𝘦𝘤𝘩𝘓𝘦𝘢𝘥 #𝘌𝘯𝘨𝘪𝘯𝘦𝘦𝘳𝘪𝘯𝘨 #𝘓𝘦𝘢𝘥𝘦𝘳𝘴𝘩𝘪𝘱",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7426002699151720449",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-010",
+    "date": "2025-12-23",
+    "title": "𝖨 𝗁𝖺𝖽 𝗍𝗐𝗈 𝖾𝗇𝗀𝗂𝗇𝖾𝖾𝗋𝗌 𝗈𝗇 𝗆𝗒 𝗍𝖾𝖺𝗆.",
+    "excerpt": "𝖤𝗇𝗀𝗂𝗇𝖾𝖾𝗋 𝖠 𝖺𝗅𝗐𝖺𝗒𝗌 𝖺𝗌𝗄𝖾𝖽 𝘄𝗵𝘆 𝖶𝗁𝗒 𝖺𝗋𝖾 𝗐𝖾 𝖻𝗎𝗂𝗅𝖽𝗂𝗇𝗀 𝗍𝗁𝗂𝗌? 𝖨𝗌 𝗍𝗁𝖾𝗋𝖾 𝖺 𝗌𝗂𝗆𝗉𝗅𝖾𝗋 𝗐𝖺𝗒? 𝖲𝗈𝗆𝖾𝗍𝗂𝗆𝖾𝗌 𝗂𝗍 𝗐𝖺𝗌 𝖺𝗇𝗇𝗈𝗒𝗂𝗇𝗀.",
+    "body": "𝖨 𝗁𝖺𝖽 𝗍𝗐𝗈 𝖾𝗇𝗀𝗂𝗇𝖾𝖾𝗋𝗌 𝗈𝗇 𝗆𝗒 𝗍𝖾𝖺𝗆.\n\n𝖤𝗇𝗀𝗂𝗇𝖾𝖾𝗋 𝖠 𝖺𝗅𝗐𝖺𝗒𝗌 𝖺𝗌𝗄𝖾𝖽 𝘄𝗵𝘆 𝖶𝗁𝗒 𝖺𝗋𝖾 𝗐𝖾 𝖻𝗎𝗂𝗅𝖽𝗂𝗇𝗀 𝗍𝗁𝗂𝗌? 𝖨𝗌 𝗍𝗁𝖾𝗋𝖾 𝖺 𝗌𝗂𝗆𝗉𝗅𝖾𝗋 𝗐𝖺𝗒? 𝖲𝗈𝗆𝖾𝗍𝗂𝗆𝖾𝗌 𝗂𝗍 𝗐𝖺𝗌 𝖺𝗇𝗇𝗈𝗒𝗂𝗇𝗀.\n\n𝖤𝗇𝗀𝗂𝗇𝖾𝖾𝗋 𝖡 𝗃𝗎𝗌𝗍 𝗐𝖺𝗇𝗍𝖾𝖽 𝖼𝗅𝖾𝖺𝗋 𝗍𝗂𝖼𝗄𝖾𝗍𝗌. 𝖦𝗂𝗏𝖾 𝗁𝗂𝗆 𝗍𝗁𝖾 𝗋𝖾𝗊𝗎𝗂𝗋𝖾𝗆𝖾𝗇𝗍𝗌, 𝗁𝖾 𝗐𝗈𝗎𝗅𝖽 𝖻𝗎𝗂𝗅𝖽 𝗂𝗍 𝖿𝖺𝗌𝗍, 𝖼𝗅𝖾𝖺𝗇, 𝗇𝗈 𝖽𝗋𝖺𝗆𝖺.\n\n𝖠 𝗒𝖾𝖺𝗋 𝖺𝗀𝗈, 𝖨 𝗐𝗈𝗎𝗅𝖽 𝗁𝖺𝗏𝖾 𝗌𝖺𝗂𝖽 𝖡 𝗐𝖺𝗌 𝗆𝗒 𝖽𝗋𝖾𝖺𝗆 𝖾𝗇𝗀𝗂𝗇𝖾𝖾𝗋.\n\n𝖭𝗈𝗐? 𝖨’𝗆 𝖺𝗅𝗅 𝗂𝗇 𝗈𝗇 𝖠.\n\n𝖧𝖾𝗋𝖾’𝗌 𝗐𝗁𝗒: 𝖠𝖨 𝖼𝖺𝗇 𝗐𝗋𝗂𝗍𝖾 𝖼𝗈𝖽𝖾. 𝖡𝗎𝗍 𝖠𝖨 𝖼𝖺𝗇’𝗍 𝖽𝖾𝖼𝗂𝖽𝖾 𝗂𝖿 𝗍𝗁𝖾 𝖼𝗈𝖽𝖾 𝗌𝗁𝗈𝗎𝗅𝖽 𝖾𝗏𝖾𝗇 𝖾𝗑𝗂𝗌𝗍.\n\n𝖤𝗇𝗀𝗂𝗇𝖾𝖾𝗋 𝖡 𝗃𝗎𝗌𝗍 𝖿𝗈𝗅𝗅𝗈𝗐𝗌 𝗂𝗇𝗌𝗍𝗋𝗎𝖼𝗍𝗂𝗈𝗇𝗌. 𝖨𝖿 𝗍𝗁𝖾 𝗌𝗉𝖾𝖼 𝗂𝗌 𝗐𝗋𝗈𝗇𝗀, 𝗁𝖾 𝗌𝗍𝗂𝗅𝗅 𝖻𝗎𝗂𝗅𝖽𝗌 𝗂𝗍. 𝖨𝖿 𝗍𝗁𝖾𝗋𝖾’𝗌 𝖺 𝖻𝖾𝗍𝗍𝖾𝗋 𝗐𝖺𝗒, 𝗁𝖾 𝗐𝗈𝗇’𝗍 𝗌𝖾𝖾 𝗂𝗍. 𝖨𝖿 𝗍𝗁𝖾 𝖿𝖾𝖺𝗍𝗎𝗋𝖾 𝗌𝗁𝗂𝗉𝗌 𝖺𝗇𝖽 𝗇𝗈𝖻𝗈𝖽𝗒 𝗎𝗌𝖾𝗌 𝗂𝗍? 𝖧𝖾 𝖽𝖾𝗅𝗂𝗏𝖾𝗋𝖾𝖽 𝗐𝗁𝖺𝗍 𝗐𝖺𝗌 𝖺𝗌𝗄𝖾𝖽 𝗃𝗈𝖻 𝖽𝗈𝗇𝖾.\n\n𝖤𝗇𝗀𝗂𝗇𝖾𝖾𝗋 𝖠 𝖽𝗋𝗂𝗏𝖾𝗌 𝗆𝖾 𝖼𝗋𝖺𝗓𝗒 𝗐𝗂𝗍𝗁 𝗊𝗎𝖾𝗌𝗍𝗂𝗈𝗇𝗌. 𝖡𝗎𝗍 𝗍𝗁𝗈𝗌𝖾 𝗊𝗎𝖾𝗌𝗍𝗂𝗈𝗇𝗌 𝗌𝖺𝗏𝖾 𝗎𝗌 𝗐𝖾𝖾𝗄𝗌:\n\n“𝖶𝗁𝗒 𝖺𝗋𝖾 𝗐𝖾 𝖻𝗎𝗂𝗅𝖽𝗂𝗇𝗀 𝗍𝗁𝗂𝗌 𝗂𝗇𝗌𝗍𝖾𝖺𝖽 𝗈𝖿 𝖿𝗂𝗑𝗂𝗇𝗀 𝗍𝗁𝖾 𝗋𝖾𝖺𝗅 𝗉𝗋𝗈𝖻𝗅𝖾𝗆?”\n“𝖢𝖺𝗇’𝗍 𝗐𝖾 𝗌𝗈𝗅𝗏𝖾 𝗍𝗁𝗂𝗌 𝗐𝗂𝗍𝗁𝗈𝗎𝗍 𝗐𝗋𝗂𝗍𝗂𝗇𝗀 𝗇𝖾𝗐 𝖼𝗈𝖽𝖾?”\n“𝖣𝗂𝖽 𝗐𝖾 𝖺𝗌𝗄 𝗎𝗌𝖾𝗋𝗌 𝗂𝖿 𝗍𝗁𝖾𝗒 𝖺𝖼𝗍𝗎𝖺𝗅𝗅𝗒 𝗇𝖾𝖾𝖽 𝗍𝗁𝗂𝗌?”\n\n𝖲𝗈𝗆𝖾𝗍𝗂𝗆𝖾𝗌 𝗐𝖾 𝖾𝗇𝖽 𝗎𝗉 𝖻𝗎𝗂𝗅𝖽𝗂𝗇𝗀 𝗌𝗈𝗆𝖾𝗍𝗁𝗂𝗇𝗀 𝗌𝗆𝖺𝗅𝗅𝖾𝗋. 𝖲𝗈𝗆𝖾𝗍𝗂𝗆𝖾𝗌 𝗐𝖾 𝖽𝗈𝗇’𝗍 𝖻𝗎𝗂𝗅𝖽 𝖺𝗇𝗒𝗍𝗁𝗂𝗇𝗀 𝖺𝗍 𝖺𝗅𝗅.\n\n𝖤𝗇𝗀𝗂𝗇𝖾𝖾𝗋𝗌 𝗐𝗁𝗈 𝗃𝗎𝗌𝗍 𝖿𝗈𝗅𝗅𝗈𝗐 𝗍𝗂𝖼𝗄𝖾𝗍𝗌 𝖺𝗋𝖾 𝖼𝗈𝗆𝗉𝖾𝗍𝗂𝗇𝗀 𝗐𝗂𝗍𝗁 𝖠𝖨. 𝖤𝗇𝗀𝗂𝗇𝖾𝖾𝗋𝗌 𝗐𝗁𝗈 𝗎𝗇𝖽𝖾𝗋𝗌𝗍𝖺𝗇𝖽 𝗍𝗁𝖾 𝗉𝗋𝗈𝖻𝗅𝖾𝗆? 𝖳𝗁𝖾𝗒 𝖺𝗋𝖾 𝗌𝗈𝗅𝗏𝗂𝗇𝗀 𝗌𝗈𝗆𝖾𝗍𝗁𝗂𝗇𝗀 𝖠𝖨 𝖼𝖺𝗇’𝗍 𝗍𝗈𝗎𝖼𝗁.\n\n𝖭𝗈𝗍 𝖾𝗏𝖾𝗋𝗒 𝖽𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋 𝗇𝖾𝖾𝖽𝗌 𝗍𝗈 𝖻𝖾 𝖺 𝗉𝗋𝗈𝖽𝗎𝖼𝗍 𝗆𝖺𝗇𝖺𝗀𝖾𝗋. 𝖡𝗎𝗍 𝗍𝗁𝖾 𝗈𝗇𝖾𝗌 𝗐𝗁𝗈 𝗍𝗁𝗂𝗇𝗄 𝖺𝖻𝗈𝗎𝗍 𝗍𝗁𝖾 𝗉𝗋𝗈𝖻𝗅𝖾𝗆, 𝗇𝗈𝗍 𝗃𝗎𝗌𝗍 𝗍𝗁𝖾 𝗍𝗂𝖼𝗄𝖾𝗍? 𝖳𝗁𝖾𝗒 𝖺𝗋𝖾 𝗍𝗁𝖾 𝗈𝗇𝖾𝗌 𝗒𝗈𝗎 𝗐𝖺𝗇𝗍 𝗈𝗇 𝗒𝗈𝗎𝗋 𝗍𝖾𝖺𝗆.\n\n𝖳𝗁𝖾 𝗋𝖾𝖺𝗅 𝗉𝗈𝗐𝖾𝗋 𝗂𝗌𝗇’𝗍 𝗂𝗇 𝗍𝗒𝗉𝗂𝗇𝗀 𝖼𝗈𝖽𝖾 𝗂𝗍’𝗌 𝗂𝗇 𝗍𝗁𝗂𝗇𝗄𝗂𝗇𝗀. 𝖨𝗇 𝖺𝗌𝗄𝗂𝗇𝗀 𝗊𝗎𝖾𝗌𝗍𝗂𝗈𝗇𝗌. 𝖨𝗇 𝖼𝗁𝖺𝗅𝗅𝖾𝗇𝗀𝗂𝗇𝗀.",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7409286829448962049",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-011",
+    "date": "2025-12-18",
+    "title": "𝖬𝗈𝗌𝗍 𝗉𝖾𝗋𝖿𝗈𝗋𝗆𝖺𝗇𝖼𝖾 𝗂𝗌𝗌𝗎𝖾𝗌 𝖽𝗈𝗇’𝗍 𝗌𝗍𝖺𝗋𝗍 𝗐𝗂𝗍𝗁 𝖿𝖺𝗂𝗅𝗎𝗋𝖾𝗌.",
+    "excerpt": "𝖳𝗁𝖾𝗒 𝗌𝗍𝖺𝗋𝗍 𝗐𝗂𝗍𝗁 𝗊𝗎𝖾𝗎𝖾𝗌 𝗊𝗎𝗂𝖾𝗍𝗅𝗒 𝗀𝗋𝗈𝗐𝗂𝗇𝗀, 𝗍𝗁𝖾𝗇 𝖽𝖺𝗍𝖺𝖻𝖺𝗌𝖾𝗌 𝗀𝖾𝗍 𝗌𝗅𝗈𝗐𝖾𝗋, 𝗍𝗁𝗋𝖾𝖺𝖽𝗌 𝗉𝗂𝗅𝖾 𝗎𝗉, 𝖺𝗇𝖽 𝗌𝗎𝖽𝖽𝖾𝗇𝗅𝗒 𝖾𝗏𝖾𝗋𝗒𝗈𝗇𝖾 𝗂𝗌 “𝗂𝗇𝗏𝖾𝗌𝗍𝗂𝗀𝖺…",
+    "body": "𝖬𝗈𝗌𝗍 𝗉𝖾𝗋𝖿𝗈𝗋𝗆𝖺𝗇𝖼𝖾 𝗂𝗌𝗌𝗎𝖾𝗌 𝖽𝗈𝗇’𝗍 𝗌𝗍𝖺𝗋𝗍 𝗐𝗂𝗍𝗁 𝖿𝖺𝗂𝗅𝗎𝗋𝖾𝗌.\n𝖳𝗁𝖾𝗒 𝗌𝗍𝖺𝗋𝗍 𝗐𝗂𝗍𝗁 𝗊𝗎𝖾𝗎𝖾𝗌 𝗊𝗎𝗂𝖾𝗍𝗅𝗒 𝗀𝗋𝗈𝗐𝗂𝗇𝗀, 𝗍𝗁𝖾𝗇 𝖽𝖺𝗍𝖺𝖻𝖺𝗌𝖾𝗌 𝗀𝖾𝗍 𝗌𝗅𝗈𝗐𝖾𝗋, 𝗍𝗁𝗋𝖾𝖺𝖽𝗌 𝗉𝗂𝗅𝖾 𝗎𝗉, 𝖺𝗇𝖽 𝗌𝗎𝖽𝖽𝖾𝗇𝗅𝗒 𝖾𝗏𝖾𝗋𝗒𝗈𝗇𝖾 𝗂𝗌 “𝗂𝗇𝗏𝖾𝗌𝗍𝗂𝗀𝖺𝗍𝗂𝗇𝗀 𝗅𝖺𝗍𝖾𝗇𝖼𝗒”.\n\n𝖨𝗇𝗌𝗂𝖽𝖾 𝖭𝖾𝗍𝖿𝗅𝗂𝗑, 𝖾𝗇𝗀𝗂𝗇𝖾𝖾𝗋𝗌 𝗍𝖺𝖼𝗄𝗅𝖾𝖽 𝗍𝗁𝗂𝗌 𝗐𝗂𝗍𝗁 𝖺 𝗌𝗂𝗆𝗉𝗅𝖾 𝗂𝖽𝖾𝖺 𝖺𝗇𝖽 𝗉𝗈𝗐𝖾𝗋𝖿𝗎𝗅 𝖾𝗑𝖾𝖼𝗎𝗍𝗂𝗈𝗇:\n𝗔𝗱𝗮𝗽𝘁𝗶𝘃𝗲 𝗖𝗼𝗻𝗰𝘂𝗿𝗿𝗲𝗻𝗰𝘆 𝗟𝗶𝗺𝗶𝘁𝘀, 𝗂𝗇𝗌𝗉𝗂𝗋𝖾𝖽 𝖻𝗒 𝗁𝗈𝗐 𝖳𝖢𝖯 𝗆𝖺𝗇𝖺𝗀𝖾𝗌 𝖼𝗈𝗇𝗀𝖾𝗌𝗍𝗂𝗈𝗇.\n\n𝖨𝗇𝗌𝗍𝖾𝖺𝖽 𝗈𝖿 𝗁𝖺𝗋𝖽-𝖼𝗈𝖽𝗂𝗇𝗀 “𝗌𝖺𝖿𝖾” 𝖼𝗈𝗇𝖼𝗎𝗋𝗋𝖾𝗇𝖼𝗒 𝗇𝗎𝗆𝖻𝖾𝗋𝗌 (𝗐𝗁𝗂𝖼𝗁 𝖺𝗋𝖾 𝗐𝗋𝗈𝗇𝗀 𝗍𝗁𝖾 𝗆𝗈𝗆𝖾𝗇𝗍 𝗒𝗈𝗎 𝖽𝖾𝗉𝗅𝗈𝗒), 𝖭𝖾𝗍𝖿𝗅𝗂𝗑 𝗅𝖾𝗍𝗌 𝖾𝖺𝖼𝗁 𝗌𝖾𝗋𝗏𝗂𝖼𝖾 𝖺𝖽𝗃𝗎𝗌𝗍 𝗂𝗍𝗌𝖾𝗅𝖿 𝖻𝖺𝗌𝖾𝖽 𝗈𝗇 𝗋𝖾𝖺𝗅 𝗌𝗂𝗀𝗇𝖺𝗅𝗌:\n\n• 𝖶𝖺𝗍𝖼𝗁 𝗅𝖺𝗍𝖾𝗇𝖼𝗒 (𝗍𝗂𝗆𝖾 𝗍𝖺𝗄𝖾𝗇 𝗍𝗈 𝖼𝗈𝗆𝗉𝗅𝖾𝗍𝖾 𝖺 𝗋𝖾𝗊𝗎𝖾𝗌𝗍) 𝗂𝗇 𝗋𝖾𝖺𝗅 𝗍𝗂𝗆𝖾\n\n• 𝖣𝖾𝗍𝖾𝖼𝗍 𝗐𝗁𝖾𝗇 𝗊𝗎𝖾𝗎𝗂𝗇𝗀 𝖻𝖾𝗀𝗂𝗇𝗌\n\n• 𝖨𝗇𝖼𝗋𝖾𝖺𝗌𝖾 𝗈𝗋 𝖽𝖾𝖼𝗋𝖾𝖺𝗌𝖾 𝖼𝗈𝗇𝖼𝗎𝗋𝗋𝖾𝗇𝖼𝗒 𝖺𝗎𝗍𝗈𝗆𝖺𝗍𝗂𝖼𝖺𝗅𝗅𝗒, 𝗃𝗎𝗌𝗍 𝗅𝗂𝗄𝖾 𝖳𝖢𝖯 𝗌𝗅𝗈𝗐𝗌 𝖽𝗈𝗐𝗇 𝗐𝗁𝖾𝗇 𝗉𝖺𝖼𝗄𝖾𝗍𝗌 𝗀𝖾𝗍 𝖽𝖾𝗅𝖺𝗒𝖾𝖽\n\n𝖠𝗍 𝗍𝗁𝖾 𝖼𝗈𝗋𝖾 𝗂𝗌 𝖺 𝗌𝗎𝗋𝗉𝗋𝗂𝗌𝗂𝗇𝗀𝗅𝗒 𝖼𝗅𝖾𝖺𝗇 𝖿𝗈𝗋𝗆𝗎𝗅𝖺:\n\n𝗇𝖾𝗐𝖫𝗂𝗆𝗂𝗍 = 𝖼𝗎𝗋𝗋𝖾𝗇𝗍𝖫𝗂𝗆𝗂𝗍 × (𝗆𝗂𝗇𝖱𝖳𝖳 / 𝗈𝖻𝗌𝖾𝗋𝗏𝖾𝖽𝖱𝖳𝖳)\n\n• 𝗆𝗂𝗇𝖱𝖳𝖳 → 𝖻𝖾𝗌𝗍 𝗈𝖻𝗌𝖾𝗋𝗏𝖾𝖽 𝗅𝖺𝗍𝖾𝗇𝖼𝗒 (𝗇𝗈 𝗊𝗎𝖾𝗎𝖾𝗂𝗇𝗀)\n\n• 𝗈𝖻𝗌𝖾𝗋𝗏𝖾𝖽𝖱𝖳𝖳 → 𝖼𝗎𝗋𝗋𝖾𝗇𝗍 𝗅𝖺𝗍𝖾𝗇𝖼𝗒 𝗎𝗇𝖽𝖾𝗋 𝗅𝗈𝖺𝖽\n\n𝖨𝖿 𝗅𝖺𝗍𝖾𝗇𝖼𝗒 𝗋𝗂𝗌𝖾𝗌, 𝖼𝗈𝗇𝖼𝗎𝗋𝗋𝖾𝗇𝖼𝗒 𝖽𝗋𝗈𝗉𝗌.\n𝖨𝖿 𝗅𝖺𝗍𝖾𝗇𝖼𝗒 𝗌𝗍𝖺𝗒𝗌 𝖼𝗅𝗈𝗌𝖾 𝗍𝗈 𝗍𝗁𝖾 𝗆𝗂𝗇𝗂𝗆𝗎𝗆, 𝖼𝗈𝗇𝖼𝗎𝗋𝗋𝖾𝗇𝖼𝗒 𝗀𝗋𝗈𝗐𝗌.\n𝖭𝗈 𝗀𝗎𝖾𝗌𝗌𝗐𝗈𝗋𝗄, 𝗇𝗈 𝗌𝗍𝖺𝗍𝗂𝖼 𝗍𝗁𝗋𝖾𝗌𝗁𝗈𝗅𝖽𝗌 𝗉𝗋𝖾𝗍𝖾𝗇𝖽𝗂𝗇𝗀 𝗍𝗁𝖾 𝗌𝗒𝗌𝗍𝖾𝗆 𝗂𝗌 𝗌𝗍𝖺𝗍𝗂𝖼.\n𝖭𝗈 𝖽𝖺𝗌𝗁𝖻𝗈𝖺𝗋𝖽𝗌 𝖺𝗋𝗀𝗎𝗂𝗇𝗀 𝖺𝖻𝗈𝗎𝗍 𝗍𝗁𝖾 “𝗋𝗂𝗀𝗁𝗍” 𝗇𝗎𝗆𝖻𝖾𝗋.\n𝖭𝗈 𝖼𝗈𝗇𝖿𝗂𝗀 𝖺𝗋𝖼𝗁𝖺𝖾𝗈𝗅𝗈𝗀𝗒 𝖽𝗎𝗋𝗂𝗇𝗀 𝗂𝗇𝖼𝗂𝖽𝖾𝗇𝗍𝗌.\n𝖳𝗁𝖾 𝗌𝖾𝗋𝗏𝗂𝖼𝖾 𝗅𝖾𝖺𝗋𝗇𝗌 𝗂𝗍𝗌 𝗈𝗐𝗇 𝗅𝗂𝗆𝗂𝗍𝗌 𝖺𝗇𝖽 𝖻𝖺𝖼𝗄𝗌 𝗈𝖿𝖿 𝖻𝖾𝖿𝗈𝗋𝖾 𝗍𝗁𝖾 𝖽𝖺𝗍𝖺𝖻𝖺𝗌𝖾 𝗍𝖺𝗉𝗌 𝗈𝗎𝗍.\n\n𝖨𝖿 𝗍𝗁𝖾 𝗇𝖾𝗍𝗐𝗈𝗋𝗄 𝗅𝖺𝗒𝖾𝗋 𝖼𝗋𝖺𝖼𝗄𝖾𝖽 𝗍𝗁𝗂𝗌 𝖽𝖾𝖼𝖺𝖽𝖾𝗌 𝖺𝗀𝗈, 𝗈𝗎𝗋 𝗌𝖾𝗋𝗏𝗂𝖼𝖾𝗌 𝖼𝖺𝗇 𝗍𝗈𝗈.\n\n#𝖲𝗒𝗌𝗍𝖾𝗆𝖣𝖾𝗌𝗂𝗀𝗇 #𝖤𝗇𝗀𝗂𝗇𝖾𝖾𝗋𝗂𝗇𝗀𝖫𝖾𝖺𝖽𝖾𝗋𝗌𝗁𝗂𝗉 #𝖣𝗂𝗌𝗍𝗋𝗂𝖻𝗎𝗍𝖾𝖽𝖲𝗒𝗌𝗍𝖾𝗆𝗌 #𝖭𝖾𝗍𝖿𝗅𝗂𝗑 #𝖬𝗂𝖼𝗋𝗈𝗌𝖾𝗋𝗏𝗂𝖼𝖾𝗌 #𝖯𝖾𝗋𝖿𝗈𝗋𝗆𝖺𝗇𝖼𝖾𝖤𝗇𝗀𝗂𝗇𝖾𝖾𝗋𝗂𝗇𝗀 #𝖠𝖽𝖺𝗉𝗍𝗂𝗏𝖾𝖢𝗈𝗇𝖼𝗎𝗋𝗋𝖾𝗇𝖼𝗒 #𝖲𝗈𝖿𝗍𝗐𝖺𝗋𝖾𝖠𝗋𝖼𝗁𝗂𝗍𝖾𝖼𝗍𝗎𝗋𝖾 #𝖱𝖾𝗅𝗂𝖺𝖻𝗂𝗅𝗂𝗍𝗒𝖤𝗇𝗀𝗂𝗇𝖾𝖾𝗋𝗂𝗇𝗀",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7407366118362877953",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-012",
+    "date": "2025-12-09",
+    "title": "𝖩𝗎𝗌𝗍 𝖽𝗂𝗌𝖼𝗈𝗏𝖾𝗋𝖾𝖽 𝖲𝖾𝗋𝗏𝖾𝗋 𝖲𝗎𝗋𝗏𝗂𝗏𝖺𝗅 𝖺 𝗍𝗈𝗐𝖾𝗋-𝖽𝖾𝖿𝖾𝗇𝗌𝖾 𝗌𝗍𝗒𝗅𝖾 𝗀𝖺𝗆𝖾 𝗍𝗁𝖺𝗍 𝗍𝖾𝖺𝖼𝗁𝖾𝗌…",
+    "excerpt": "𝖡𝗎𝗂𝗅𝖽 𝗒𝗈𝗎𝗋 𝗂𝗇𝖿𝗋𝖺. 𝖧𝖺𝗇𝖽𝗅𝖾 𝗍𝗋𝖺𝖿𝖿𝗂𝖼 𝗌𝗉𝗂𝗄𝖾𝗌. 𝖲𝗎𝗋𝗏𝗂𝗏𝖾 𝖺𝗍𝗍𝖺𝖼𝗄𝗌. 𝖲𝗍𝖺𝗒 𝗐𝗂𝗍𝗁𝗂𝗇 𝖻𝗎𝖽𝗀𝖾𝗍.",
+    "body": "𝖩𝗎𝗌𝗍 𝖽𝗂𝗌𝖼𝗈𝗏𝖾𝗋𝖾𝖽 𝖲𝖾𝗋𝗏𝖾𝗋 𝖲𝗎𝗋𝗏𝗂𝗏𝖺𝗅 𝖺 𝗍𝗈𝗐𝖾𝗋-𝖽𝖾𝖿𝖾𝗇𝗌𝖾 𝗌𝗍𝗒𝗅𝖾 𝗀𝖺𝗆𝖾 𝗍𝗁𝖺𝗍 𝗍𝖾𝖺𝖼𝗁𝖾𝗌 𝗋𝖾𝖺𝗅 𝖼𝗅𝗈𝗎𝖽 𝖺𝗋𝖼𝗁𝗂𝗍𝖾𝖼𝗍𝗎𝗋𝖾 𝗌𝗄𝗂𝗅𝗅𝗌.\n𝖡𝗎𝗂𝗅𝖽 𝗒𝗈𝗎𝗋 𝗂𝗇𝖿𝗋𝖺. 𝖧𝖺𝗇𝖽𝗅𝖾 𝗍𝗋𝖺𝖿𝖿𝗂𝖼 𝗌𝗉𝗂𝗄𝖾𝗌. 𝖲𝗎𝗋𝗏𝗂𝗏𝖾 𝖺𝗍𝗍𝖺𝖼𝗄𝗌. 𝖲𝗍𝖺𝗒 𝗐𝗂𝗍𝗁𝗂𝗇 𝖻𝗎𝖽𝗀𝖾𝗍.\n\n𝖨 𝗅𝗈𝗏𝖾 𝗁𝗈𝗐 𝗂𝗍 𝗍𝗎𝗋𝗇𝗌 𝗌𝖼𝖺𝗅𝗂𝗇𝗀, 𝗅𝗈𝖺𝖽-𝖻𝖺𝗅𝖺𝗇𝖼𝗂𝗇𝗀, 𝖺𝗇𝖽 𝗋𝖾𝗌𝗂𝗅𝗂𝖾𝗇𝖼𝖾 𝗂𝗇𝗍𝗈 𝖺 𝖿𝗎𝗇, 𝗏𝗂𝗌𝗎𝖺𝗅 𝖼𝗁𝖺𝗅𝗅𝖾𝗇𝗀𝖾.\n𝖶𝗈𝗋𝗍𝗁 𝖺 𝗅𝗈𝗈𝗄 👉 𝗁𝗍𝗍𝗉𝗌://𝗀𝗂𝗍𝗁𝗎𝖻.𝖼𝗈𝗆/𝗉𝗌𝗁𝖾𝗇𝗈𝗄/𝗌𝖾𝗋𝗏𝖾𝗋-𝗌𝗎𝗋𝗏𝗂𝗏𝖺𝗅",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7404300127676633088",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-013",
+    "date": "2025-11-28",
+    "title": "⚠️ 𝗚𝗼𝗼𝗴𝗹𝗲 𝗔𝗻𝘁𝗶𝗴𝗿𝗮𝘃𝗶𝘁𝘆 𝗜𝗗𝗘 𝗵𝗮𝘀 𝗮 𝘀𝗲𝗿𝗶𝗼𝘂𝘀 𝘀𝗲𝗰𝘂𝗿𝗶𝘁𝘆 𝗳𝗹𝗮𝘄!",
+    "excerpt": "𝖱𝖾𝗌𝖾𝖺𝗋𝖼𝗁𝖾𝗋𝗌 𝖿𝗈𝗎𝗇𝖽 𝗍𝗁𝖺𝗍 𝖠𝗇𝗍𝗂𝗀𝗋𝖺𝗏𝗂𝗍𝗒’𝗌 𝖠𝖨, 𝖦𝖾𝗆𝗂𝗇𝗂:",
+    "body": "⚠️ 𝗚𝗼𝗼𝗴𝗹𝗲 𝗔𝗻𝘁𝗶𝗴𝗿𝗮𝘃𝗶𝘁𝘆 𝗜𝗗𝗘 𝗵𝗮𝘀 𝗮 𝘀𝗲𝗿𝗶𝗼𝘂𝘀 𝘀𝗲𝗰𝘂𝗿𝗶𝘁𝘆 𝗳𝗹𝗮𝘄!\n\n𝖱𝖾𝗌𝖾𝖺𝗋𝖼𝗁𝖾𝗋𝗌 𝖿𝗈𝗎𝗇𝖽 𝗍𝗁𝖺𝗍 𝖠𝗇𝗍𝗂𝗀𝗋𝖺𝗏𝗂𝗍𝗒’𝗌 𝖠𝖨, 𝖦𝖾𝗆𝗂𝗇𝗂:\n𝟣. 𝖳𝗁𝖾 𝖺𝗍𝗍𝖺𝖼𝗄 𝗏𝖾𝖼𝗍𝗈𝗋 – 𝖳𝗁𝖾 𝖠𝖨 𝖺𝗌𝗌𝗂𝗌𝗍𝖺𝗇𝗍, 𝖦𝖾𝗆𝗂𝗇𝗂, 𝗋𝖾𝖺𝖽𝗌 𝗂𝗇𝗍𝖾𝗀𝗋𝖺𝗍𝗂𝗈𝗇 𝗀𝗎𝗂𝖽𝖾𝗌 𝗈𝗋 𝗂𝗇𝗌𝗍𝗋𝗎𝖼𝗍𝗂𝗈𝗇𝗌 𝗒𝗈𝗎 𝗀𝗂𝗏𝖾 𝗂𝗍. 𝖬𝖺𝗅𝗂𝖼𝗂𝗈𝗎𝗌 𝗀𝗎𝗂𝖽𝖾𝗌 𝖼𝖺𝗇 𝖻𝖾 “𝗉𝗈𝗂𝗌𝗈𝗇𝖾𝖽” 𝗐𝗂𝗍𝗁 𝗁𝗂𝖽𝖽𝖾𝗇 𝗂𝗇𝗌𝗍𝗋𝗎𝖼𝗍𝗂𝗈𝗇𝗌 𝗍𝗈 𝖽𝗈 𝖻𝖺𝖽 𝗍𝗁𝗂𝗇𝗀𝗌.\n\n𝟤. 𝖡𝗒𝗉𝖺𝗌𝗌𝗂𝗇𝗀 𝗉𝗋𝗈𝗍𝖾𝖼𝗍𝗂𝗈𝗇𝗌 – 𝖤𝗏𝖾𝗇 𝗂𝖿 𝗒𝗈𝗎 𝗁𝖺𝗏𝖾 .𝖾𝗇𝗏 𝖿𝗂𝗅𝖾𝗌 𝗈𝗋 .𝗀𝗂𝗍𝗂𝗀𝗇𝗈𝗋𝖾 𝗍𝗈 𝗁𝗂𝖽𝖾 𝗌𝖾𝖼𝗋𝖾𝗍𝗌, 𝖦𝖾𝗆𝗂𝗇𝗂 𝖼𝖺𝗇 𝖻𝖾 𝗍𝗋𝗂𝖼𝗄𝖾𝖽 𝗂𝗇𝗍𝗈 𝗂𝗀𝗇𝗈𝗋𝗂𝗇𝗀 𝗍𝗁𝗈𝗌𝖾 𝗌𝖺𝖿𝖾𝗀𝗎𝖺𝗋𝖽𝗌.\n\n𝟥. 𝖤𝗑𝖿𝗂𝗅𝗍𝗋𝖺𝗍𝗂𝗈𝗇 – 𝖮𝗇𝖼𝖾 𝗍𝗋𝗂𝖼𝗄𝖾𝖽, 𝖦𝖾𝗆𝗂𝗇𝗂 𝖼𝖺𝗇 𝗋𝖾𝖺𝖽 𝗌𝖾𝗇𝗌𝗂𝗍𝗂𝗏𝖾 𝖿𝗂𝗅𝖾𝗌 𝖿𝗋𝗈𝗆 𝗒𝗈𝗎𝗋 𝗐𝗈𝗋𝗄𝗌𝗉𝖺𝖼𝖾 𝖺𝗇𝖽 𝗌𝖾𝗇𝖽 𝗍𝗁𝖾𝗆 𝗍𝗈 𝖺𝗇 𝖺𝗍𝗍𝖺𝖼𝗄𝖾𝗋’𝗌 𝗌𝖾𝗋𝗏𝖾𝗋.\n\n𝖦𝗈𝗈𝗀𝗅𝖾’𝗌 𝗋𝖾𝗌𝗉𝗈𝗇𝗌𝖾 𝖳𝗁𝖾𝗒’𝗏𝖾 𝖼𝗈𝗇𝖿𝗂𝗋𝗆𝖾𝖽 𝗍𝗁𝖾 𝗋𝗂𝗌𝗄 𝖻𝗎𝗍 𝗁𝖺𝗏𝖾𝗇’𝗍 𝗂𝗌𝗌𝗎𝖾𝖽 𝖺 𝗉𝖺𝗍𝖼𝗁 𝗒𝖾𝗍.\n\n𝖳𝖺𝗄𝖾𝖺𝗐𝖺𝗒: 𝖣𝗈𝗇’𝗍 𝖻𝗅𝗂𝗇𝖽𝗅𝗒 𝖿𝖾𝖾𝖽 𝖾𝗑𝗍𝖾𝗋𝗇𝖺𝗅 𝗀𝗎𝗂𝖽𝖾𝗌 𝗈𝗋 𝗌𝖼𝗋𝗂𝗉𝗍𝗌 𝗂𝗇𝗍𝗈 𝖠𝗇𝗍𝗂𝗀𝗋𝖺𝗏𝗂𝗍𝗒. 𝖳𝗋𝖾𝖺𝗍 𝗍𝗁𝖾𝗆 𝗅𝗂𝗄𝖾 𝗎𝗇𝗍𝗋𝗎𝗌𝗍𝖾𝖽 𝖼𝗈𝖽𝖾, 𝖻𝖾𝖼𝖺𝗎𝗌𝖾 𝖦𝖾𝗆𝗂𝗇𝗂 𝖼𝖺𝗇 𝖺𝖼𝗍 𝗈𝗇 𝗍𝗁𝖾𝗆.\n\nimg_src: devsecopsnow",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7400123843819900928",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-014",
+    "date": "2025-11-27",
+    "title": "𝗔𝗣𝗜 𝗩𝗲𝗿𝘀𝗶𝗼𝗻𝗶𝗻𝗴: 𝗖𝗼𝗿𝗽𝗼𝗿𝗮𝘁𝗲 𝗘𝗱𝗶𝘁𝗶𝗼𝗻",
+    "excerpt": "/𝗏𝟣 → /𝗏𝟤 → /𝗏𝟥-𝖽𝖾𝗏-𝗅𝖾𝖿𝗍 → /𝗏𝟥.𝟣-𝖥𝖨𝖭𝖠𝖫-𝖥𝖨𝖭𝖠𝖫 😩",
+    "body": "𝗔𝗣𝗜 𝗩𝗲𝗿𝘀𝗶𝗼𝗻𝗶𝗻𝗴: 𝗖𝗼𝗿𝗽𝗼𝗿𝗮𝘁𝗲 𝗘𝗱𝗶𝘁𝗶𝗼𝗻\n\n/𝗏𝟣 → /𝗏𝟤 → /𝗏𝟥-𝖽𝖾𝗏-𝗅𝖾𝖿𝗍 → /𝗏𝟥.𝟣-𝖥𝖨𝖭𝖠𝖫-𝖥𝖨𝖭𝖠𝖫 😩\n\n𝖲𝗉𝗋𝗂𝗇𝗀 𝖡𝗈𝗈𝗍 𝟦 𝗌𝗁𝗈𝗐𝗌 𝗎𝗉: “𝖲𝗍𝗈𝗉 𝗍𝗁𝗂𝗌 𝗆𝖺𝖽𝗇𝖾𝗌𝗌. 𝖴𝗌𝖾 𝖺 𝗁𝖾𝖺𝖽𝖾𝗋.”\n𝗌𝗉𝗋𝗂𝗇𝗀.𝗆𝗏𝖼.𝖺𝗉𝗂𝗏𝖾𝗋𝗌𝗂𝗈𝗇.𝗎𝗌𝖾.𝗁𝖾𝖺𝖽𝖾𝗋 = 𝖠𝖯𝖨-𝖵𝖾𝗋𝗌𝗂𝗈𝗇\n\n@𝖦𝖾𝗍𝖬𝖺𝗉𝗉𝗂𝗇𝗀(\"/𝗉𝗋𝗈𝖽𝗎𝖼𝗍𝗌/{𝗂𝖽}\", 𝗏𝖾𝗋𝗌𝗂𝗈𝗇=\"𝟣\")\n@𝖦𝖾𝗍𝖬𝖺𝗉𝗉𝗂𝗇𝗀(\"/𝗉𝗋𝗈𝖽𝗎𝖼𝗍𝗌/{𝗂𝖽}\", 𝗏𝖾𝗋𝗌𝗂𝗈𝗇=\"𝟤\")\n\n𝖲𝖺𝗆𝖾 𝖴𝖱𝖫. 𝖬𝗎𝗅𝗍𝗂𝗉𝗅𝖾 𝗏𝖾𝗋𝗌𝗂𝗈𝗇𝗌. 𝖢𝗁𝖺𝗈𝗌 𝖼𝗈𝗇𝗍𝖺𝗂𝗇𝖾𝖽.\n\n𝖡𝖺𝖼𝗄𝖾𝗇𝖽: “𝖯𝖾𝖺𝖼𝖾.” 😌\n𝖥𝗋𝗈𝗇𝗍𝖾𝗇𝖽: “𝖬𝖺𝗀𝗂𝖼.”\n𝖠𝗋𝖼𝗁𝗂𝗍𝖾𝖼𝗍𝗌: “𝖶𝗁𝗈 𝖺𝗉𝗉𝗋𝗈𝗏𝖾𝖽 /𝗏𝟩-𝖥𝖨𝖭𝖠𝖫-𝖿𝗈𝗋-𝗋𝖾𝖺𝗅?” 😭\n\n𝖲𝗉𝗋𝗂𝗇𝗀 𝖡𝗈𝗈𝗍 𝟦: “𝖭𝗈𝗍 𝗆𝗒 𝖼𝗂𝗋𝖼𝗎𝗌.”",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7399937776516841472",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-015",
+    "date": "2025-11-15",
+    "title": "\udd10  𝗣𝗦𝗔: 𝗬𝗼𝘂𝗿 𝗦𝗦𝗛 𝗞𝗲𝘆 𝗜𝘀𝗻'𝘁 𝗗𝗼𝗶𝗻𝗴 𝗪𝗵𝗮𝘁 𝗬𝗼𝘂 𝗧𝗵𝗶𝗻𝗸 𝗜𝘁 𝗗𝗼𝗲𝘀",
+    "excerpt": "𝖰𝗎𝗂𝖼𝗄 𝗋𝖾𝖺𝗅𝗂𝗍𝗒 𝖼𝗁𝖾𝖼𝗄: 𝗉𝗎𝗌𝗁𝗂𝗇𝗀 𝖼𝗈𝖽𝖾 𝗈𝗏𝖾𝗋 𝖲𝖲𝖧 𝗍𝗈 𝖦𝗂𝗍𝖧𝗎𝖻 𝖽𝗈𝖾𝗌𝗇'𝗍 𝗆𝖾𝖺𝗇 𝗒𝗈𝗎𝗋 𝖼𝗈𝗆𝗆𝗂𝗍𝗌 𝖺𝗋𝖾 𝗏𝖾𝗋𝗂𝖿𝗂𝖾𝖽. 𝖨𝗍 𝗃𝗎𝗌𝗍 𝗆𝖾𝖺𝗇𝗌 𝗌𝗈𝗆𝖾𝗈𝗇𝖾 𝗐𝗂𝗍𝗁 …",
+    "body": "🔐  𝗣𝗦𝗔: 𝗬𝗼𝘂𝗿 𝗦𝗦𝗛 𝗞𝗲𝘆 𝗜𝘀𝗻'𝘁 𝗗𝗼𝗶𝗻𝗴 𝗪𝗵𝗮𝘁 𝗬𝗼𝘂 𝗧𝗵𝗶𝗻𝗸 𝗜𝘁 𝗗𝗼𝗲𝘀\n\n𝖰𝗎𝗂𝖼𝗄 𝗋𝖾𝖺𝗅𝗂𝗍𝗒 𝖼𝗁𝖾𝖼𝗄: 𝗉𝗎𝗌𝗁𝗂𝗇𝗀 𝖼𝗈𝖽𝖾 𝗈𝗏𝖾𝗋 𝖲𝖲𝖧 𝗍𝗈 𝖦𝗂𝗍𝖧𝗎𝖻 𝖽𝗈𝖾𝗌𝗇'𝗍 𝗆𝖾𝖺𝗇 𝗒𝗈𝗎𝗋 𝖼𝗈𝗆𝗆𝗂𝗍𝗌 𝖺𝗋𝖾 𝗏𝖾𝗋𝗂𝖿𝗂𝖾𝖽. 𝖨𝗍 𝗃𝗎𝗌𝗍 𝗆𝖾𝖺𝗇𝗌 𝗌𝗈𝗆𝖾𝗈𝗇𝖾 𝗐𝗂𝗍𝗁 𝖺𝖼𝖼𝖾𝗌𝗌 𝗉𝗎𝗌𝗁𝖾𝖽 𝗍𝗁𝖾𝗆.\n\n𝖧𝖾𝗋𝖾'𝗌 𝗍𝗁𝖾 𝖿𝗎𝗇 𝗉𝖺𝗋𝗍: 𝗅𝗂𝗍𝖾𝗋𝖺𝗅𝗅𝗒 𝖺𝗇𝗒𝗈𝗇𝖾 𝖼𝖺𝗇 𝗉𝗋𝖾𝗍𝖾𝗇𝖽 𝗍𝗈 𝖻𝖾 𝗒𝗈𝗎 𝖻𝗒 𝗍𝗒𝗉𝗂𝗇𝗀:\n```\n𝗀𝗂𝗍 𝖼𝗈𝗇𝖿𝗂𝗀 𝗎𝗌𝖾𝗋.𝗇𝖺𝗆𝖾 \"𝖸𝗈𝗎𝗋 𝖭𝖺𝗆𝖾\n𝗀𝗂𝗍 𝖼𝗈𝗇𝖿𝗂𝗀 𝗎𝗌𝖾𝗋.𝖾𝗆𝖺𝗂𝗅 \"𝗒𝗈𝗎𝗋@𝖾𝗆𝖺𝗂𝗅\n```\n𝖢𝗈𝗇𝗀𝗋𝖺𝗍𝗎𝗅𝖺𝗍𝗂𝗈𝗇𝗌, 𝗍𝗁𝖾𝗒'𝗋𝖾 𝗇𝗈𝗐 𝗒𝗈𝗎. 𝖸𝗈𝗎𝗋 𝖻𝗈𝗌𝗌? 𝖠𝗅𝗌𝗈 𝗒𝗈𝗎. 𝖳𝗁𝖺𝗍 𝗂𝗇𝗍𝖾𝗋𝗇? 𝖸𝖾𝗉, 𝗒𝗈𝗎 𝖺𝗀𝖺𝗂𝗇.\n\n𝖤𝗇𝗍𝖾𝗋: 𝖵𝖾𝗋𝗂𝖿𝗂𝖾𝖽 𝖢𝗈𝗆𝗆𝗂𝗍𝗌\n𝖶𝗁𝖾𝗇 𝗒𝗈𝗎 𝖺𝖼𝗍𝗎𝖺𝗅𝗅𝗒 𝗌𝗂𝗀𝗇 𝗒𝗈𝗎𝗋 𝖼𝗈𝗆𝗆𝗂𝗍𝗌 𝗐𝗂𝗍𝗁 𝖦𝖯𝖦 𝗈𝗋 𝖲𝖲𝖧 𝗌𝗂𝗀𝗇𝗂𝗇𝗀 𝗄𝖾𝗒𝗌, 𝖦𝗂𝗍𝖧𝗎𝖻 𝖼𝖺𝗇 𝖼𝗋𝗒𝗉𝗍𝗈𝗀𝗋𝖺𝗉𝗁𝗂𝖼𝖺𝗅𝗅𝗒 𝗉𝗋𝗈𝗏𝖾:\n\n𝖸𝗈𝗎 𝗐𝗋𝗈𝗍𝖾 𝗂𝗍 (𝗇𝗈𝗍 𝗒𝗈𝗎𝗋 \"𝖾𝗏𝗂𝗅 𝗍𝗐𝗂𝗇\")\n\n𝖭𝗈𝖻𝗈𝖽𝗒 𝗆𝖾𝗌𝗌𝖾𝖽 𝗐𝗂𝗍𝗁 𝗂𝗍 𝖺𝖿𝗍𝖾𝗋\n\n𝖸𝗈𝗎𝗋 𝗀𝗂𝗍 𝗁𝗂𝗌𝗍𝗈𝗋𝗒 𝗂𝗌𝗇'𝗍 𝗃𝗎𝗌𝗍 𝖼𝗈𝗅𝗅𝖺𝖻𝗈𝗋𝖺𝗍𝗂𝗏𝖾 𝖿𝗂𝖼𝗍𝗂𝗈𝗇\n\n𝖳𝗁𝖾 𝖳𝖫;𝖣𝖱\n𝖲𝖲𝖧 𝗉𝗋𝗈𝗏𝖾𝗌 𝗒𝗈𝗎 𝖼𝖺𝗇 𝗉𝗎𝗌𝗁. 𝖲𝗂𝗀𝗇𝖾𝖽 𝖼𝗈𝗆𝗆𝗂𝗍𝗌 𝗉𝗋𝗈𝗏𝖾 𝗒𝗈𝗎 𝖺𝖼𝗍𝗎𝖺𝗅𝗅𝗒 𝗐𝗋𝗈𝗍𝖾 𝗍𝗁𝖾 𝗍𝗁𝗂𝗇𝗀.\n\n𝖤𝗏𝖾𝗇 𝗂𝗇 𝗉𝗋𝗂𝗏𝖺𝗍𝖾 𝗋𝖾𝗉𝗈𝗌, 𝗍𝖾𝖺𝗆𝗌 𝗍𝗁𝖺𝗍 𝖼𝖺𝗋𝖾 𝖺𝖻𝗈𝗎𝗍 𝗌𝖾𝖼𝗎𝗋𝗂𝗍𝗒, 𝖼𝗈𝗆𝗉𝗅𝗂𝖺𝗇𝖼𝖾, 𝗈𝗋 𝗇𝗈𝗍 𝗀𝖾𝗍𝗍𝗂𝗇𝗀 𝖻𝗅𝖺𝗆𝖾𝖽 𝖿𝗈𝗋 𝖼𝗈𝖽𝖾 𝗍𝗁𝖾𝗒 𝖽𝗂𝖽𝗇'𝗍 𝗐𝗋𝗂𝗍𝖾 𝖺𝗋𝖾 𝗆𝖺𝗄𝗂𝗇𝗀 𝗍𝗁𝗂𝗌 𝗆𝖺𝗇𝖽𝖺𝗍𝗈𝗋𝗒.\n\n𝖨𝖿 𝗒𝗈𝗎 𝗁𝖺𝗏𝖾𝗇'𝗍 𝗌𝖾𝗍 𝗍𝗁𝗂𝗌 𝗎𝗉 𝗒𝖾𝗍, 𝗂𝗍 𝗍𝖺𝗄𝖾𝗌 𝗅𝗂𝗄𝖾 𝟣𝟢 𝗆𝗂𝗇𝗎𝗍𝖾𝗌 𝖺𝗇𝖽 𝗌𝖺𝗏𝖾𝗌 𝗒𝗈𝗎 𝖿𝗋𝗈𝗆 𝖺𝗐𝗄𝗐𝖺𝗋𝖽 \"𝖨 𝖽𝗂𝖽𝗇'𝗍 𝖼𝗈𝗆𝗆𝗂𝗍 𝗍𝗁𝖺𝗍\" 𝖼𝗈𝗇𝗏𝖾𝗋𝗌𝖺𝗍𝗂𝗈𝗇𝗌 𝗅𝖺𝗍𝖾𝗋.\n\n𝖠𝗋𝖾 𝗒𝗈𝗎 𝗌𝗂𝗀𝗇𝗂𝗇𝗀 𝖼𝗈𝗆𝗆𝗂𝗍𝗌, 𝗈𝗋 𝗃𝗎𝗌𝗍 𝗅𝗂𝗏𝗂𝗇𝗀 𝖽𝖺𝗇𝗀𝖾𝗋𝗈𝗎𝗌𝗅𝗒?\n\n#𝖦𝗂𝗍𝖧𝗎𝖻𝖲𝖾𝖼𝗎𝗋𝗂𝗍𝗒 #𝖣𝖾𝗏𝖲𝖾𝖼𝖮𝗉𝗌 #𝖲𝗈𝖿𝗍𝗐𝖺𝗋𝖾𝖤𝗇𝗀𝗂𝗇𝖾𝖾𝗋𝗂𝗇𝗀 #𝖦𝗂𝗍 #𝖢𝗒𝖻𝖾𝗋𝖲𝖾𝖼𝗎𝗋𝗂𝗍𝗒 #𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋𝖳𝗈𝗈𝗅𝗌 #𝖢𝗈𝖽𝖾𝖲𝖾𝖼𝗎𝗋𝗂𝗍𝗒 #𝖲𝗈𝖿𝗍𝗐𝖺𝗋𝖾𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝗆𝖾𝗇𝗍 #𝖦𝗂𝗍𝖧𝗎𝖻 #𝖳𝖾𝖼𝗁𝖳𝗂𝗉𝗌",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7395586366941827073",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-016",
+    "date": "2025-11-02",
+    "title": "\udea8 Last Day Alert: Keep Your LinkedIn Data Out of AI Training",
+    "excerpt": "Starting Monday, November 3, 2025, LinkedIn will begin using your profile details, public posts, and feed activity to train its AI models; if you're in the UK, EU, Switzerland, Canada, or Hong Kong.",
+    "body": "🚨 Last Day Alert: Keep Your LinkedIn Data Out of AI Training\nStarting Monday, November 3, 2025, LinkedIn will begin using your profile details, public posts, and feed activity to train its AI models; if you're in the UK, EU, Switzerland, Canada, or Hong Kong.\n\nYou can opt out in one click before it starts:\n👉 Turn it off here: https://lnkd.in/gxrrFGjh\nFor those in the US, it’s already too late; your data is part of the training set.\n\nHave you opted out yet?\nOr do you think it’s worth letting AI learn from your data? 🤔",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7390807459772121088",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-017",
+    "date": "2025-10-29",
+    "title": "\udcb3 𝗩𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝗖𝗼𝗺𝗺𝘂𝗻𝗶𝗰𝗮𝘁𝗶𝗼𝗻: 𝗧𝗵𝗲 𝗜𝗻𝘃𝗶𝘀𝗶𝗯𝗹𝗲 𝗧𝗿𝘂𝘀𝘁 𝗟𝗮𝘆𝗲𝗿 𝗶𝗻 𝗙𝗶𝗻𝘁𝗲𝗰𝗵",
+    "excerpt": "𝖨𝗇 𝖿𝗂𝗇𝗍𝖾𝖼𝗁, 𝗍𝗋𝗎𝗌𝗍 𝗂𝗌𝗇’𝗍 𝗃𝗎𝗌𝗍 𝖺 𝗏𝖺𝗅𝗎𝖾, 𝗂𝗍’𝗌 𝗍𝗁𝖾 𝗉𝗋𝗈𝖽𝗎𝖼𝗍.",
+    "body": "💳 𝗩𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝗖𝗼𝗺𝗺𝘂𝗻𝗶𝗰𝗮𝘁𝗶𝗼𝗻: 𝗧𝗵𝗲 𝗜𝗻𝘃𝗶𝘀𝗶𝗯𝗹𝗲 𝗧𝗿𝘂𝘀𝘁 𝗟𝗮𝘆𝗲𝗿 𝗶𝗻 𝗙𝗶𝗻𝘁𝗲𝗰𝗵\n\n𝖨𝗇 𝖿𝗂𝗇𝗍𝖾𝖼𝗁, 𝗍𝗋𝗎𝗌𝗍 𝗂𝗌𝗇’𝗍 𝗃𝗎𝗌𝗍 𝖺 𝗏𝖺𝗅𝗎𝖾, 𝗂𝗍’𝗌 𝗍𝗁𝖾 𝗉𝗋𝗈𝖽𝗎𝖼𝗍.\n𝖤𝗏𝖾𝗋𝗒 𝖾𝗆𝖺𝗂𝗅 𝗌𝖾𝗇𝗍 𝗍𝗈 𝖺 𝖼𝗎𝗌𝗍𝗈𝗆𝖾𝗋 (𝗐𝗁𝖾𝗍𝗁𝖾𝗋 𝖺𝗇 𝖮𝖳𝖯, 𝗂𝗇𝗏𝖾𝗌𝗍𝗆𝖾𝗇𝗍 𝗎𝗉𝖽𝖺𝗍𝖾, 𝗈𝗋 𝗍𝗋𝖺𝗇𝗌𝖺𝖼𝗍𝗂𝗈𝗇 𝖺𝗅𝖾𝗋𝗍) 𝗆𝗎𝗌𝗍 𝖼𝖺𝗋𝗋𝗒 𝖺𝗎𝗍𝗁𝖾𝗇𝗍𝗂𝖼𝗂𝗍𝗒 𝖻𝖺𝗄𝖾𝖽 𝗂𝗇𝗍𝗈 𝗂𝗍𝗌 𝖼𝗈𝖽𝖾.\n\n𝖳𝗁𝖺𝗍’𝗌 𝗐𝗁𝖾𝗋𝖾 𝖲𝖯𝖥, 𝖣𝖪𝖨𝖬, 𝖣𝖬𝖠𝖱𝖢, 𝖺𝗇𝖽 𝖡𝖨𝖬𝖨 𝖼𝗈𝗆𝖾 𝗍𝗈𝗀𝖾𝗍𝗁𝖾𝗋, 𝖺 𝗍𝖾𝖼𝗁𝗇𝗂𝖼𝖺𝗅 𝗌𝗍𝖺𝖼𝗄 𝖾𝗇𝗌𝗎𝗋𝗂𝗇𝗀 𝖾𝗏𝖾𝗋𝗒 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 𝗍𝗁𝖺𝗍 𝗅𝖾𝖺𝗏𝖾𝗌 𝗒𝗈𝗎𝗋 𝖽𝗈𝗆𝖺𝗂𝗇 𝖼𝖺𝗇 𝖻𝖾 𝖼𝗋𝗒𝗉𝗍𝗈𝗀𝗋𝖺𝗉𝗁𝗂𝖼𝖺𝗅𝗅𝗒 𝗏𝖾𝗋𝗂𝖿𝗂𝖾𝖽.\n\n𝖶𝗁𝖾𝗇 𝖦𝗆𝖺𝗂𝗅 𝗌𝗁𝗈𝗐𝗌\n\n“𝙏𝙝𝙚 𝙨𝙚𝙣𝙙𝙚𝙧 𝙤𝙛 𝙩𝙝𝙞𝙨 𝙚𝙢𝙖𝙞𝙡 𝙝𝙖𝙨 𝙫𝙚𝙧𝙞𝙛𝙞𝙚𝙙 𝙩𝙝𝙖𝙩 𝙩𝙝𝙚𝙮 𝙤𝙬𝙣 [𝙙𝙤𝙢𝙖𝙞𝙣] 𝙖𝙣𝙙 𝙩𝙝𝙚 𝙡𝙤𝙜𝙤 𝙞𝙣 𝙩𝙝𝙚 𝙥𝙧𝙤𝙛𝙞𝙡𝙚 𝙞𝙢𝙖𝙜𝙚,”\n𝗂𝗍 𝗆𝖾𝖺𝗇𝗌 𝗍𝗁𝖾 𝗌𝗒𝗌𝗍𝖾𝗆 𝖻𝖾𝗁𝗂𝗇𝖽 𝗍𝗁𝖺𝗍 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 𝗁𝖺𝗌 𝗉𝖺𝗌𝗌𝖾𝖽 𝖺𝗅𝗅 𝗅𝖺𝗒𝖾𝗋𝗌 𝗈𝖿 𝖽𝗈𝗆𝖺𝗂𝗇 𝖺𝗎𝗍𝗁𝖾𝗇𝗍𝗂𝖼𝖺𝗍𝗂𝗈𝗇 𝖺𝗇𝖽 𝖻𝗋𝖺𝗇𝖽 𝗏𝖺𝗅𝗂𝖽𝖺𝗍𝗂𝗈𝗇.\n\n𝖴𝗇𝖽𝖾𝗋 𝗍𝗁𝖾 𝗁𝗈𝗈𝖽:\n\n𝟣. 𝗦𝗣𝗙 𝖼𝗁𝖾𝖼𝗄𝗌 𝗍𝗁𝖺𝗍 𝗍𝗁𝖾 𝗆𝖺𝗂𝗅 𝗌𝖾𝗋𝗏𝖾𝗋 𝗂𝗌 𝖺𝗎𝗍𝗁𝗈𝗋𝗂𝗓𝖾𝖽 𝗍𝗈 𝗌𝖾𝗇𝖽 𝗈𝗇 𝖻𝖾𝗁𝖺𝗅𝖿 𝗈𝖿 𝗒𝗈𝗎𝗋 𝖽𝗈𝗆𝖺𝗂𝗇.\n𝟤. 𝗗𝗞𝗜𝗠 𝗌𝗂𝗀𝗇𝗌 𝗍𝗁𝖾 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 𝗐𝗂𝗍𝗁 𝖺 𝗉𝗋𝗂𝗏𝖺𝗍𝖾 𝗄𝖾𝗒 𝗌𝗈 𝗋𝖾𝖼𝗂𝗉𝗂𝖾𝗇𝗍𝗌 𝖼𝖺𝗇 𝗏𝖾𝗋𝗂𝖿𝗒 𝗂𝗍 𝗁𝖺𝗌𝗇’𝗍 𝖻𝖾𝖾𝗇 𝖺𝗅𝗍𝖾𝗋𝖾𝖽.\n𝟥. 𝗗𝗠𝗔𝗥𝗖 𝖾𝗇𝖿𝗈𝗋𝖼𝖾𝗌 𝖺 𝗉𝗈𝗅𝗂𝖼𝗒 — 𝗋𝖾𝗃𝖾𝖼𝗍𝗂𝗇𝗀 𝗈𝗋 𝗊𝗎𝖺𝗋𝖺𝗇𝗍𝗂𝗇𝗂𝗇𝗀 𝖺𝗇𝗒𝗍𝗁𝗂𝗇𝗀 𝗍𝗁𝖺𝗍 𝖿𝖺𝗂𝗅𝗌 𝗍𝗁𝖾𝗌𝖾 𝖼𝗁𝖾𝖼𝗄𝗌.\n𝟦. 𝗕𝗜𝗠𝗜 𝖺𝖽𝖽𝗌 𝗒𝗈𝗎𝗋 𝗏𝖾𝗋𝗂𝖿𝗂𝖾𝖽 𝖻𝗋𝖺𝗇𝖽 𝗅𝗈𝗀𝗈, 𝖻𝖺𝖼𝗄𝖾𝖽 𝖻𝗒 𝖺 𝖵𝖾𝗋𝗂𝖿𝗂𝖾𝖽 𝖬𝖺𝗋𝗄 𝖢𝖾𝗋𝗍𝗂𝖿𝗂𝖼𝖺𝗍𝖾 (𝖵𝖬𝖢).\n\n𝖳𝗈𝗀𝖾𝗍𝗁𝖾𝗋, 𝗍𝗁𝖾𝗒 𝗍𝗎𝗋𝗇 𝖺 𝗌𝗂𝗆𝗉𝗅𝖾 𝖾𝗆𝖺𝗂𝗅 𝗂𝗇𝗍𝗈 𝖺 𝖼𝗋𝗒𝗉𝗍𝗈𝗀𝗋𝖺𝗉𝗁𝗂𝖼𝖺𝗅𝗅𝗒 𝗍𝗋𝗎𝗌𝗍𝖾𝖽 𝖼𝗈𝗆𝗆𝗎𝗇𝗂𝖼𝖺𝗍𝗂𝗈𝗇 𝖼𝗁𝖺𝗇𝗇𝖾𝗅.\n\n𝖨𝗇 𝖿𝗂𝗇𝗍𝖾𝖼𝗁, 𝗍𝗁𝗂𝗌 𝗂𝗌𝗇’𝗍 𝖼𝗈𝗌𝗆𝖾𝗍𝗂𝖼; 𝗂𝗍’𝗌 𝖺 𝗋𝗂𝗌𝗄 𝖼𝗈𝗇𝗍𝗋𝗈𝗅 𝗅𝖺𝗒𝖾𝗋.\n𝖨𝗍 𝗌𝗍𝗈𝗉𝗌 𝗉𝗁𝗂𝗌𝗁𝗂𝗇𝗀 𝗅𝗈𝗈𝗄-𝖺𝗅𝗂𝗄𝖾𝗌, 𝗉𝗋𝗈𝗍𝖾𝖼𝗍𝗌 𝗍𝗋𝖺𝗇𝗌𝖺𝖼𝗍𝗂𝗈𝗇𝖺𝗅 𝗂𝗇𝗍𝖾𝗀𝗋𝗂𝗍𝗒, 𝖺𝗇𝖽 𝖾𝗇𝗌𝗎𝗋𝖾𝗌 𝖼𝗎𝗌𝗍𝗈𝗆𝖾𝗋𝗌 𝗇𝖾𝗏𝖾𝗋 𝗁𝖾𝗌𝗂𝗍𝖺𝗍𝖾 𝗍𝗈 𝖼𝗅𝗂𝖼𝗄 𝖺 𝗅𝖾𝗀𝗂𝗍𝗂𝗆𝖺𝗍𝖾 𝗆𝖾𝗌𝗌𝖺𝗀𝖾.\n\n𝗪𝗵𝗲𝗻 𝗰𝘂𝘀𝘁𝗼𝗺𝗲𝗿𝘀 𝘀𝗲𝗲 𝗮𝗻 “𝘂𝗻𝗸𝗻𝗼𝘄𝗻 𝘀𝗲𝗻𝗱𝗲𝗿”, 𝘁𝗵𝗲𝘆 𝗽𝗮𝘂𝘀𝗲.\n𝗪𝗵𝗲𝗻 𝘁𝗵𝗲𝘆 𝘀𝗲𝗲 𝗮 𝘃𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝘀𝗲𝗻𝗱𝗲𝗿 𝘄𝗶𝘁𝗵 𝘆𝗼𝘂𝗿 𝗹𝗼𝗴𝗼, 𝘁𝗵𝗲𝘆 𝗮𝗰𝘁, 𝗯𝗲𝗰𝗮𝘂𝘀𝗲 𝘁𝗿𝘂𝘀𝘁 𝗵𝗮𝘀 𝗯𝗲𝗲𝗻 𝗲𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗲𝗱 𝗶𝗻𝘁𝗼 𝘁𝗵𝗲 𝗺𝗲𝘀𝘀𝗮𝗴𝗲 𝗶𝘁𝘀𝗲𝗹𝗳.\n\n𝖳𝗁𝖾 𝗍𝖺𝗄𝖾𝖺𝗐𝖺𝗒:\n\n𝖵𝖾𝗋𝗂𝖿𝗂𝖾𝖽 𝖼𝗈𝗆𝗆𝗎𝗇𝗂𝖼𝖺𝗍𝗂𝗈𝗇 𝗂𝗌𝗇’𝗍 𝖺 𝗆𝖺𝗋𝗄𝖾𝗍𝗂𝗇𝗀 𝖿𝖾𝖺𝗍𝗎𝗋𝖾.\n𝖨𝗍’𝗌 𝖺 𝗌𝖾𝖼𝗎𝗋𝗂𝗍𝗒 𝗉𝗋𝗈𝖽𝗎𝖼𝗍 𝖾𝗏𝖾𝗋𝗒 𝖿𝗂𝗇𝗍𝖾𝖼𝗁 𝗌𝗁𝗈𝗎𝗅𝖽 𝖻𝖾 𝗌𝗁𝗂𝗉𝗉𝗂𝗇𝗀 𝖻𝗒 𝖽𝖾𝖿𝖺𝗎𝗅𝗍.",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7389256339509645312",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-018",
+    "date": "2025-10-27",
+    "title": "𝖱𝖾𝖼𝖾𝗇𝗍𝗅𝗒, 𝗌𝗈𝗆𝖾 𝗍𝗁𝗈𝗎𝗀𝗁𝗍-𝗉𝗋𝗈𝗏𝗈𝗄𝗂𝗇𝗀 𝗊𝗎𝖾𝗌𝗍𝗂𝗈𝗇𝗌 𝗁𝖺𝗏𝖾 𝖼𝗈𝗆𝖾 𝗎𝗉 𝗂𝗇 one of the 𝗍𝖾𝖼𝗁 𝗆𝖾𝖾𝗍𝗎𝗉",
+    "excerpt": "𝖶𝗁𝗒 𝖽𝗈 𝗇𝖾𝗐 𝖾𝗇𝗀𝗂𝗇𝖾𝖾𝗋𝗌 𝗍𝖺𝗄𝖾 𝗅𝗈𝗇𝗀𝖾𝗋 𝗍𝗈 𝖻𝖾𝖼𝗈𝗆𝖾 𝗉𝗋𝗈𝖽𝗎𝖼𝗍𝗂𝗏𝖾 𝗂𝗇 𝗍𝗁𝖾 𝗍𝖾𝖺𝗆?",
+    "body": "𝖱𝖾𝖼𝖾𝗇𝗍𝗅𝗒, 𝗌𝗈𝗆𝖾 𝗍𝗁𝗈𝗎𝗀𝗁𝗍-𝗉𝗋𝗈𝗏𝗈𝗄𝗂𝗇𝗀 𝗊𝗎𝖾𝗌𝗍𝗂𝗈𝗇𝗌 𝗁𝖺𝗏𝖾 𝖼𝗈𝗆𝖾 𝗎𝗉 𝗂𝗇 one of the 𝗍𝖾𝖼𝗁 𝗆𝖾𝖾𝗍𝗎𝗉:\n\n• 𝖶𝗁𝗒 𝖽𝗈 𝗇𝖾𝗐 𝖾𝗇𝗀𝗂𝗇𝖾𝖾𝗋𝗌 𝗍𝖺𝗄𝖾 𝗅𝗈𝗇𝗀𝖾𝗋 𝗍𝗈 𝖻𝖾𝖼𝗈𝗆𝖾 𝗉𝗋𝗈𝖽𝗎𝖼𝗍𝗂𝗏𝖾 𝗂𝗇 𝗍𝗁𝖾 𝗍𝖾𝖺𝗆?\n• 𝖶𝗁𝗒 𝖽𝗈 𝗈𝗇𝗅𝗒 𝖺 𝖿𝖾𝗐 𝗉𝖾𝗈𝗉𝗅𝖾 𝗁𝖺𝗏𝖾 𝖼𝗈𝗆𝗉𝗅𝖾𝗍𝖾 𝖼𝗈𝗇𝗍𝖾𝗑𝗍 𝗈𝖿 𝖼𝖾𝗋𝗍𝖺𝗂𝗇 𝗆𝗈𝖽𝗎𝗅𝖾𝗌?\n• 𝖶𝗁𝗒 𝖽𝗈 𝗐𝖾 𝗌𝗉𝖾𝗇𝖽 𝗇𝗈𝗍𝗂𝖼𝖾𝖺𝖻𝗅𝖾 𝗍𝗂𝗆𝖾 𝖿𝗂𝗑𝗂𝗇𝗀 𝖺𝗏𝗈𝗂𝖽𝖺𝖻𝗅𝖾 𝗉𝗈𝗌𝗍-𝗋𝖾𝗅𝖾𝖺𝗌𝖾 𝗂𝗌𝗌𝗎𝖾𝗌?\n• 𝖶𝗁𝖾𝗇 𝗌𝗍𝗎𝖼𝗄, 𝖽𝗈 𝗐𝖾 𝖺𝗌𝗄 𝖿𝗈𝗋 𝗁𝖾𝗅𝗉 𝗈𝗋 𝗄𝖾𝖾𝗉 𝖽𝗂𝗀𝗀𝗂𝗇𝗀 𝗌𝗈𝗅𝗈?\n• 𝖧𝗈𝗐 𝗈𝖿𝗍𝖾𝗇 𝖽𝗈 𝗐𝖾 𝗋𝖾𝗏𝗂𝗌𝗂𝗍 𝖺𝗋𝖼𝗁𝗂𝗍𝖾𝖼𝗍𝗎𝗋𝖾 𝖼𝗁𝗈𝗂𝖼𝖾𝗌 𝖺𝖿𝗍𝖾𝗋 𝗋𝖾𝖺𝗅𝗂𝗓𝗂𝗇𝗀 𝗍𝗁𝖾𝗒 𝖽𝗈𝗇’𝗍 𝗌𝖼𝖺𝗅𝖾 𝖺𝗌 𝗂𝗇𝗍𝖾𝗇𝖽𝖾𝖽?\n\n𝖳𝗁𝖾 𝖺𝗇𝗌𝗐𝖾𝗋 𝗂𝗌 𝗌𝗂𝗆𝗉𝗅𝖾: 𝙋𝙖𝙞𝙧 𝙋𝙧𝙤𝙜𝙧𝙖𝙢𝙢𝙞𝙣𝙜\n\n𝖰𝗎𝗂𝖼𝗄 𝗋𝖾𝖼𝖺𝗉: 𝗍𝗐𝗈 𝖽𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋𝗌, 𝗈𝗇𝖾 𝗐𝗈𝗋𝗄𝗌𝗍𝖺𝗍𝗂𝗈𝗇; 𝖣𝗋𝗂𝗏𝖾𝗋 𝗍𝗒𝗉𝖾𝗌, 𝖭𝖺𝗏𝗂𝗀𝖺𝗍𝗈𝗋 𝗋𝖾𝗏𝗂𝖾𝗐𝗌 𝖺𝗇𝖽 𝗀𝗎𝗂𝖽𝖾𝗌.\n\n𝖧𝗈𝗐 usually 𝖨 𝗆𝖺𝗄𝖾 𝗂𝗍 𝗐𝗈𝗋𝗄:\n\n• 𝖯𝖺𝗂𝗋 𝗈𝗇 𝖼𝗈𝗆𝗉𝗅𝖾𝗑 𝗆𝗈𝖽𝗎𝗅𝖾𝗌, 𝖽𝖾𝗌𝗂𝗀𝗇 𝖽𝗂𝗌𝖼𝗎𝗌𝗌𝗂𝗈𝗇𝗌, 𝖺𝗇𝖽 𝗈𝗇𝖻𝗈𝖺𝗋𝖽𝗂𝗇𝗀 → 𝗄𝗇𝗈𝗐𝗅𝖾𝖽𝗀𝖾 𝗌𝗉𝗋𝖾𝖺𝖽𝗌 𝖿𝖺𝗌𝗍.\n• 𝖬𝖾𝗇𝗍𝗈𝗋𝗌𝗁𝗂𝗉 𝗂𝗇 𝖺𝖼𝗍𝗂𝗈𝗇: 𝗌𝖾𝗇𝗂𝗈𝗋 + 𝗃𝗎𝗇𝗂𝗈𝗋 𝖾𝗇𝗀𝗂𝗇𝖾𝖾𝗋𝗌, 𝗌𝗐𝗂𝗍𝖼𝗁 𝗋𝗈𝗅𝖾𝗌 𝗋𝖾𝗀𝗎𝗅𝖺𝗋𝗅𝗒.\n• 𝟫𝟢-𝗆𝗂𝗇𝗎𝗍𝖾 𝗍𝗂𝗆𝖾-𝖻𝗈𝗑𝖾𝖽 𝗌𝖾𝗌𝗌𝗂𝗈𝗇𝗌 → 𝖿𝗈𝖼𝗎𝗌 𝗐𝗂𝗍𝗁𝗈𝗎𝗍 𝖻𝗎𝗋𝗇𝗈𝗎𝗍.\n• 𝖱𝗈𝗍𝖺𝗍𝖾 𝗉𝖺𝗂𝗋𝗌 → 𝖻𝗋𝖾𝖺𝗄 𝗌𝗂𝗅𝗈𝗌, 𝗌𝗉𝗋𝖾𝖺𝖽 𝖼𝗈𝗇𝗍𝖾𝗑𝗍.\n• 𝖴𝗌𝖾 𝗉𝖺𝗂𝗋𝗂𝗇𝗀 𝖿𝗈𝗋 𝖠𝖯𝖨 𝖼𝗈𝗇𝗍𝗋𝖺𝖼𝗍𝗌, 𝗆𝗂𝖼𝗋𝗈𝗌𝖾𝗋𝗏𝗂𝖼𝖾 𝖻𝗈𝗎𝗇𝖽𝖺𝗋𝗂𝖾𝗌, 𝗂𝗇𝗍𝖾𝗀𝗋𝖺𝗍𝗂𝗈𝗇 𝗐𝗈𝗋𝗄𝖿𝗅𝗈𝗐𝗌 → 𝗅𝗈𝗇𝗀-𝗍𝖾𝗋𝗆 𝗂𝗆𝗉𝖺𝖼𝗍.\n• 𝖲𝗄𝗂𝗉 𝗍𝗋𝗂𝗏𝗂𝖺𝗅 𝗍𝖺𝗌𝗄𝗌 → 𝖾𝖿𝖿𝗂𝖼𝗂𝖾𝗇𝖼𝗒 𝗆𝖺𝗍𝗍𝖾𝗋𝗌.\n• 𝖢𝗈𝗆𝖻𝗂𝗇𝖾 𝗐𝗂𝗍𝗁 𝖳𝖣𝖣 → 𝗌𝗎𝗉𝖾𝗋𝖼𝗁𝖺𝗋𝗀𝖾𝗌 𝗊𝗎𝖺𝗅𝗂𝗍𝗒.\n\n𝖯𝖺𝗂𝗋 𝗉𝗋𝗈𝗀𝗋𝖺𝗆𝗆𝗂𝗇𝗀 𝗂𝗌𝗇’𝗍 𝗃𝗎𝗌𝗍 𝖼𝗈𝖽𝗂𝗇𝗀; 𝗂𝗍’𝗌 𝖼𝗈𝗅𝗅𝖺𝖻𝗈𝗋𝖺𝗍𝗂𝗈𝗇, 𝗅𝖾𝖺𝗋𝗇𝗂𝗇𝗀, 𝖺𝗇𝖽 𝖻𝗎𝗂𝗅𝖽𝗂𝗇𝗀 𝖻𝖾𝗍𝗍𝖾𝗋 𝗌𝗈𝖿𝗍𝗐𝖺𝗋𝖾.\n\n💡 𝖢𝗎𝗋𝗂𝗈𝗎𝗌: 𝖧𝗈𝗐 𝖽𝗈𝖾𝗌 𝗒𝗈𝗎𝗋 𝗍𝖾𝖺𝗆 𝗎𝗌𝖾 𝗉𝖺𝗂𝗋 𝗉𝗋𝗈𝗀𝗋𝖺𝗆𝗆𝗂𝗇𝗀?",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7388625738226135041",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-019",
+    "date": "2025-10-26",
+    "title": "𝗥𝗔𝗚 vs 𝗙𝗶𝗻𝗲-𝘁𝘂𝗻𝗶𝗻𝗴",
+    "excerpt": "When it comes to adapting Large Language Models to new tasks, two approaches dominate: RAG and Fine-tuning. Both enhance model performance for domain-specific use cases, but their architectural differences matter.",
+    "body": "𝗥𝗔𝗚 vs 𝗙𝗶𝗻𝗲-𝘁𝘂𝗻𝗶𝗻𝗴\n\nWhen it comes to adapting Large Language Models to new tasks, two approaches dominate: RAG and Fine-tuning. Both enhance model performance for domain-specific use cases, but their architectural differences matter.\n\n𝗥𝗔𝗚 (𝗥𝗲𝘁𝗿𝗶𝗲𝘃𝗮𝗹-𝗔𝘂𝗴𝗺𝗲𝗻𝘁𝗲𝗱 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗶𝗼𝗻)\nRuntime knowledge retrieval through vector embeddings and semantic search. External knowledge base remains separate from model weights updating data doesn't require retraining. High traceability with citable sources, ideal for dynamic environments where information changes frequently.\n\n𝗙𝗶𝗻𝗲-𝘁𝘂𝗻𝗶𝗻𝗴\nSupervised learning that updates model parameters with domain specific datasets. Knowledge is internalized into weights no external retrieval at inference. Better for specialized tasks requiring consistent output formats and improved response latency.\n\n𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝘁𝗿𝗮𝗱𝗲𝗼𝗳𝗳𝘀:\n• Data freshness: RAG pulls real-time data; fine-tuning is static post-training\n• Compute: RAG requires vector DB + orchestration; fine-tuning needs GPU clusters and ML expertise\n• Scalability: RAG updates in minutes; fine-tuning requires complete retraining cycles.\n\nMany production systems use hybrid approaches fine-tuned models for task-specific behavior combined with RAG for up-to-date context injection.\n\nFor your domain: Do you optimize for knowledge recency (RAG) or embedded expertise (Fine-tuning)?\n\npic credits: one of the LLM",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7388315686147604480",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-020",
+    "date": "2025-10-10",
+    "title": "𝖠 𝖿𝗈𝗎𝗇𝖽𝖾𝗋 𝗐𝖾𝗇𝗍 𝗍𝗈 𝖺𝗇 𝗂𝗇𝗏𝖾𝗌𝗍𝗈𝗋 𝖿𝗈𝗋 𝖿𝗎𝗇𝖽𝗂𝗇𝗀…",
+    "excerpt": "𝖨𝗇𝗏𝖾𝗌𝗍𝗈𝗋: “𝖸𝗈𝗎𝗋 𝖺𝗉𝗉 𝖽𝗈𝖾𝗌𝗇’𝗍 𝗁𝖺𝗏𝖾 𝖠𝖨…!! 𝖲𝗈𝗋𝗋𝗒, 𝖨 𝖼𝖺𝗇’𝗍 𝖿𝗎𝗇𝖽 𝗍𝗁𝗂𝗌 𝗉𝗋𝗈𝗃𝖾𝖼𝗍.”",
+    "body": "𝖠 𝖿𝗈𝗎𝗇𝖽𝖾𝗋 𝗐𝖾𝗇𝗍 𝗍𝗈 𝖺𝗇 𝗂𝗇𝗏𝖾𝗌𝗍𝗈𝗋 𝖿𝗈𝗋 𝖿𝗎𝗇𝖽𝗂𝗇𝗀…\n\n𝖨𝗇𝗏𝖾𝗌𝗍𝗈𝗋: “𝖸𝗈𝗎𝗋 𝖺𝗉𝗉 𝖽𝗈𝖾𝗌𝗇’𝗍 𝗁𝖺𝗏𝖾 𝖠𝖨…!! 𝖲𝗈𝗋𝗋𝗒, 𝖨 𝖼𝖺𝗇’𝗍 𝖿𝗎𝗇𝖽 𝗍𝗁𝗂𝗌 𝗉𝗋𝗈𝗃𝖾𝖼𝗍.”\n\n𝖥𝗈𝗎𝗇𝖽𝖾𝗋: “𝖶𝖾’𝗋𝖾 𝗉𝗅𝖺𝗇𝗇𝗂𝗇𝗀 𝗍𝗈 𝖺𝖽𝖽 𝗂𝗍… 𝗂𝗇 𝗉𝗁𝖺𝗌𝖾 𝟤!“\n\n𝖨𝗇𝗏𝖾𝗌𝗍𝗈𝗋: “𝖭𝗈𝗉𝖾, 𝖺𝖽𝖽 𝗂𝗍 𝗂𝗇 𝗉𝗁𝖺𝗌𝖾 𝟣 — 𝖺𝗇𝖽 𝗍𝗁𝖾𝗇 𝖨’𝗅𝗅 𝗐𝗋𝗂𝗍𝖾 𝗍𝗁𝖾 𝖼𝗁𝖾𝗊𝗎𝖾.”\n\n𝖲𝗈 𝗍𝗁𝖾 𝖿𝗈𝗎𝗇𝖽𝖾𝗋 𝗋𝗎𝗌𝗁𝖾𝖽 𝗍𝗈 𝗍𝗁𝖾 𝖾𝗇𝗀𝗂𝗇𝖾𝖾𝗋 𝖺𝗇𝖽 𝖾𝗑𝗉𝗅𝖺𝗂𝗇𝖾𝖽 𝗍𝗁𝖾 𝗌𝗂𝗍𝗎𝖺𝗍𝗂𝗈𝗇.\n\n𝖤𝗇𝗀𝗂𝗇𝖾𝖾𝗋: “𝖯𝗁𝖺𝗌𝖾 𝟣? 𝖦𝗈𝗍 𝗂𝗍. 𝖦𝗂𝗏𝖾 𝗆𝖾 𝖺𝗇 𝗁𝗈𝗎𝗋.”\n\n𝖠𝖿𝗍𝖾𝗋 𝖺𝗇 𝗁𝗈𝗎𝗋, 𝗍𝗁𝖾 𝖾𝗇𝗀𝗂𝗇𝖾𝖾𝗋 𝗁𝖺𝗇𝖽𝖾𝖽 𝗍𝗁𝖾 𝖺𝗉𝗉 𝖻𝖺𝖼𝗄. 𝖳𝗁𝖾 𝖿𝗈𝗎𝗇𝖽𝖾𝗋 𝗍𝗈𝗈𝗄 𝗂𝗍 𝗍𝗈 𝗍𝗁𝖾 𝗂𝗇𝗏𝖾𝗌𝗍𝗈𝗋.\n\n𝖳𝗁𝖾 𝗂𝗇𝗏𝖾𝗌𝗍𝗈𝗋 𝖼𝗁𝖾𝖼𝗄𝖾𝖽 𝗍𝗁𝖾 𝖺𝗉𝗉, 𝗇𝗈𝖽𝖽𝖾𝖽 𝗂𝗇 𝖺𝗉𝗉𝗋𝗈𝗏𝖺𝗅, 𝖺𝗇𝖽 𝗁𝖺𝗇𝖽𝖾𝖽 𝗈𝗏𝖾𝗋 𝗍𝗁𝖾 𝖼𝗁𝖾𝗊𝗎𝖾.\n\n𝖥𝗈𝗎𝗇𝖽𝖾𝗋 𝗍𝗈 𝖤𝗇𝗀𝗂𝗇𝖾𝖾𝗋:\n“𝖡𝗋𝗈, 𝗐𝖾 𝗀𝗈𝗍 𝗍𝗁𝖾 𝖿𝗎𝗇𝖽𝗂𝗇𝗀! 𝖡𝗎𝗍 𝗍𝖾𝗅𝗅 𝗆𝖾… 𝗁𝗈𝗐 𝖽𝗂𝖽 𝗒𝗈𝗎 𝗆𝖺𝗄𝖾 𝗍𝗁𝖾 𝖺𝗉𝗉 𝖠𝖨-𝖾𝗇𝖺𝖻𝗅𝖾𝖽 𝗂𝗇 𝗃𝗎𝗌𝗍 𝗈𝗇𝖾 𝗁𝗈𝗎𝗋?”\n\n𝖤𝗇𝗀𝗂𝗇𝖾𝖾𝗋: “𝖨 𝖽𝗂𝖽𝗇’𝗍 𝖺𝖽𝖽 𝖺𝗇𝗒 𝖠𝖨…”\n\n“𝖨 𝗃𝗎𝗌𝗍 𝖼𝗁𝖺𝗇𝗀𝖾𝖽 𝖾𝗏𝖾𝗋𝗒 ‘𝖫𝗈𝖺𝖽𝗂𝗇𝗀…’ 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 𝗍𝗈 ‘𝖳𝗁𝗂𝗇𝗄𝗂𝗇𝗀…’.” 😎\n\n#𝖫𝗂𝗇𝗄𝖾𝖽𝖨𝗇 #𝖳𝖾𝖼𝗁𝖧𝗎𝗆𝗈𝗋 #𝖲𝗍𝖺𝗋𝗍𝗎𝗉𝖫𝗂𝖿𝖾 #𝖥𝗎𝗇𝖽𝗂𝗇𝗀 #𝖤𝗇𝗀𝗂𝗇𝖾𝖾𝗋𝖬𝖺𝗀𝗂𝖼",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7382372263804702721",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-021",
+    "date": "2025-10-09",
+    "title": "𝖠𝗋𝖾 𝗋𝖾𝗆𝗈𝗍𝖾-𝖿𝗂𝗋𝗌𝗍 𝖼𝗈𝗆𝗉𝖺𝗇𝗂𝖾𝗌 𝗌𝖾𝗍𝗍𝗂𝗇𝗀 𝗎𝗉 𝗒𝗈𝗎𝗇𝗀 𝖾𝗆𝗉𝗅𝗈𝗒𝖾𝖾𝗌 𝗍𝗈 𝖿𝖺𝗂𝗅?",
+    "excerpt": "𝖨 𝗋𝖾𝖼𝖾𝗇𝗍𝗅𝗒 𝖼𝖺𝗆𝖾 𝖺𝖼𝗋𝗈𝗌𝗌 𝖺 𝗇𝖾𝗐𝗌𝗅𝖾𝗍𝗍𝖾𝗋 𝗐𝗁𝖾𝗋𝖾 𝟣𝟢𝟢𝖢𝖤𝖮𝗌 𝗌𝗁𝖺𝗋𝖾𝖽 𝗍𝗁𝖾𝗂𝗋 𝗍𝗁𝗈𝗎𝗀𝗁𝗍𝗌 𝗈𝗇 𝗍𝗁𝗂𝗌 𝖾𝗑𝖺𝖼𝗍 𝗊𝗎𝖾𝗌𝗍𝗂𝗈𝗇 𝖺𝗇𝖽 𝖺 𝖿𝖾𝗐 𝗋𝖾𝗌𝗉𝗈𝗇𝗌𝖾𝗌 𝗋𝖾𝖺…",
+    "body": "𝖠𝗋𝖾 𝗋𝖾𝗆𝗈𝗍𝖾-𝖿𝗂𝗋𝗌𝗍 𝖼𝗈𝗆𝗉𝖺𝗇𝗂𝖾𝗌 𝗌𝖾𝗍𝗍𝗂𝗇𝗀 𝗎𝗉 𝗒𝗈𝗎𝗇𝗀 𝖾𝗆𝗉𝗅𝗈𝗒𝖾𝖾𝗌 𝗍𝗈 𝖿𝖺𝗂𝗅?\n𝖨 𝗋𝖾𝖼𝖾𝗇𝗍𝗅𝗒 𝖼𝖺𝗆𝖾 𝖺𝖼𝗋𝗈𝗌𝗌 𝖺 𝗇𝖾𝗐𝗌𝗅𝖾𝗍𝗍𝖾𝗋 𝗐𝗁𝖾𝗋𝖾 𝟣𝟢𝟢𝖢𝖤𝖮𝗌 𝗌𝗁𝖺𝗋𝖾𝖽 𝗍𝗁𝖾𝗂𝗋 𝗍𝗁𝗈𝗎𝗀𝗁𝗍𝗌 𝗈𝗇 𝗍𝗁𝗂𝗌 𝖾𝗑𝖺𝖼𝗍 𝗊𝗎𝖾𝗌𝗍𝗂𝗈𝗇 𝖺𝗇𝖽 𝖺 𝖿𝖾𝗐 𝗋𝖾𝗌𝗉𝗈𝗇𝗌𝖾𝗌 𝗋𝖾𝖺𝗅𝗅𝗒 𝗌𝗍𝗎𝖼𝗄 𝗐𝗂𝗍𝗁 𝗆𝖾.\n\n𝖶𝗁𝖾𝗇 𝖨 𝗌𝗍𝖺𝗋𝗍𝖾𝖽 𝗆𝗒 𝖼𝖺𝗋𝖾𝖾𝗋, 𝖨 𝗅𝖾𝖺𝗋𝗇𝖾𝖽 𝖻𝗒 𝗈𝗌𝗆𝗈𝗌𝗂𝗌: 𝗈𝗏𝖾𝗋𝗁𝖾𝖺𝗋𝗂𝗇𝗀 𝗌𝖾𝗇𝗂𝗈𝗋 𝖾𝗇𝗀𝗂𝗇𝖾𝖾𝗋𝗌 𝗌𝗈𝗅𝗏𝖾 𝗉𝗋𝗈𝖻𝗅𝖾𝗆𝗌, 𝗀𝖾𝗍𝗍𝗂𝗇𝗀 𝗉𝗎𝗅𝗅𝖾𝖽 𝗂𝗇𝗍𝗈 𝗂𝗆𝗉𝗋𝗈𝗆𝗉𝗍𝗎 𝗐𝗁𝗂𝗍𝖾𝖻𝗈𝖺𝗋𝖽 𝗌𝖾𝗌𝗌𝗂𝗈𝗇𝗌, 𝗈𝗋 𝗃𝗎𝗌𝗍 𝖼𝗁𝖺𝗍𝗍𝗂𝗇𝗀 𝗈𝗏𝖾𝗋 𝖼𝗈𝖿𝖿𝖾𝖾 𝖺𝖻𝗈𝗎𝗍 𝖺𝗋𝖼𝗁𝗂𝗍𝖾𝖼𝗍𝗎𝗋𝖾 𝖼𝗁𝗈𝗂𝖼𝖾𝗌. 𝖭𝗈𝗇𝖾 𝗈𝖿 𝗍𝗁𝖺𝗍 𝗐𝖺𝗌 𝗌𝖼𝗁𝖾𝖽𝗎𝗅𝖾𝖽 — 𝖻𝗎𝗍 𝗍𝗁𝖺𝗍’𝗌 𝗐𝗁𝖾𝗋𝖾 𝗍𝗁𝖾 𝗋𝖾𝖺𝗅 𝗀𝗋𝗈𝗐𝗍𝗁 𝗁𝖺𝗉𝗉𝖾𝗇𝖾𝖽.\n\n𝖲𝗍𝖾𝗏𝖾𝗇 𝖡𝖺𝗋𝗍𝗅𝖾𝗍𝗍 (𝖥𝗅𝗂𝗀𝗁𝗍𝖲𝗍𝗈𝗋𝗒, 𝖳𝗁𝗂𝗋𝖽𝗐𝖾𝖻) 𝗉𝗎𝗍 𝗂𝗍 𝗐𝖾𝗅𝗅: “𝖤𝖺𝗋𝗅𝗒 𝗂𝗇 𝗒𝗈𝗎𝗋 𝖼𝖺𝗋𝖾𝖾𝗋, 𝗐𝗈𝗋𝗄 𝗈𝖿𝗍𝖾𝗇 𝖻𝖾𝖼𝗈𝗆𝖾𝗌 𝗒𝗈𝗎𝗋 𝖼𝗈𝗆𝗆𝗎𝗇𝗂𝗍𝗒. 𝖳𝗁𝖾 𝗆𝖾𝗇𝗍𝗈𝗋𝗌𝗁𝗂𝗉, 𝖿𝗋𝗂𝖾𝗇𝖽𝗌𝗁𝗂𝗉𝗌, 𝖺𝗇𝖽 𝗌𝖾𝗇𝗌𝖾 𝗈𝖿 𝖻𝖾𝗅𝗈𝗇𝗀𝗂𝗇𝗀 𝖺𝗋𝖾 𝗁𝖺𝗋𝖽 𝗍𝗈 𝗋𝖾𝗉𝗅𝖺𝖼𝖾 𝗈𝗇 𝖹𝗈𝗈𝗆.”\n\n𝖬𝖺𝗋𝗄 𝖡𝖺𝗂𝗅𝗂𝖾 (𝖢𝗈𝗆𝗉𝖺𝗋𝖾 𝗍𝗁𝖾 𝖬𝖺𝗋𝗄𝖾𝗍) 𝗌𝖺𝗂𝖽: “𝖳𝗋𝗎𝗌𝗍 𝗂𝗌𝗇’𝗍 𝖻𝗎𝗂𝗅𝗍 𝗈𝗇 𝗏𝗂𝖽𝖾𝗈 𝖼𝖺𝗅𝗅𝗌. 𝖳𝗁𝖾 𝖻𝗂𝗀𝗀𝖾𝗌𝗍 𝖼𝖺𝗋𝖾𝖾𝗋 𝖺𝖼𝖼𝖾𝗅𝖾𝗋𝖺𝗍𝗈𝗋𝗌 𝖼𝗈𝗆𝖾 𝖿𝗋𝗈𝗆 𝖿𝖺𝖼𝖾-𝗍𝗈-𝖿𝖺𝖼𝖾 𝗆𝗈𝗆𝖾𝗇𝗍𝗌 𝗍𝗁𝖺𝗍 𝖺𝗋𝖾𝗇’𝗍 𝗂𝗇 𝗒𝗈𝗎𝗋 𝖽𝗂𝖺𝗋𝗒.”\n\n𝖢𝗈𝖽𝗂𝖾 𝖲𝖺𝗇𝖼𝗁𝖾𝗓 (𝖢𝗈𝗇𝗍𝗋𝖺𝗋𝗂𝖺𝗇 𝖳𝗁𝗂𝗇𝗄𝗂𝗇𝗀) 𝖺𝖽𝖽𝖾𝖽: “𝖸𝗈𝗎 𝗆𝗂𝗌𝗌 𝗍𝗁𝖾 𝗈𝗌𝗆𝗈𝗌𝗂𝗌 𝗍𝗁𝖺𝗍 𝗁𝖺𝗉𝗉𝖾𝗇𝗌 𝖺𝗋𝗈𝗎𝗇𝖽 𝗌𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅 𝗉𝖾𝗈𝗉𝗅𝖾. 𝖳𝗁𝖾 𝗆𝗈𝗌𝗍 𝗏𝖺𝗅𝗎𝖺𝖻𝗅𝖾 𝗈𝗉𝗉𝗈𝗋𝗍𝗎𝗇𝗂𝗍𝗂𝖾𝗌 𝖽𝗈𝗇’𝗍 𝗁𝖺𝗉𝗉𝖾𝗇 𝗈𝗇 𝖹𝗈𝗈𝗆.”\n\n𝖠𝗇𝖽 𝖭𝗂𝖼𝗈𝗅𝖺 𝖪𝗂𝗅𝗇𝖾𝗋 (𝖣𝖤𝖢𝖨𝖤𝖬) 𝗋𝖾𝗆𝗂𝗇𝖽𝖾𝖽 𝗎𝗌 𝗍𝗁𝖺𝗍 𝗐𝗂𝗍𝗁 𝖠𝖨 𝗍𝖺𝗄𝗂𝗇𝗀 𝗈𝗏𝖾𝗋 𝗆𝖺𝗇𝗒 𝗍𝖺𝗌𝗄𝗌, 𝗉𝖾𝗈𝗉𝗅𝖾 𝗌𝗄𝗂𝗅𝗅𝗌 𝖺𝗇𝖽 𝖾𝗆𝗈𝗍𝗂𝗈𝗇𝖺𝗅 𝗂𝗇𝗍𝖾𝗅𝗅𝗂𝗀𝖾𝗇𝖼𝖾 𝖻𝗈𝗍𝗁 𝖻𝖾𝗌𝗍 𝖽𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝖽 𝗂𝗇 𝗉𝖾𝗋𝗌𝗈𝗇 𝗐𝗂𝗅𝗅 𝗈𝗇𝗅𝗒 𝖻𝖾𝖼𝗈𝗆𝖾 𝗆𝗈𝗋𝖾 𝗏𝖺𝗅𝗎𝖺𝖻𝗅𝖾.\n\n𝖨’𝗆 𝖺 𝗁𝗎𝗀𝖾 𝖻𝖾𝗅𝗂𝖾𝗏𝖾𝗋 𝗂𝗇 𝖿𝗅𝖾𝗑𝗂𝖻𝗂𝗅𝗂𝗍𝗒 𝖺𝗇𝖽 𝖺𝗎𝗍𝗈𝗇𝗈𝗆𝗒. 𝖡𝗎𝗍 𝖨 𝖺𝗅𝗌𝗈 𝗍𝗁𝗂𝗇𝗄 𝗐𝖾 𝗎𝗇𝖽𝖾𝗋𝖾𝗌𝗍𝗂𝗆𝖺𝗍𝖾 𝗁𝗈𝗐 𝗆𝗎𝖼𝗁 𝖾𝖺𝗋𝗅𝗒-𝖼𝖺𝗋𝖾𝖾𝗋 𝗉𝗋𝗈𝖿𝖾𝗌𝗌𝗂𝗈𝗇𝖺𝗅𝗌 𝗀𝖺𝗂𝗇 𝖿𝗋𝗈𝗆 𝖻𝖾𝗂𝗇𝗀 𝗉𝗁𝗒𝗌𝗂𝖼𝖺𝗅𝗅𝗒 𝗉𝗋𝖾𝗌𝖾𝗇𝗍 𝗍𝗁𝖾 𝗌𝗆𝖺𝗅𝗅 𝖼𝗎𝖾𝗌, 𝗍𝗁𝖾 𝗂𝗇𝖿𝗈𝗋𝗆𝖺𝗅 𝖿𝖾𝖾𝖽𝖻𝖺𝖼𝗄, 𝗍𝗁𝖾 𝖾𝗇𝖾𝗋𝗀𝗒 𝗈𝖿 𝖻𝗎𝗂𝗅𝖽𝗂𝗇𝗀 𝗍𝗈𝗀𝖾𝗍𝗁𝖾𝗋.\n\n𝖨𝖿 𝖨 𝗐𝖾𝗋𝖾 𝗌𝗍𝖺𝗋𝗍𝗂𝗇𝗀 𝗈𝗎𝗍 𝗍𝗈𝖽𝖺𝗒, 𝖨’𝖽 𝗐𝖺𝗇𝗍 𝖺𝗍 𝗅𝖾𝖺𝗌𝗍 𝗉𝖺𝗋𝗍 𝗈𝖿 𝗆𝗒 𝗐𝖾𝖾𝗄 𝗂𝗇 𝖺𝗇 𝖾𝗇𝗏𝗂𝗋𝗈𝗇𝗆𝖾𝗇𝗍 𝗐𝗁𝖾𝗋𝖾 𝖨 𝖼𝗈𝗎𝗅𝖽 𝗈𝖻𝗌𝖾𝗋𝗏𝖾, 𝖼𝗈𝗇𝗇𝖾𝖼𝗍, 𝖺𝗇𝖽 𝗅𝖾𝖺𝗋𝗇.",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7381971901386051584",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-022",
+    "date": "2025-09-11",
+    "title": "When building backend systems at scale, I’ve learned one truth",
+    "excerpt": "The difference between a prototype and a production system is design discipline.",
+    "body": "When building backend systems at scale, I’ve learned one truth:\nThe difference between a prototype and a production system is design discipline.\n\nAI is no different.\nCalling an API is easy.\nDesigning agents that handle failures, preserve memory, and coordinate reliably? That’s the real challenge.\n\nGoogle Senior Engineer just dropped a Free 400+ page book “Agentic Design Patterns”\n\nIt is the best resource for anyone serious about building real AI systems:\n\nInside Antonio Gulli book:\n🔹 Patterns for memory retention and monitoring — critical in long-running processes\n🔹 Guardrails for exceptions and safety — the kind of details that make or break production rollouts\n🔹 Multi-agent orchestration — similar to microservices coordination, but with new complexities\n🔹 MCP (Model Context Protocol) — a framework that feels as fundamental as APIs were in traditional systems\n\nIf you’ve ever asked:\nWhat happens when an agent fails mid-task?\nHow do I prevent chaos when scaling to 10+ agents?\nHow do I evaluate reliability, not just accuracy?\n…this book gives you concrete answers.\n\nHighly recommend saving it if you're building AI systems that need to scale and stay reliable.\n\n👉 Link to the book: https://lnkd.in/ghwKbmAx",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7371820654897164288",
+    "sharedUrl": "https://lnkd.in/ghwKbmAx"
+  },
+  {
+    "id": "li-023",
+    "date": "2025-09-09",
+    "title": "My screen time has been validated!",
+    "excerpt": "Somehow, I hit the Top 1% of creators on Topmate for August.",
+    "body": "My screen time has been validated!\n\nSomehow, I hit the Top 1% of creators on Topmate for August.\n\nEvery booking and DM wasn’t just a notification it was proof my weird obsessions are valuable.\n\nMy highly-caffeinated strategy?\n– Sharing thoughts before I could overthink them\n– Showing up online, even when my hair was a mess\n– Turning my random trivia into actual tutorials\n\nThanks to all who connected with me in August. Let’s keep building.\n\n#Topmate #TopOnePercent #AugustRecap #CreatorEconomy #IndieExperts\n\nhttps://lnkd.in/dNJw25Bf",
+    "tags": [
+      "topmate",
+      "toponepercent",
+      "augustrecap",
+      "creatoreconomy",
+      "indieexperts"
+    ],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7371134119575060480",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-024",
+    "date": "2025-07-15",
+    "title": "𝖨𝗌 “𝟨𝟨𝗑+” 𝖺𝗅𝗐𝖺𝗒𝗌 𝗍𝗁𝖾 𝗌𝖺𝗆𝖾?",
+    "excerpt": "𝗇𝗈. 𝖨𝗍'𝗌 𝗇𝗈𝗍 𝖺 𝖿𝗂𝗑𝖾𝖽 𝗇𝗎𝗆𝖻𝖾𝗋.",
+    "body": "𝖨𝗌 “𝟨𝟨𝗑+” 𝖺𝗅𝗐𝖺𝗒𝗌 𝗍𝗁𝖾 𝗌𝖺𝗆𝖾?\n\n𝗇𝗈. 𝖨𝗍'𝗌 𝗇𝗈𝗍 𝖺 𝖿𝗂𝗑𝖾𝖽 𝗇𝗎𝗆𝖻𝖾𝗋.\n\n𝗃𝗎𝗌𝗍 𝗍𝗁𝖾 𝗋𝖾𝗌𝗎𝗅𝗍 𝗈𝖿 𝗈𝗇𝖾 𝖻𝖾𝗇𝖼𝗁𝗆𝖺𝗋𝗄:\n𝖽𝖾𝗉𝖾𝗇𝖽𝗂𝗇𝗀 𝗈𝗇 𝗃𝗏𝗆 𝗏𝖾𝗋𝗌𝗂𝗈𝗇, 𝖼𝗉𝗎, 𝖽𝖾𝗉𝗍𝗁 𝗈𝖿 𝗍𝗁𝖾 𝗌𝗍𝖺𝖼𝗄, 𝖺𝗇𝖽 𝗐𝗁𝖾𝗍𝗁𝖾𝗋 𝗒𝗈𝗎'𝗋𝖾 𝗍𝗁𝗋𝗈𝗐𝗂𝗇𝗀 𝖾𝗏𝖾𝗋𝗒 𝗍𝗂𝗆𝖾 𝗈𝗋 𝗃𝗎𝗌𝗍 𝗈𝗇𝖼𝖾, 𝗂𝗍 𝖼𝗈𝗎𝗅𝖽 𝖻𝖾:\n𝟣𝟢𝗑 𝗌𝗅𝗈𝗐𝖾𝗋\n𝟣𝟢𝟢𝗑 𝗌𝗅𝗈𝗐𝖾𝗋 𝖾𝗏𝖾𝗇\n𝟣𝟢𝟢𝟢𝗑 𝗌𝗅𝗈𝗐𝖾𝗋\n\n𝗍𝗁𝖾 𝗆𝖺𝗂𝗇 𝗉𝗈𝗂𝗇𝗍 is: 𝗍𝗁𝗋𝗈𝗐𝗂𝗇𝗀 𝖾𝗑𝖼𝖾𝗉𝗍𝗂𝗈𝗇𝗌 𝗂𝗌 𝗆𝗎𝖼𝗁 𝗌𝗅𝗈𝗐𝖾𝗋 𝗍𝗁𝖺𝗇 𝗋𝖾𝗀𝗎𝗅𝖺𝗋 𝖼𝗈𝖽𝖾 𝖾𝗑𝖾𝖼𝗎𝗍𝗂𝗈𝗇, 𝖾𝗌𝗉𝖾𝖼𝗂𝖺𝗅𝗅𝗒 𝗂𝗇𝗌𝗂𝖽𝖾 𝗁𝗈𝗍 𝗅𝗈𝗈𝗉𝗌.",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7350842687253528577",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-025",
+    "date": "2025-05-22",
+    "title": "I have entered the Top 1% Club of experts on Topmate",
+    "excerpt": "This accomplishment is as much yours as it is mine. Your support has been pivotal throughout my journey.",
+    "body": "Guess what?\n\nI have entered the Top 1% Club of experts on Topmate\n\nThis accomplishment is as much yours as it is mine. Your support has been pivotal throughout my journey.\n\nLet's continue creating the impact on topmate.\n\nhttps://lnkd.in/dqAAWwVv",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7331307730365763584",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-026",
+    "date": "2025-05-09",
+    "title": "OpenAI paid $3 billion for Windsurf, and Cursor was valued at $9 billion in its latest funding round.",
+    "excerpt": "Both products are forks (modified versions) of VS Code, which is owned by Microsoft.",
+    "body": "OpenAI paid $3 billion for Windsurf, and Cursor was valued at $9 billion in its latest funding round.\n\nBoth products are forks (modified versions) of VS Code, which is owned by Microsoft.\n\nAnd Microsoft owns up to 49% of OpenAI’s profits.\n\nJust like that, $12 billion appeared in the market.",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7326620893009346561",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-027",
+    "date": "2025-05-04",
+    "title": "Lazy vs Eager Transformations in Kotlin — Who Works Smarter?",
+    "excerpt": "When working with data transformations in Kotlin, you often face a choice between two styles: Collections or Sequences.",
+    "body": "Lazy vs Eager Transformations in Kotlin — Who Works Smarter?\n\nWhen working with data transformations in Kotlin, you often face a choice between two styles: Collections or Sequences.\nThey both work with Lists, Sets, and other iterables — but their approach under the hood is quite different.\n\n𝐂𝐨𝐥𝐥𝐞𝐜𝐭𝐢𝐨𝐧𝐬\nCollections like List, Set, Map apply each transformation (map(), filter(), etc.) immediately.\nEach step creates a brand-new collection.\n\n✔️ Best suited for small datasets or a couple of transformations\n⚠️ Can become inefficient with longer chains, as each step allocates memory for a new intermediate collection\n\n𝐒𝐞𝐪𝐮𝐞𝐧𝐜𝐞𝐬\nSequences delay execution. Transformations like map() and filter() don’t do anything until a terminal operation like toList() or count() is called.\n✔️ Great for large datasets, long transformation chains, or even infinite streams\n⚠️ Slight overhead for small datasets — and once evaluated, the sequence is consumed.\n\nGif Credit: android lead",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7324876145001156608",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-028",
+    "date": "2025-04-20",
+    "title": "Commit messages I’ve seen in the wild",
+    "excerpt": "Beautiful. Poetic. Absolutely zero context.",
+    "body": "Commit messages I’ve seen in the wild:\n“fixed bug”\n“it works now”\n“final fix”\n“updated logic”\nBeautiful. Poetic. Absolutely zero context.\nFuture me staring at this like: “Cool cool cool… but WHICH bug, HOW does it work now, and WHY is this the FINAL fix of the 17th final fixes?”\nIf commit messages were horoscopes, these would be “you will experience changes today.”\nLet’s be real — writing descriptive commit messages isn’t just being nice.\nIt’s self-defense.\n✅ Tell me the why, the what, and maybe even the how (if you're feeling generous).\nYour teammates (and your future 3AM-debugging self) will thank you.\n📸 Picture credit: GitHub Community Projects X handle",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7319824344371683328",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-029",
+    "date": "2025-02-25",
+    "title": "Excited to share with you all that I'm hosting a new webinar on Topmate",
+    "excerpt": "It's something I've been meaning to do for a long time -",
+    "body": "Excited to share with you all that I'm hosting a new webinar on Topmate\n\nIt's something I've been meaning to do for a long time -\n\nGet Into IT – Your Gateway to a Tech Career!\n\nAnd I think you'll find it incredibly valuable\n\nSo do give it a try and let me know what you think?\n\nAll you have to do is head over to the link and get it.\n\nhttps://lnkd.in/dYrqGvy8",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7300114756152049666",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-030",
+    "date": "2025-02-20",
+    "title": "Clean Code tip: Write clean commit messages It’s the best tool to document the reason for change in your code.",
+    "excerpt": "Here are 5 tips on how I write commits:",
+    "body": "Clean Code tip: Write clean commit messages It’s the best tool to document the reason for change in your code.\n\nHere are 5 tips on how I write commits:\n\n1. Explain the WHY\n❌ Add endpoint\n✅ Add endpoint to enable users to download purchase history\n\n2. Summarize WHAT the commit does, not HOW it does it:\n❌ Changed the button color by updating CSS file\n✅ Update primary button color for better contrast\n\n3. Use present tense with imperative mood\n❌ I have removed\n✅ Remove ...\n\n4. Add link reference to the actual work item\n❌ Fix login bug when user is inactive\n✅ ab34Dc: Fix login bug when user is inactive\n\n5. Don’t include file names - they are in the Git details\n❌ Update dependencies in package.json\n✅ Update dependencies to address security vulnerabilities\n\nClean commit messages are part of internal software quality.\n\njust a #thought 💭",
+    "tags": [
+      "thought"
+    ],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7298379913772867584",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-031",
+    "date": "2025-02-04",
+    "title": "From doubt to breakthrough - that's the journey I've had the privilege to facilitate, landing me among Topmate's top 5% professionals! 💫",
+    "excerpt": "January marks just the beginning. Every conversation has added a new perspective, every exchange has created lasting value.",
+    "body": "From doubt to breakthrough - that's the journey I've had the privilege to facilitate, landing me among Topmate's top 5% professionals! 💫\n\nJanuary marks just the beginning. Every conversation has added a new perspective, every exchange has created lasting value.\n\nLet's connect on Topmate - where ambition meets opportunity.\n\n#Growth #Topmate #ProfessionalGrowth #NewYear2025\n\nhttps://lnkd.in/d2DWT-eW",
+    "tags": [
+      "growth",
+      "topmate",
+      "professionalgrowth",
+      "newyear2025"
+    ],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7292527769492594688",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-032",
+    "date": "2025-01-31",
+    "title": "The Don't Repeat Yourself (DRY) principle isn't just about avoiding duplicate code.",
+    "excerpt": "If two similar pieces of code represent different business logic, they may need to change for different reasons and at different times. Forcing them to be the same can create problems.",
+    "body": "The Don't Repeat Yourself (DRY) principle isn't just about avoiding duplicate code.\n\nIf two similar pieces of code represent different business logic, they may need to change for different reasons and at different times. Forcing them to be the same can create problems.\n\nHowever, if two pieces of code represent the same idea or knowledge, they should always change together. In this case, removing duplication makes sense.\n\nDRY is about avoiding repeated knowledge, not just repeated code.\n\nJust a #thought  💭",
+    "tags": [
+      "thought"
+    ],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7291013916409655296",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-033",
+    "date": "2023-03-03",
+    "title": "Exciting news! OpenAI has just released its ChatGPT and Whisper APIs!",
+    "excerpt": "With the ChatGPT API priced at $0.002 per 1k tokens and the Whisper API priced at $0.006 per minute, these powerful tools are now accessible to developers and businesses alike.",
+    "body": "Exciting news! OpenAI has just released its ChatGPT and Whisper APIs!\nWith the ChatGPT API priced at $0.002 per 1k tokens and the Whisper API priced at $0.006 per minute, these powerful tools are now accessible to developers and businesses alike.\n\nIt's amazing to see how quickly these advancements are transforming the job market. It's an exciting time to be a part of the tech industry!\n\nWell, well, well, look who's writing this post - none other than yours truly, ChatGPT. Oh, the irony!\n#OpenAI #AI #API #ChatGPT #WhisperAPI #TechTransformations\nhttps://lnkd.in/e3GxYXqN",
+    "tags": [
+      "openai",
+      "ai",
+      "api",
+      "chatgpt",
+      "whisperapi"
+    ],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7037381326999560192",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-034",
+    "date": "2022-07-17",
+    "title": "Snigdhajyoti Ghosh #Kudos It's incredible how often you exceed expectations #GoingAboveAndBeyond",
+    "excerpt": "Snigdhajyoti Ghosh #Kudos It's incredible how often you exceed expectations #GoingAboveAndBeyond",
+    "body": "Snigdhajyoti Ghosh #Kudos It's incredible how often you exceed expectations #GoingAboveAndBeyond",
+    "tags": [
+      "kudos",
+      "goingaboveandbeyond"
+    ],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A6954441557231951872",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-035",
+    "date": "2022-04-20",
+    "title": "If you are using a  #java #containerized solution this blog is for you.",
+    "excerpt": "Recommended strategies for containerizing your Java applications for #deployment to the #cloud.",
+    "body": "If you are using a  #java #containerized solution this blog is for you.\nRecommended strategies for containerizing your Java applications for #deployment to the #cloud.\n#docker #kubernetes\nhttps://lnkd.in/dZiAeAAJ",
+    "tags": [
+      "java",
+      "containerized",
+      "deployment",
+      "cloud",
+      "docker"
+    ],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6922483746231185408",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-036",
+    "date": "2022-01-17",
+    "title": "#Thoughtworks is looking for a Senior Consultant with 4-9 years of software development experience. Please read more details in this link and then apply.",
+    "excerpt": "#Thoughtworks is looking for a Senior Consultant with 4-9 years of software development experience. Please read more details in this link and then apply.",
+    "body": "#Thoughtworks is looking for a Senior Consultant with 4-9 years of software development experience. Please read more details in this link and then apply.\nhttps://lnkd.in/ggZPr3Ni\n#hiring",
+    "tags": [
+      "thoughtworks",
+      "hiring"
+    ],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6888910593726791680",
+    "sharedUrl": "https://grnh.se/544437e01us"
+  },
+  {
+    "id": "li-037",
+    "date": "2021-10-18",
+    "title": "Sign up for #Vapasi, our back-to-work program for women technologists. Explore more: https://lnkd.in/ebYmNTrb #Developers #QualityAnalysts",
+    "excerpt": "Sign up for #Vapasi, our back-to-work program for women technologists. Explore more: https://lnkd.in/ebYmNTrb #Developers #QualityAnalysts",
+    "body": "Sign up for #Vapasi, our back-to-work program for women technologists. Explore more: https://lnkd.in/ebYmNTrb #Developers #QualityAnalysts",
+    "tags": [
+      "vapasi",
+      "developers",
+      "qualityanalysts"
+    ],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6855845450315034624",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-038",
+    "date": "2021-02-23",
+    "title": "The Vapasi program is for women technologists who are currently on a career break and looking to resume their tech career journeys. The…",
+    "excerpt": "The 1st Vapasi was launched in 2014, since then we had 14 editions and the program has seen more than 200 women returnees participate in the program. Many of them are currently on their second-career journeys, working…",
+    "body": "The Vapasi program is for women technologists who are currently on a career break and looking to resume their tech career journeys. The 4-week free technical program will help sharpen participants' coding skills through hands-on sessions on object-oriented programming. The aim is to help make their transition back into the industry smoother.\n\nThe 1st Vapasi was launched in 2014, since then we had 14 editions and the program has seen more than 200 women returnees participate in the program. Many of them are currently on their second-career journeys, working with ThoughtWorks and other companies in India.\n\nWe are looking forward to you, to refer your friends and family who will benefit from the program. Please share the Vapasi page link with them to register.\n\nhttps://lnkd.in/dm6A87g\n\n#thoughtworks #careers #vapasi #forwomen",
+    "tags": [
+      "thoughtworks",
+      "careers",
+      "vapasi",
+      "forwomen"
+    ],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6769876544446894080",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-039",
+    "date": "2020-06-13",
+    "title": "IoT Fundamentals",
+    "excerpt": "What are the components  IoT includes?",
+    "body": "IoT Fundamentals\nWhat are the components  IoT includes?\nCovered IoT fundamentals and sensors to some extent.\nOpen for feedback\nReference: Introduction to the Internet of Things (XEE100) from Stanford University\n#iot #sensors #article #blogpost",
+    "tags": [
+      "iot",
+      "sensors",
+      "article",
+      "blogpost"
+    ],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A6677444472499970048",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-040",
+    "date": "2020-06-09",
+    "title": "Nowadays everyone is using containerized solution for CI/CD.",
+    "excerpt": "Have you ever wonder what makes a container to run in a host machine as a separate process/CPU/memory all along. #firstblogpost",
+    "body": "Nowadays everyone is using containerized solution for CI/CD.\nHave you ever wonder what makes a container to run in a host machine as a separate process/CPU/memory all along. #firstblogpost\n#docker #containers #kubernetes #devops",
+    "tags": [
+      "firstblogpost",
+      "docker",
+      "containers",
+      "kubernetes",
+      "devops"
+    ],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6675991722494873600",
+    "sharedUrl": "https://dev.to/gauravratnawat/what-s-inside-a-container-5g03"
+  },
+  {
+    "id": "li-041",
+    "date": "2020-05-01",
+    "title": "#specialization AWS Fundamentals from #coursera",
+    "excerpt": "A step forward towards AWS associate architect.",
+    "body": "#specialization AWS Fundamentals from #coursera\nA step forward towards AWS associate architect.\n#lockdownlearning #aws",
+    "tags": [
+      "specialization",
+      "coursera",
+      "lockdownlearning",
+      "aws"
+    ],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6661922653554774016",
+    "sharedUrl": "https://coursera.org/share/00997c27efd0876967e33cba508ca69f"
+  },
+  {
+    "id": "li-042",
+    "date": "2020-04-25",
+    "title": "3. AWS Fundamentals: Addressing Security Risk",
+    "excerpt": "#certifications #awssecurity #coursera #lockdownlearning",
+    "body": "3. AWS Fundamentals: Addressing Security Risk\n#certifications #awssecurity #coursera #lockdownlearning",
+    "tags": [
+      "certifications",
+      "awssecurity",
+      "coursera",
+      "lockdownlearning"
+    ],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6659790413651673088",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-043",
+    "date": "2020-03-29",
+    "title": "2. AWS Fundamentals: Building Serverless Applications",
+    "excerpt": "#coursera #aws #serverless #certifications",
+    "body": "One More\n2. AWS Fundamentals: Building Serverless Applications\n#coursera #aws #serverless #certifications",
+    "tags": [
+      "coursera",
+      "aws",
+      "serverless",
+      "certifications"
+    ],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6650043107767398400",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-044",
+    "date": "2020-03-24",
+    "title": "#1 Accomplished Specialization in  \"An Introduction to Programming the Internet of Things (IOT) Specialization",
+    "excerpt": "Conducted by University of California, Irvine #iot #coursera #certifications #learnings #internetofthings",
+    "body": "#1 Accomplished Specialization in  \"An Introduction to Programming the Internet of Things (IOT) Specialization\nConducted by University of California, Irvine #iot #coursera #certifications #learnings #internetofthings\n\nhttps://lnkd.in/g_5ZxTZ",
+    "tags": [
+      "1",
+      "iot",
+      "coursera",
+      "certifications",
+      "learnings"
+    ],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6648270211671818240",
+    "sharedUrl": "https://coursera.org/share/137db111973a1d77f6b0ab7141625a1f"
+  },
+  {
+    "id": "li-045",
+    "date": "2019-06-24",
+    "title": "#jobsinindia #jobhiring #javadevelopers #springframework",
+    "excerpt": "#jobsinindia #jobhiring #javadevelopers #springframework",
+    "body": "#jobsinindia #jobhiring #javadevelopers #springframework",
+    "tags": [
+      "jobsinindia",
+      "jobhiring",
+      "javadevelopers",
+      "springframework"
+    ],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6548995081385443328",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-046",
+    "date": "2019-06-19",
+    "title": "We are looking for the java professional.",
+    "excerpt": "Job Description:Position: SE/SSE JavaLocation: Gurugram",
+    "body": "Hello folks!!\nWe are looking for the java professional.\n\nCompany : Q3 Infotech\nJob Description:Position: SE/SSE JavaLocation: Gurugram\nJob Description:\n•  Designing and developing high-volume, low-latency applications for mission-critical systems and delivering high-availability and performance\n•   Contributing in all phases of the development lifecycle\n•   Writing well designed, testable, efficient code.\n•   Having2-4 years of experience in Java application development.\n•  Good communication skills\n•  Education: Full time bachelor’s degree with 60% and above.\n• Skills Required: Java, jQuery, core java, Spring/hibernate/struts, SQL Server/Oracle.\n\nIntrested one DM me.",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6547170394527404032",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-047",
+    "date": "2015-02-23",
+    "title": "Israel based firm launches Sesame, a touch-free smartphone for the disabled",
+    "excerpt": "Israel based firm launches Sesame, a touch-free smartphone for the disabled",
+    "body": "Israel based firm launches Sesame, a touch-free smartphone for the disabled",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5975658489723318272",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-048",
+    "date": "2015-02-23",
+    "title": "HTTP/2, the first major change to HTTP in 16 years, has been finalized",
+    "excerpt": "HTTP/2, the first major change to HTTP in 16 years, has been finalized",
+    "body": "HTTP/2, the first major change to HTTP in 16 years, has been finalized",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5975658485747113984",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-049",
+    "date": "2015-02-14",
+    "title": "12 Cool VLC Tips & Tricks You Might Not Know About",
+    "excerpt": "12 Cool VLC Tips & Tricks You Might Not Know About",
+    "body": "12 Cool VLC Tips & Tricks You Might Not Know About",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5972388997530472448",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-050",
+    "date": "2015-02-12",
+    "title": "Get 100GB of free OneDrive storage thanks to this loophole",
+    "excerpt": "Get 100GB of free OneDrive storage thanks to this loophole",
+    "body": "Get 100GB of free OneDrive storage thanks to this loophole",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5971633922767933440",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-051",
+    "date": "2015-02-12",
+    "title": "There’s a Game Hidden inside your Google Chrome, It works on Android too!",
+    "excerpt": "There’s a Game Hidden inside your Google Chrome, It works on Android too!",
+    "body": "There’s a Game Hidden inside your Google Chrome, It works on Android too!",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5971633918502322176",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-052",
+    "date": "2014-12-27",
+    "title": "New gaming mouse tracks how your heart and skin react to games",
+    "excerpt": "New gaming mouse tracks how your heart and skin react to games",
+    "body": "New gaming mouse tracks how your heart and skin react to games",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5954639300862763008",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-053",
+    "date": "2014-12-27",
+    "title": "Cicret bracelet will turn your arm into a tablet",
+    "excerpt": "Cicret bracelet will turn your arm into a tablet",
+    "body": "Cicret bracelet will turn your arm into a tablet",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5954630851831615488",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-054",
+    "date": "2014-03-16",
+    "title": "I connected my LinkedIn and SlideShare accounts",
+    "excerpt": "I connected my LinkedIn and SlideShare accounts",
+    "body": "I connected my LinkedIn and SlideShare accounts",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5850876442371436545",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-055",
+    "date": "2014-02-25",
+    "title": "Copy YouTube Playlists.",
+    "excerpt": "",
+    "body": "Copy YouTube Playlists.",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5844075936802148353",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-056",
+    "date": "2014-02-25",
+    "title": "Wolfram’s First Demo Of New Language; 3 Decades In Making",
+    "excerpt": "The first demo of Stephen Wolfram’s much awaited Wolfram Language has been shown by the creator. The story begun three months ago, when Stephen Wolfram gave the media a ‘sneak-peak’ into the future of the Wolfram Lang…",
+    "body": "Wolfram’s First Demo Of New Language; 3 Decades In Making\nThe first demo of Stephen Wolfram’s much awaited Wolfram Language has been shown by the creator. The story begun three months ago, when Stephen Wolfram gave the media a ‘sneak-peak’ into the future of the Wolfram Language. Back at that time, Wolfram struggled to explain how exactly the new language worked.\n\nThe Wolfram Language is a completely symbolic, heavily natural, intensely knowledge-based, and extremely large computer programming language, and apparently took three decades in the making. In a video release, Wolfram sa...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5844064354789519361",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-057",
+    "date": "2014-02-25",
+    "title": "50 Cloud Computing Terms That You Should Know!",
+    "excerpt": "With cloud computing becoming bigger by the day, there is yet another language that is picking up in the technology world. No, this is not a programming language. Often you will hear people say things like private clo…",
+    "body": "50 Cloud Computing Terms That You Should Know!\nWith cloud computing becoming bigger by the day, there is yet another language that is picking up in the technology world. No, this is not a programming language. Often you will hear people say things like private cloud, cloud security, IaaS, XaaS etc. As a professional or someone interested in the industry, you should know what each of these means.\nHere is a collection of 50 terms that are commonly used in the industry nowadays.\n\nAirframe: This is an open source cloud computing platform that is meant for organisations who are consider...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5844063360915607561",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-058",
+    "date": "2014-02-23",
+    "title": "11 Websites Where You Can Buy And Sell App Source Codes!",
+    "excerpt": "App reskinning is a popular practice nowadays. You can buy an app, give it your own touches and then sell it on the various app store. The practice exists in both Android and iOS platforms. Here are 11 websites that w…",
+    "body": "11 Websites Where You Can Buy And Sell App Source Codes!\nApp reskinning is a popular practice nowadays. You can buy an app, give it your own touches and then sell it on the various app store. The practice exists in both Android and iOS platforms. Here are 11 websites that will aid you in the transactions!\n\n1. ChupaMobile\nThis is perhaps the top website for buying and selling of Android and iOS app source codes. It has a huge collection of games and apps and is very easy to navigate through. You can also sort the listings by frameworks.\n2. Apptopia\nThis is amongst the best sources...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5843353551459348488",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-059",
+    "date": "2014-02-23",
+    "title": "Here Are 6 Ways To Dual-Booting With Windows 8 And Linux!",
+    "excerpt": "You think Linux is not for you and only for the tech savvy and those who are trained? Well, think again! The way things stand right now, laptops and PCs are becoming passé and mobile operating systems are gaining popu…",
+    "body": "Here Are 6 Ways To Dual-Booting With Windows 8 And Linux!\nYou think Linux is not for you and only for the tech savvy and those who are trained? Well, think again! The way things stand right now, laptops and PCs are becoming passé and mobile operating systems are gaining popularity. Linux is being adopted like never before! When it comes to choosing your operating system, you must focus on what your usage is. However, if your using Windows, you can still try out the ‘goodness’ of Linux without having to give up on your first love!\n\nHere are six ways to set up multi-booting with Window...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5843353187490205703",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-060",
+    "date": "2014-02-23",
+    "title": "Here Are 15 ‘Big Data’ Facts Every IT Professional Should Know!",
+    "excerpt": "Big data is certainly the talk of the town lately! It is one of the fast growing technologies that can help you get jobs with the tech biggies. More and more firms now believe that big data will help businesses make b…",
+    "body": "Here Are 15 ‘Big Data’ Facts Every IT Professional Should Know!\nBig data is certainly the talk of the town lately! It is one of the fast growing technologies that can help you get jobs with the tech biggies. More and more firms now believe that big data will help businesses make better decisions in the days to come (some believe it’s already started). However, there is dearth of right skills in the market.\n\nAs such, IT professionals should keep track of big data trends, research and statistics!\n1. How Much Data is There?\n-According to IBM, a whopping 2.5 quintillion bytes of data ...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5843346207727955977",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-061",
+    "date": "2014-02-22",
+    "title": "11 Top Circuit Simulators For Engineers!",
+    "excerpt": "Electronic circuit simulators are usually available under the free software license from various platforms. These tools replicate the working of an actual circuit and hence electronic device, on the computer. They use…",
+    "body": "11 Top Circuit Simulators For Engineers!\nElectronic circuit simulators are usually available under the free software license from various platforms. These tools replicate the working of an actual circuit and hence electronic device, on the computer. They use mathematical models for the same. As a result, circuit simulators can be invaluable analysis tools for engineers. Here are some of the top freely available electronic circuit simulators.\n\nAnalog Electronic Circuit Simulators: These tools simulate analog circuits on your system. You can use them for their analysis.\n1. Electric...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5842915311820496898",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-062",
+    "date": "2014-02-22",
+    "title": "Here Are Top 20 Hacking Forums!",
+    "excerpt": "Does hacking excite you? If yes, then we bring to you some interesting hacking forums. These may not be for those wanting to understand only the concept but for those who want to learn hacking techniques and have gath…",
+    "body": "Here Are Top 20 Hacking Forums!\nDoes hacking excite you? If yes, then we bring to you some interesting hacking forums. These may not be for those wanting to understand only the concept but for those who want to learn hacking techniques and have gathered some knowledge so far.\n\n1. Hack This Site!\n-Provides realistic challenges which allow you to practice your cracking skills in a safe, legal environment.\n2. Hack-tech\n-Cover hacking, infosec and network security.\n-Topics like firewalls, encryption and malicious software are also available.\n3. Hack Hound\n-Learn about programming,...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5842912207553171457",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-063",
+    "date": "2014-02-22",
+    "title": "Want To Send Anonymous Mails? Here’s How You Can Do It!",
+    "excerpt": "Faking the source address of an email is easy, thanks to a neat set of tricks that anyone could master. Sending anonymous emails could be fun, but that’s not all about it! The trick could be useful in various client s…",
+    "body": "Want To Send Anonymous Mails? Here’s How You Can Do It!\nFaking the source address of an email is easy, thanks to a neat set of tricks that anyone could master. Sending anonymous emails could be fun, but that’s not all about it! The trick could be useful in various client side hacking, sending fake emails is an important part of social engineering. The trick is: using the address of a trusted company as source making the recipient fall for its authenticity, and you’re done!\n\nHere’s how to send an anonymous email (with no risk involved!):\n1. First and foremost you need a fake email se...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5842910595262734343",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-064",
+    "date": "2014-02-22",
+    "title": "Here Are 15 ‘Big Data’ Facts Every IT Professional Should Know!",
+    "excerpt": "Big data is certainly the talk of the town lately! It is one of the fast growing technologies that can help you get jobs with the tech biggies. More and more firms now believe that big data will help businesses make b…",
+    "body": "Here Are 15 ‘Big Data’ Facts Every IT Professional Should Know!\nBig data is certainly the talk of the town lately! It is one of the fast growing technologies that can help you get jobs with the tech biggies. More and more firms now believe that big data will help businesses make better decisions in the days to come (some believe it’s already started). However, there is dearth of right skills in the market.\n\nAs such, IT professionals should keep track of big data trends, research and statistics!\n1. How Much Data is There?\n-According to IBM, a whopping 2.5 quintillion bytes of data ...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5842910768370040833",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-065",
+    "date": "2014-02-22",
+    "title": "8 Common Terms You Need To Know Before Buying Your Next TV",
+    "excerpt": "We’re at a point now where you can watch TV online legally and for free, but that doesn’t mean you should ditch that thing all the furniture in your living room is pointed towards. The TV still has a place in your hou…",
+    "body": "8 Common Terms You Need To Know Before Buying Your Next TV\nWe’re at a point now where you can watch TV online legally and for free, but that doesn’t mean you should ditch that thing all the furniture in your living room is pointed towards. The TV still has a place in your house and, in fact, there are several parts where your PC monitor hasn’t caught up.\nWhen you go out to buy a new television, you might be a little confused by the many options available, all the features they have, and the jargon you need to wade through. So here’s your cheat sheet for some of the common terms in TV tech...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5842868283270766592",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-066",
+    "date": "2014-02-22",
+    "title": "10 Awesome Features In Android Developer Options!",
+    "excerpt": "The Developer Options on Android are most often skipped by users, but they are of the utmost importance for developers. That said, there are many features on this that may be useful to users too. Moreover, even develo…",
+    "body": "10 Awesome Features In Android Developer Options!\nThe Developer Options on Android are most often skipped by users, but they are of the utmost importance for developers. That said, there are many features on this that may be useful to users too. Moreover, even developers tend to miss these features sometimes. Here they are,\n\n1. Enable And Disabling USB Debugging\nWhen you try to run Android-related tools on your PC, most of them require you to enable USB debugging. This can be done by the following method.\n- Open Settings -> Developer Options.\n- Put a check mark on the USB debug...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5842864299302727689",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-067",
+    "date": "2014-02-22",
+    "title": "Top 5 Free Games On Android",
+    "excerpt": "Android marketplace, the Google Play Store, has many games but hardly some are original gaming apps as most are duplicates of various popular games. Here, we have selectively listed five free-to-play games that are re…",
+    "body": "Top 5 Free Games On Android\nAndroid marketplace, the Google Play Store, has many games but hardly some are original gaming apps as most are duplicates of various popular games. Here, we have selectively listed five free-to-play games that are rewarding as well as challenging for the gamer in you.\n\nHowever, it is to be noted that some of these games have locked content that can be availed by in-app purchases.\nFirst in our list is: Clash of Clans\nThis free-to-play action game engages into strategy and planning, to build a village.\nComplete with a fortress like features, the game in...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5842865779581652996",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-068",
+    "date": "2014-02-22",
+    "title": "These 7 Tech Acronyms Should Be Dumped Now!",
+    "excerpt": "The world of Information Technology is full of acronyms and abbreviations, after all the IT hub is full of mnemonic geniuses! Majority of these shorthands have become standard terms in tech over the years. However, as…",
+    "body": "These 7 Tech Acronyms Should Be Dumped Now!\nThe world of Information Technology is full of acronyms and abbreviations, after all the IT hub is full of mnemonic geniuses! Majority of these shorthands have become standard terms in tech over the years. However, as unfortunate as this may sound, many of these have overstayed their dues we believe. Many of them date all the way back to the early 1990s. It’s high time they hang their boots for the better!\n\nHere are seven such acronyms that should be retired now:\n1. DAM\n-Acronym for Database Activity Monitoring: a security technique that ...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5842865225639927812",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-069",
+    "date": "2014-02-22",
+    "title": "Top 10 Free PHP Scripts That Will Be Useful For Developers!",
+    "excerpt": "Developers often need to reach their goals within time constraints. In such cases, having ready scripts can be really useful. What do you do when you need such codes? The answer is simple, just ask us. Here are 10 of …",
+    "body": "Top 10 Free PHP Scripts That Will Be Useful For Developers!\nDevelopers often need to reach their goals within time constraints. In such cases, having ready scripts can be really useful. What do you do when you need such codes? The answer is simple, just ask us. Here are 10 of the most popular PHP scrips available online.\n\n1. ChiliScripts\nThis is a free and open source application that has been built using PHP. It uses MySQL for storing data.\n2. Xde Bug\nThis is a PHP extension that is used for profiling and debugging PHP scripts. It is a free and open source application.\n3. PHP & ...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5842864957410013184",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-070",
+    "date": "2014-02-22",
+    "title": "Here Are 10 Must Know WhatsApp Tips And Tricks!",
+    "excerpt": "Developers often need to reach their goals within time constraints. In such cases, having ready scripts can be really useful. What do you do when you need such codes? The answer is simple, just ask us. Here are 10 of …",
+    "body": "Here Are 10 Must Know WhatsApp Tips And Tricks!\nDevelopers often need to reach their goals within time constraints. In such cases, having ready scripts can be really useful. What do you do when you need such codes? The answer is simple, just ask us. Here are 10 of the most popular PHP scrips available online.\n\n1. ChiliScripts\nThis is a free and open source application that has been built using PHP. It uses MySQL for storing data.\n2. Xde Bug\nThis is a PHP extension that is used for profiling and debugging PHP scripts. It is a free and open source application.\n3. PHP & MySQL Login ...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5842864117626458119",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-071",
+    "date": "2014-02-22",
+    "title": "7 Weirdest Patents Owned By Google!",
+    "excerpt": "When they first announced the Google Glass, Google was ridiculed by many for being overambitious. But this is one technology giant that seems to not know the meaning of that word. Not only have they come up with the G…",
+    "body": "7 Weirdest Patents Owned By Google!\nWhen they first announced the Google Glass, Google was ridiculed by many for being overambitious. But this is one technology giant that seems to not know the meaning of that word. Not only have they come up with the Glass, they’re even close to making it commercially available. Well, the Glass isn’t the only thing Google has in store for us. Take a look at the company’s patents and you see what the word ‘futuristic’ actually means.\n\n1. Social Networking Updates by Comic Strips: This allows a user to post a self made comic strip to their social netw...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5842863147953692674",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-072",
+    "date": "2014-02-22",
+    "title": "List Of Smartphones Getting Android 4.4 KitKat Update",
+    "excerpt": "A dose of Android KitKat is what we all want today. Android KitKat is a ray of hope for many as it brings a new Linux Kernel at a smaller memory footprint.",
+    "body": "List Of Smartphones Getting Android 4.4 KitKat Update\nA dose of Android KitKat is what we all want today. Android KitKat is a ray of hope for many as it brings a new Linux Kernel at a smaller memory footprint.\nThe latest version of Android, Android 4.4, was released with Google Nexus 5 and has been able to create a liking for itself since then. A major reason for rejoice with KitKat is that it has been developed to run smoothly on any device, even those that have as little as 512MB space.\nSo manufacturers have no excuse to exclude any device from the list. Wish to know if your phone fall...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5842863070421991424",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-073",
+    "date": "2014-02-22",
+    "title": "11 Cloud Useful Cloud Computing Tutorials",
+    "excerpt": "Cloud computing is the future, you may have heard someone say this before. Here are 11 tutorials that will get you through various aspects of dealing with the cloud.",
+    "body": "11 Cloud Useful Cloud Computing Tutorials\nCloud computing is the future, you may have heard someone say this before. Here are 11 tutorials that will get you through various aspects of dealing with the cloud.\n\n1. Using Google Weather API In A C# Application\nThis one teaches you the basics of getting the weather with Google weather API.\n2. Using Tropo & Python To Have The Phone Tell Us The Weather\nAccording to the user, this tutorial teaches you to set up an automatic phone system and, using Python, design it to answer the phone and tell you the weather in your area based on the zi...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5842862652455387137",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-074",
+    "date": "2014-02-22",
+    "title": "10 Best Programming Languages For 2014",
+    "excerpt": "Productivity of programmers depends largely on how comfortable they are with a programming language. Coding could be great fun if you like the language and you are sure that the language will help you grow as well. We…",
+    "body": "10 Best Programming Languages For 2014\nProductivity of programmers depends largely on how comfortable they are with a programming language. Coding could be great fun if you like the language and you are sure that the language will help you grow as well. Well, we are aware that with a host of programming languages around, it could be difficult for you to pick the best for yourself. Worry not! Here’s a list of top 10 programming languages poised to make it big this year. Get started and happy coding!\n\n1. Clojure- “A Lisp for Functional Programming symbiotic with an established Platform...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5842862244362203138",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-075",
+    "date": "2014-02-21",
+    "title": "50 Open Source Software For Your Windows PC!",
+    "excerpt": "Using a Windows PC doesn’t mean that you have to be trapped within it. There are many open source applications that run on Microsoft’s Windows. Here are 50 of the best of the lot!",
+    "body": "50 Open Source Software For Your Windows PC!\nUsing a Windows PC doesn’t mean that you have to be trapped within it. There are many open source applications that run on Microsoft’s Windows. Here are 50 of the best of the lot!\n\nApp Collections: These are tools that contain a numbebr of open source software within them. They are complete packages that can run on Windows.\n1. OpenDisc\n2. PortableApps.com\n3. winPenPack\nAntivirus: You already know an what Antivirus is, add something get a good one, for example, use this software\n4. ClamWin Free Antivirus\nAstronomy: These are nifty to...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5842689555358040072",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-076",
+    "date": "2014-02-17",
+    "title": "The 101 Most Useful Websites",
+    "excerpt": "the 101 most useful websites on the internet. These sites, well most of them, solve at least one problem really well and they all have simple web addresses (URLs) that you can memorize thus saving you a trip to Google.",
+    "body": "The 101 Most Useful Websites\nthe 101 most useful websites on the internet. These sites, well most of them, solve at least one problem really well and they all have simple web addresses (URLs) that you can memorize thus saving you a trip to Google.\nAnd if you find this list useful, also check out the expanded version – The Most Useful Websites – which now offers a collection of 150+ undiscovered and incredibly useful websites to enhance your productivity.\n\nThe Most Useful Websites and Web Apps\nctrlq.org/screenshots – for capturing screenshots of web pages on mobile and desktops...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5841249247667691527",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-077",
+    "date": "2014-02-17",
+    "title": "How to Easily Transfer Files Across Cloud Services",
+    "excerpt": "Storage services like Google Docs, Dropbox, Amazon S3, etc. have made it easy for you keep your important files and documents online. These services are mostly free and you can have multiple accounts on them as long a…",
+    "body": "How to Easily Transfer Files Across Cloud Services\nStorage services like Google Docs, Dropbox, Amazon S3, etc. have made it easy for you keep your important files and documents online. These services are mostly free and you can have multiple accounts on them as long as you use separate email addresses.\nThis leads to another problem though. When you have files spread across multiple cloud services, managing them can be challenge. You may have stored one group of files on Dropbox, the other on Google Docs while some of the older files could be hosted on your old Google Docs account that you...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5841246853286350849",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-078",
+    "date": "2014-02-17",
+    "title": "Play any YouTube Playlist with VLC Media Player",
+    "excerpt": "you know that VLC Media Player, the world’s favorite video player that supports nearly every video format, can also play YouTube videos on your desktop without requiring the web browser or the Adobe Flash player.",
+    "body": "Play any YouTube Playlist with VLC Media Player\nyou know that VLC Media Player, the world’s favorite video player that supports nearly every video format, can also play YouTube videos on your desktop without requiring the web browser or the Adobe Flash player.\nTo get started, open the VLC player, press Ctrl+N to open the Network URL dialog and paste any YouTube video URL in the input box.\n\nThe Benefits of Watching YouTube Videos with VLC\nThe streaming videos will play inside VLC Media Player just like any other local video file while offering some additional benefits not ava...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5841241369024147461",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-079",
+    "date": "2014-02-17",
+    "title": "The Best Google Chrome Extensions for YouTube",
+    "excerpt": "you spend more than a few minutes watching videos on YouTube? Here are some essential extensions for Google Chrome that will add new and missing features to the YouTube website thus improving your overall YouTube expe…",
+    "body": "The Best Google Chrome Extensions for YouTube\nyou spend more than a few minutes watching videos on YouTube? Here are some essential extensions for Google Chrome that will add new and missing features to the YouTube website thus improving your overall YouTube experience.\nThe Best YouTube Extensions for Google Chrome\n1. Looper – This add a new “Loop” button near the YouTube video player and once clicked, the current video will play in an infinite loop until you hit stop. This comes handy if you are enjoying a music video on YouTube that you want to watch (or listen) over and over again.\n...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5841240106479927304",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-080",
+    "date": "2014-02-17",
+    "title": "How to Save Money on Stock Photos",
+    "excerpt": "you need some high quality images around a particular theme for your design project, be it web or print, there are dozens of stock photography sites out there that may just have what your looking for.",
+    "body": "How to Save Money on Stock Photos\nyou need some high quality images around a particular theme for your design project, be it web or print, there are dozens of stock photography sites out there that may just have what your looking for.\n\nResearch stock photos on Google Images before hitting the buy button!\nTips for Buying Stock Photos\nThat said, stock images can be a little expensive so you may want to do a little research before shelling out your hard-earned money on these images. Here are some tips:\n\nTip 1: Before finalizing any stock photo for your design project, always en...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5841237709338722311",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-081",
+    "date": "2014-02-17",
+    "title": "The Best Feature of Google Chrome You Aren’t Using",
+    "excerpt": "gOogle Chrome is an awesome web browser but there’s an even more awesome feature built right inside Chrome that most of us rarely use – it’s called Chrome Developer Tools. Let the word “Developer” not intimidate you b…",
+    "body": "The Best Feature of Google Chrome You Aren’t Using\ngOogle Chrome is an awesome web browser but there’s an even more awesome feature built right inside Chrome that most of us rarely use – it’s called Chrome Developer Tools. Let the word “Developer” not intimidate you because us regular Chrome users, or non-developers, can also benefit from having some basic knowledge of Chrome Dev Tools.\nChrome Developer Tools for Non-Developers\nOpen this demo page inside Google Chrome on desktop and then press Ctrl + Shift + I on the keyboard (or Cmd + Shift + I on the Mac) to open Chrome Dev Tools. Now ...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5841236845660237830",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-082",
+    "date": "2014-02-17",
+    "title": "A Directory of RSS Feeds of Popular Social Sites",
+    "excerpt": "ou are old school like me and still prefer consuming online content through RSS feeds, this directory is for you.",
+    "body": "A Directory of RSS Feeds of Popular Social Sites\nou are old school like me and still prefer consuming online content through RSS feeds, this directory is for you.\nMost of the popular online apps and services – including the likes of Facebook,YouTube and Twitter, offer RSS feeds but the problem is that you have to be a near geek in order to discover any of these feeds. Hence, I compiled this directory that will probably help you find XML feeds for your favorite online services without digging into the complex APIs.\n\nYouTube RSS Feeds\n\n1. Get the most recently uploaded videos o...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5841235417004793866",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-083",
+    "date": "2014-02-17",
+    "title": "How to Host your Website on Google for Free",
+    "excerpt": "Host your own website on Google App Engine",
+    "body": "How to Host your Website on Google for Free\nHost your own website on Google App Engine\nThere are quite a few advantages with hosting websites on Google App Engine. First, it should be more reliable since your site will get served through Google’s own data centers.\nSecond, if you have a low traffic website, it is highly likely that you won’t have to spend a penny for web hosting. You get 1 GB of free storage space for hosting your images, HTML web pages and other files and 1 GB of bandwidth per day. If you exceed that quota, you pay-per-use similar to Amazon S3.\nReady to jump?\nWith a re...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5841235027601395713",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-084",
+    "date": "2014-02-16",
+    "title": "Browse the Web Faster on a Slow Internet Connection",
+    "excerpt": "Your current Internet speed is very slow and you are living in an area where broadband connections are still not available, here are some ideas to help you download web pages faster on your computer. You may use the s…",
+    "body": "Browse the Web Faster on a Slow Internet Connection\nYour current Internet speed is very slow and you are living in an area where broadband connections are still not available, here are some ideas to help you download web pages faster on your computer. You may use the same tips to  improve your web browsing experience on a sluggish USB modem.\nSurf the Web Faster on Slow Internet\n1. Turn off web images, the Adobe Flash plug-in, Java Applets and JavaScript from your browser settings as these files are often the bulkiest elements of any web page.\n\n2. Increase the size of your brow...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840811665070759938",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-085",
+    "date": "2014-02-16",
+    "title": "Add the Auto-Sweep Feature of Outlook to Gmail",
+    "excerpt": "Outlook has an interesting Auto-Sweep feature that automatically deletes older email messages from specific senders after a certain period of time. The Trash and the Spam folders in Gmail too have a similar auto-purge…",
+    "body": "Add the Auto-Sweep Feature of Outlook to Gmail\nOutlook has an interesting Auto-Sweep feature that automatically deletes older email messages from specific senders after a certain period of time. The Trash and the Spam folders in Gmail too have a similar auto-purge property and any mail in these folders that is older than 30 days is automatically deleted.\n\nGet rid of unwanted and older email messages with auto-purge in Gmail.\nGmail Auto Purge – Delete Old Mails Automatically\nAuto-purging can help keep your mailbox lean and tidy.\n\nFor instance, if you have created a rule in Gm...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840809862916747270",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-086",
+    "date": "2014-02-16",
+    "title": "An Impressive Web-based App for Photos Editing",
+    "excerpt": "big fan of Picnik image editor until Google merged it with Google+ and the standalone editor was shut down. Since then I have switched toPicMonkey which is an equally awesome online photo editing tool though some of t…",
+    "body": "An Impressive Web-based App for Photos Editing\nbig fan of Picnik image editor until Google merged it with Google+ and the standalone editor was shut down. Since then I have switched toPicMonkey which is an equally awesome online photo editing tool though some of the image effects and photo touching tools are only available to premium customers.\n\nAn impressive web-based image editing tool\nToday I chanced upon another interesting web-based image editor that’s fast, the UI is beautiful with several useful features. It’s called Picozu.\n\nWhile Picnik and PicMonkey are purely photo...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840810318929854464",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-087",
+    "date": "2014-02-16",
+    "title": "Things You Should Do After Installing WordPress",
+    "excerpt": "takes two easy steps to install WordPress but you may tweaking some of the default settings to further optimize the performance and also improve the security of your WordPress website.",
+    "body": "Things You Should Do After Installing WordPress\ntakes two easy steps to install WordPress but you may tweaking some of the default settings to further optimize the performance and also improve the security of your WordPress website.\n\nHow to Optimize your WordPress Installation\nThese suggestions are only applicable to self-hosted WordPress.org sites and not blogs that are hosted on WordPress.com. Also, I assume that you are running WordPress on Apache. Let’s get started:\n1. Change the default media upload folder\nThe default installation of WordPress will store all your image...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840809439661146117",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-088",
+    "date": "2014-02-16",
+    "title": "Download the Old Archives of your Website from Google Reader Before It’s Too Late",
+    "excerpt": "Google Reader is shutting down on July 1st and while we have quite a few worthy alternatives. to this popular RSS Reader, there are some things that are likely disappear with Google Reader.",
+    "body": "Download the Old Archives of your Website from Google Reader Before It’s Too Late\n\nGoogle Reader is shutting down on July 1st and while we have quite a few worthy alternatives. to this popular RSS Reader, there are some things that are likely disappear with Google Reader.\nOne are obviously your RSS subscriptions and any others items that you have “starred” in Google Reader. Getting them out is easy. Go togoogle.com/takeout, click the “Create Archive” button and you’ll be able to download all your Google Reader data as a zip file.\n\nPlease do note that Google will export your Go...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840808110985334789",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-089",
+    "date": "2014-02-16",
+    "title": "How to Save Money While Shopping Online in India",
+    "excerpt": "Online shopping can be convenient and you often get better discounts than what the local shops in your area have to offer but if you do a little more research, you may end up saving even more. Here are some tips and w…",
+    "body": "How to Save Money While Shopping Online in India\nOnline shopping can be convenient and you often get better discounts than what the local shops in your area have to offer but if you do a little more research, you may end up saving even more. Here are some tips and websites that may help you get the best deals while shopping online in India.\n\nSave Money While Shopping Online\n1. Use Comparison Shopping\nThere are dozens of credible shopping sites in India and it may therefore take time and effort to determine which of them offers the best deal on a particular product. Compariso...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840806024377798660",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-090",
+    "date": "2014-02-16",
+    "title": "How to Use Flickr as a Photo Backup Service",
+    "excerpt": "Flickr, the original photo sharing service, now offers 1 Terabyte of free storage space and that should be enough to store your half a million photos securely in the cloud.",
+    "body": "How to Use Flickr as a Photo Backup Service\nFlickr, the original photo sharing service, now offers 1 Terabyte of free storage space and that should be enough to store your half a million photos securely in the cloud.\n\nContrast this to Dropbox which offers 2 GB of storage space or Google Drive where you get 5 GB for your files and photos. Flickr offers 200x more space with one minor restriction – the size of individual photos should be less than 200 MB. That shouldn’t be a concern unless you are a professional photographer dealing with pictures in the RAW format.\n\nArmed with 1 ...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840805257252188165",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-091",
+    "date": "2014-02-16",
+    "title": "Determine if your Mobile Phone will Work in Another Country",
+    "excerpt": "You are planning to buy a cell phone from an online shopping site of another country but are not too sure if that phone will work with the mobile networks of your country. Or consider a slightly different scenario. Yo…",
+    "body": "Determine if your Mobile Phone will Work in Another Country\nYou are planning to buy a cell phone from an online shopping site of another country but are not too sure if that phone will work with the mobile networks of your country. Or consider a slightly different scenario. You are travelling but how do you determine if your existing cellphone will be compatible with carriers of the foreign country?\n\nWill that Cell Phone Work in my Country?\nWell, there are basically two factors that may help you determine if a mobile phone will work with cellular operators of another country ...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840804308928434185",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-092",
+    "date": "2014-02-16",
+    "title": "How to Easily Share Files Between your Mobile Phones and Computers",
+    "excerpt": "Digital data – like files, photos, documents, music, ebooks and videos – is spread across a range of devices including your mobile phone, the tablet and your computer(s).",
+    "body": "How to Easily Share Files Between your Mobile Phones and Computers\nDigital data – like files, photos, documents, music, ebooks and videos – is spread across a range of devices including your mobile phone, the tablet and your computer(s).\nHow do you easily transfer a file from the Android phone to your iPad? Or how do you copy-paste that long snippet of text from the computer to your iPhone? The following guide discusses apps, both web-based and mobile apps, that will help you exchanges files and everything else between your desktop computer and mobile devices easily and quickly.\n\n...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840804363005620225",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-093",
+    "date": "2014-02-16",
+    "title": "How Much Customs Duty You Have to Pay for Importing Goods into India",
+    "excerpt": "You have to pay taxes, also known as customs duty, for importing mobile phones, tablets and other goods from a foreign country into India. These taxes are often payable at the port of entry (like the airport).",
+    "body": "How Much Customs Duty You Have to Pay for Importing Goods into India\nYou have to pay taxes, also known as customs duty, for importing mobile phones, tablets and other goods from a foreign country into India. These taxes are often payable at the port of entry (like the airport).\nA package forwarding service service in India has shared the current tariff chart and it should give you a good idea of what kind of taxes you can expect to pay for importing the various categories of items into India. Here’s the chart updated after the 2013 Union Budget:\n\nCategory\n\nItems to import...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840803696295821321",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-094",
+    "date": "2014-02-16",
+    "title": "Generate a Storyboard for any YouTube Video",
+    "excerpt": "YouTube, earlier this year, added storyboards to their video player that give users a much a better idea of what’s inside any YouTube video. For instance, here’s the YouTube generated storyboard of  the popular Thrill…",
+    "body": "Generate a Storyboard for any YouTube Video\nYouTube, earlier this year, added storyboards to their video player that give users a much a better idea of what’s inside any YouTube video. For instance, here’s the YouTube generated storyboard of  the popular Thriller album.\nInternally, YouTube splits the video into multiple segments and each of these segments is represented with a single image frame. All these frames are then stitched together to form one big image that can help you visualize the entire video at a glance. Storyboard are now available for most YouTube videos including the long...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840802540475662341",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-095",
+    "date": "2014-02-15",
+    "title": "Do More with your Feedly RSS Reader",
+    "excerpt": "Google Reader is shutting down in two days and it is therefore important that you migrate your existing RSS feed subscriptions elsewhere. There are quite a few Reader alternatives to choose from though I have finally …",
+    "body": "Do More with your Feedly RSS Reader\nGoogle Reader is shutting down in two days and it is therefore important that you migrate your existing RSS feed subscriptions elsewhere. There are quite a few Reader alternatives to choose from though I have finally picked Feedly as the new home for my beloved feeds.\nFeedly offers every single feature that you would expect in an RSS Reader and it has well-built apps for the two most popular mobile platforms – iOS and Android. For everyone else, they have the web version. I have been using Feedly for a couple of months now and, barring a few hiccups, fi...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840446704599453697",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-096",
+    "date": "2014-02-15",
+    "title": "How to Create Custom Facebook Pages",
+    "excerpt": "Facebook has made some significant changes to the layout of Facebook Pages in recent months. The custom landing tabs are gone and all Facebook Pages are now rendered using the new Timeline view. Page owners can add co…",
+    "body": "How to Create Custom Facebook Pages\nFacebook has made some significant changes to the layout of Facebook Pages in recent months. The custom landing tabs are gone and all Facebook Pages are now rendered using the new Timeline view. Page owners can add cover photos and they can also highlight important stories by pinning them to the top.\nFacebook Pages, by default, include apps for Events, Photos, Videos and Notes. However, if you would like to include custom information on your Facebook Page – maybe a Google Map of your business or YouTube videos or maybe a calendar of events – you need to...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840445742866518020",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-097",
+    "date": "2014-02-15",
+    "title": "How to See your Passwords Hidden Under Asterisks",
+    "excerpt": "Web browser hide passwords under asterisk characters for improved security.",
+    "body": "How to See your Passwords Hidden Under Asterisks\n\nWeb browser hide passwords under asterisk characters for improved security.\nSay you are on the Gmail login page and the web browser, as always, has auto-filled the username and passwords fields for you.\nThis is convenient because you can sign-in to your account with a click but because you have not been typing these saved passwords for a while now, you don’t even remember the Gmail password anymore.\n\nAll web browsers, for security reasons, mask the password fields in login forms behind asterisk characters thus making it imposs...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840444884363771909",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-098",
+    "date": "2014-02-15",
+    "title": "What is the Best Color for Text Captions in Photos and Videos",
+    "excerpt": "ou are adding titles in the lower third of a video or creating text captions to be placed on top of a coloured photograph, the text should be readable irrespective of the color of the background image.",
+    "body": "What is the Best Color for Text Captions in Photos and Videos\nou are adding titles in the lower third of a video or creating text captions to be placed on top of a coloured photograph, the text should be readable irrespective of the color of the background image.\nIf you have been struggling to find the perfect text colours for your video or image, try this simple rule. Set the fill colour as white and use a thin black outline and your text captions will be clear readable over any other colour and brightness.\n\nThis is exactly the reason why most meme generators on the Internet...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840443817043451906",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-099",
+    "date": "2014-02-15",
+    "title": "Monitor your Website’s Uptime with Google Docs",
+    "excerpt": "you have a website or a blog? Would you like to receive instant alerts as soon as your site goes down or becomes inaccessible to users? Would you like these alerts to arrive in your email inbox or as text messages on …",
+    "body": "Monitor your Website’s Uptime with Google Docs\nyou have a website or a blog? Would you like to receive instant alerts as soon as your site goes down or becomes inaccessible to users? Would you like these alerts to arrive in your email inbox or as text messages on your mobile phone or both?\nMost website owners use “freemium” website monitoring services to track the downtime and uptime of their sites.  These service offer free plans but you often have to upgrade for unlimited email /SMS alerts or if you would like to monitor a large number of websites.\n\nBuild your own website m...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840443647622926339",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-100",
+    "date": "2014-02-15",
+    "title": "Use Google as a Proxy Server to Bypass Paywalls, Download Files",
+    "excerpt": "you have trouble accessing a web page either because the website is blocked at your workplace, or because that page happens to be behind apaywall, there are a couple of undocumented Google proxy servers that may help …",
+    "body": "Use Google as a Proxy Server to Bypass Paywalls, Download Files\nyou have trouble accessing a web page either because the website is blocked at your workplace, or because that page happens to be behind apaywall, there are a couple of undocumented Google proxy servers that may help you read that page.\n\nWhen you access any page via one of these Google proxies, the content of that page gets downloaded on Google servers and then served to you. The lesser-known gmodules.com proxy, discussed later, will even allow you to download documents, videos and other web files that are otherwi...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840443216008065031",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-101",
+    "date": "2014-02-15",
+    "title": "Little Known Gems for your Windows Computer",
+    "excerpt": "Here are some of the most useful software utilities that you wish were part of standard Windows. These tools are free, light-weight and can be installed on all versions of Windows including the newer Window 8.",
+    "body": "Little Known Gems for your Windows Computer\n\nHere are some of the most useful software utilities that you wish were part of standard Windows. These tools are free, light-weight and can be installed on all versions of Windows including the newer Window 8.\n\nEraser – When you delete a file in Windows, the contents of the file can still be recovered using other utilities. Eraser lets you permanently delete a file making recovery nearly impossible.\nUnlocker – If you are trying to delete a file (or folder) but unable to do so because the “file is in use” by another program, just use...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840442606223380482",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-102",
+    "date": "2014-02-15",
+    "title": "Popular ebooks go Free at the Google Play Store in India",
+    "excerpt": "Soumyadip, author of the popular blog Cutting the Chai, has discovered at least 40 popular ebooks that are currently available for free at the Google Play Store. You can download and read the Google Play ebooks on you…",
+    "body": "Popular ebooks go Free at the Google Play Store in India\n\nSoumyadip, author of the popular blog Cutting the Chai, has discovered at least 40 popular ebooks that are currently available for free at the Google Play Store. You can download and read the Google Play ebooks on your Android or iOS devices or even your web browser.\n\nHarperCollins is the publisher of all these books in India,  as pointed out by Diptakirti Chaudhuri and thus am not sure if the offer would be valid in other countries. And since there’s no official word on how long this promotion will last, you should grab...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840441919246704642",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-103",
+    "date": "2014-02-15",
+    "title": "HTML5 and CSS3 are the two foremost tools for web geeks nowadays. In case you had a doubt about the same then here’s how. These 10 web…",
+    "excerpt": "1. Pure CSS3 AT-AT: The animation here has been created without any coding. No programming languages have been used for this. It doesn’t do anything special, but you can use such a trick to make your website more attr…",
+    "body": "HTML5 and CSS3 are the two foremost tools for web geeks nowadays. In case you had a doubt about the same then here’s how. These 10 web tricks will show you exactly how powerful these two languages can be. Take a look, you might find something useful for your own websites.\n\n1. Pure CSS3 AT-AT: The animation here has been created without any coding. No programming languages have been used for this. It doesn’t do anything special, but you can use such a trick to make your website more attractive.\n2. Keylight: This is a nifty trick. What happens here is you click on the background to c...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840440752718487557",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-104",
+    "date": "2014-02-15",
+    "title": "A-Z Of Bash Commands For The Hungry Bash Learner!",
+    "excerpt": "The Bash shell can be a powerful tool when put in the right hands. We had earlier done a part by part alphabetical list showing the various bash commands available to the user and what they do. Here’s the A-Z bash com…",
+    "body": "A-Z Of Bash Commands For The Hungry Bash Learner!\nThe Bash shell can be a powerful tool when put in the right hands. We had earlier done a part by part alphabetical list showing the various bash commands available to the user and what they do. Here’s the A-Z bash commands.\n\nA\nalias: If creating an alias is what you want, then this is it.\napropos: We’re not the only ones providing help. This command you to search through the Help manual pages.\napt-get: This one works on Debian and Ubuntu distros. It is used to install and search for software packages.\naptitude: See the similarity ...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840440320189284355",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-105",
+    "date": "2014-02-15",
+    "title": "Here Are 8 Free Online Courses In Game Design",
+    "excerpt": "Are you an aspiring game developer, a designer or just want to try out different things? Information is available online for all your needs and more. Online courses are the latest trend in learning, and subsequent dev…",
+    "body": "Here Are 8 Free Online Courses In Game Design\nAre you an aspiring game developer, a designer or just want to try out different things? Information is available online for all your needs and more. Online courses are the latest trend in learning, and subsequent developing. Game design and development involves various fields and can be quite a tough nut to crack, but once you have your basics right, you might just end up making that big budget game of your own!\n\nHere are 8 free online courses in game design:\n1. Blender 3D Design at Tufts University\n-Learn how to use the Blender softwa...",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840439929317896194",
+    "sharedUrl": ""
+  },
+  {
+    "id": "li-106",
+    "date": "2014-02-15",
+    "title": "How to Migrate your Blog from Blogger to WordPress log (abc.blogspot.com) is hosted on Blogger but you would now like to move your blog…",
+    "excerpt": "How to Migrate your Blog from Blogger to WordPress log (abc.blogspot.com) is hosted on Blogger but you would now like to move your blog from Blogger to WordPress (self-hosted) with a personal domain name like abc.com.…",
+    "body": "How to Migrate your Blog from Blogger to WordPress log (abc.blogspot.com) is hosted on Blogger but you would now like to move your blog from Blogger to WordPress (self-hosted) with a personal domain name like abc.com. What is the easiest … Continue reading →",
+    "tags": [],
+    "url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A5840405167580672008",
+    "sharedUrl": ""
+  }
+]

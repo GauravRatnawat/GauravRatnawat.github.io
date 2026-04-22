@@ -113,11 +113,11 @@
         const ctx = canvas.getContext('2d');
         const particles = [];
         const nodes = [
-            { x: 0.15, y: 0.5, label: 'INPUT', color: '#00ff88', section: 'about' },
-            { x: 0.30, y: 0.5, label: 'PROCESS', color: '#00d4ff', section: 'skills' },
-            { x: 0.50, y: 0.5, label: 'ENRICH', color: '#fbbf24', section: 'experience' },
-            { x: 0.70, y: 0.5, label: 'OUTPUT', color: '#ff0080', section: 'projects' },
-            { x: 0.85, y: 0.5, label: 'MONITOR', color: '#a855f7', section: 'contact' }
+            { x: 0.15, y: 0.5, label: 'INPUT', color: '#0F766E', section: 'about' },
+            { x: 0.30, y: 0.5, label: 'PROCESS', color: '#2563EB', section: 'skills' },
+            { x: 0.50, y: 0.5, label: 'ENRICH', color: '#F59E0B', section: 'experience' },
+            { x: 0.70, y: 0.5, label: 'OUTPUT', color: '#EA580C', section: 'projects' },
+            { x: 0.85, y: 0.5, label: 'MONITOR', color: '#0EA5E9', section: 'contact' }
         ];
 
         let hoveredNode = null;
@@ -205,7 +205,7 @@
 
         // Draw connection lines
         function drawConnections() {
-            ctx.strokeStyle = '#1a2332';
+            ctx.strokeStyle = '#D7CEC6';
             ctx.lineWidth = 2;
             const scale = isMobile ? 1 : 2;
             for (let i = 0; i < nodes.length - 1; i++) {
@@ -235,7 +235,7 @@
                 // Node circle
                 ctx.beginPath();
                 ctx.arc(x, y, radius, 0, Math.PI * 2);
-                ctx.fillStyle = '#12182e';
+                ctx.fillStyle = '#FFFFFF';
                 ctx.strokeStyle = node.color;
                 ctx.lineWidth = 3;
                 ctx.fill();
@@ -389,18 +389,18 @@
         const radius = 150;
 
         const skills = [
-            { name: 'Event-Driven Architecture', level: 95, color: '#00ff88' },
-            { name: 'Microservices', level: 90, color: '#00d4ff' },
-            { name: 'Data Pipelines', level: 95, color: '#fbbf24' },
-            { name: 'Cloud & K8s', level: 85, color: '#ff0080' },
-            { name: 'Leadership', level: 80, color: '#a855f7' },
-            { name: 'System Design', level: 90, color: '#00ff88' }
+            { name: 'Event-Driven Architecture', level: 95, color: '#0F766E' },
+            { name: 'Microservices', level: 90, color: '#2563EB' },
+            { name: 'Data Pipelines', level: 95, color: '#F59E0B' },
+            { name: 'Cloud & K8s', level: 85, color: '#EA580C' },
+            { name: 'Leadership', level: 80, color: '#0EA5E9' },
+            { name: 'System Design', level: 90, color: '#0F766E' }
         ];
 
         const angles = skills.map((_, i) => (Math.PI * 2 * i) / skills.length - Math.PI / 2);
 
         function drawRadarGrid() {
-            ctx.strokeStyle = '#1a2332';
+            ctx.strokeStyle = '#D7CEC6';
             ctx.lineWidth = 1;
 
             // Draw concentric circles
@@ -420,8 +420,8 @@
                 ctx.stroke();
 
                 // Draw labels
-                ctx.fillStyle = '#a0aec0';
-                ctx.font = '12px sans-serif';
+                ctx.fillStyle = '#6B6B6B';
+                ctx.font = '12px Poppins, sans-serif';
                 ctx.textAlign = 'center';
                 const labelX = centerX + Math.cos(angle) * (radius + 30);
                 const labelY = centerY + Math.sin(angle) * (radius + 30);
@@ -446,13 +446,13 @@
 
             // Fill
             const gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, radius);
-            gradient.addColorStop(0, '#00ff8840');
-            gradient.addColorStop(1, '#00d4ff20');
+            gradient.addColorStop(0, '#0F766E40');
+            gradient.addColorStop(1, '#2563EB20');
             ctx.fillStyle = gradient;
             ctx.fill();
 
             // Stroke
-            ctx.strokeStyle = '#00ff88';
+            ctx.strokeStyle = '#0F766E';
             ctx.lineWidth = 2;
             ctx.stroke();
 
@@ -996,26 +996,26 @@
 
     function initConsoleEasterEggs() {
         const styles = [
-            'color: #00ff88',
+            'color: #0F766E',
             'font-size: 14px',
             'font-weight: bold',
             'font-family: monospace'
         ].join(';');
 
         console.log('%c🚀 Pipeline Portfolio Initialized', styles);
-        console.log('%c💡 Try typing: help()', 'color: #00d4ff; font-family: monospace;');
+        console.log('%c💡 Try typing: help()', 'color: #2563EB; font-family: monospace;');
 
         // Add global help function
         window.help = function() {
-            console.log('%c=== Available Commands ===', 'color: #00ff88; font-weight: bold;');
-            console.log('%cabout()', 'color: #00d4ff;', '- Learn more about Gaurav');
-            console.log('%cskills()', 'color: #00d4ff;', '- View technical skills');
-            console.log('%ccontact()', 'color: #00d4ff;', '- Get contact information');
-            console.log('%chire()', 'color: #00d4ff;', '- Why hire Gaurav?');
+            console.log('%c=== Available Commands ===', 'color: #0F766E; font-weight: bold;');
+            console.log('%cabout()', 'color: #2563EB;', '- Learn more about Gaurav');
+            console.log('%cskills()', 'color: #2563EB;', '- View technical skills');
+            console.log('%ccontact()', 'color: #2563EB;', '- Get contact information');
+            console.log('%chire()', 'color: #2563EB;', '- Why hire Gaurav?');
         };
 
         window.about = function() {
-            console.log('%c👨‍💻 Gaurav Ratnawat', 'color: #00ff88; font-size: 16px; font-weight: bold;');
+            console.log('%c👨‍💻 Gaurav Ratnawat', 'color: #0F766E; font-size: 16px; font-weight: bold;');
             console.log('Lead Software Engineer @ N26');
             console.log('📍 Berlin, Germany');
             console.log('9+ years building scalable systems');
@@ -1023,7 +1023,7 @@
         };
 
         window.skills = function() {
-            console.log('%c⚡ Core Skills:', 'color: #00ff88; font-weight: bold;');
+            console.log('%c⚡ Core Skills:', 'color: #0F766E; font-weight: bold;');
             console.log('• Event-Driven Architectures');
             console.log('• Real-time Data Pipelines (500M+ transactions/month)');
             console.log('• Microservices & Kubernetes');
@@ -1032,7 +1032,7 @@
         };
 
         window.contact = function() {
-            console.log('%c📧 Contact Information:', 'color: #00ff88; font-weight: bold;');
+            console.log('%c📧 Contact Information:', 'color: #0F766E; font-weight: bold;');
             console.log('Email: de.gratnawat@gmail.com');
             console.log('LinkedIn: https://www.linkedin.com/in/ratnawatgaurav/');
             console.log('Phone: +49-15510055601');
@@ -1040,7 +1040,7 @@
         };
 
         window.hire = function() {
-            console.log('%c🎯 Why Hire Gaurav?', 'color: #00ff88; font-weight: bold;');
+            console.log('%c🎯 Why Hire Gaurav?', 'color: #0F766E; font-weight: bold;');
             console.log('✅ 9+ years of production experience');
             console.log('✅ Built systems handling 500M+ transactions/month');
             console.log('✅ Proven track record of 99.99% uptime');
@@ -1087,7 +1087,7 @@
 
                     console.log(
                         '%c⚡ Page Load Time: ' + pageLoadTime + 'ms',
-                        'color: #00ff88; font-family: monospace;'
+                        'color: #0F766E; font-family: monospace;'
                     );
                 }, 0);
             });
@@ -1114,6 +1114,7 @@
         initProjectFilters();
         initStatusIndicators();
         initConsoleEasterEggs();
+        initNowChips();
         initKeyboardShortcuts();
         logPerformance();
         initCollapsibleSections(); // FIX: Add this function call
@@ -1121,6 +1122,25 @@
         initCertificationAnimations(); // Add this if not present
         initImpactCounters(); // Add this if not present
         console.log('🚀 Pipeline Portfolio Initialized - Phase 2 Features Active');
+    }
+
+    function initNowChips() {
+        const nowText = document.getElementById('now-text');
+        const chips = document.querySelectorAll('.now-chip');
+        if (!nowText || chips.length === 0) return;
+
+        chips.forEach((chip) => {
+            chip.addEventListener('click', () => {
+                chips.forEach((item) => {
+                    item.classList.remove('active');
+                    item.setAttribute('aria-pressed', 'false');
+                });
+
+                chip.classList.add('active');
+                chip.setAttribute('aria-pressed', 'true');
+                nowText.textContent = chip.getAttribute('data-now') || nowText.textContent;
+            });
+        });
     }
 
     // ===================================
@@ -1305,7 +1325,7 @@
                 const ripple = document.createElement('span');
                 ripple.style.position = 'absolute';
                 ripple.style.borderRadius = '50%';
-                ripple.style.background = 'rgba(0, 255, 136, 0.5)';
+                ripple.style.background = 'rgba(15, 118, 110, 0.5)';
                 ripple.style.width = '10px';
                 ripple.style.height = '10px';
                 ripple.style.animation = 'rippleEffect 0.6s ease-out';
@@ -1392,7 +1412,7 @@
 
     function initConsoleMessage() {
         const styles = [
-            'color: #00ff88',
+            'color: #0F766E',
             'font-size: 16px',
             'font-weight: bold',
             'font-family: monospace',
@@ -1400,10 +1420,10 @@
         ].join(';');
 
         console.log('%c🚀 Pipeline Portfolio v1.0', styles);
-        console.log('%c💚 Like what you see? Let\'s connect!', 'color: #00d4ff; font-size: 14px;');
-        console.log('%c📧 de.gratnawat@gmail.com', 'color: #fbbf24; font-size: 12px;');
-        console.log('%c\nPress H to scroll to top', 'color: #a0aec0; font-size: 11px;');
-        console.log('%cPress 1-5 to jump to sections', 'color: #a0aec0; font-size: 11px;');
+        console.log('%c💚 Like what you see? Let\'s connect!', 'color: #2563EB; font-size: 14px;');
+        console.log('%c📧 de.gratnawat@gmail.com', 'color: #F59E0B; font-size: 12px;');
+        console.log('%c\nPress H to scroll to top', 'color: #6B6B6B; font-size: 11px;');
+        console.log('%cPress 1-5 to jump to sections', 'color: #6B6B6B; font-size: 11px;');
     }
 
     // ===================================
@@ -1488,7 +1508,7 @@
 
             draw() {
                 const opacity = this.life / this.maxLife;
-                ctx.fillStyle = `rgba(0, 255, 136, ${opacity * 0.6})`;
+                ctx.fillStyle = `rgba(15, 118, 110, ${opacity * 0.6})`;
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fill();
@@ -1513,7 +1533,7 @@
 
                     if (distance < 100) {
                         const opacity = (1 - distance / 100) * 0.2;
-                        ctx.strokeStyle = `rgba(0, 255, 136, ${opacity})`;
+                        ctx.strokeStyle = `rgba(15, 118, 110, ${opacity})`;
                         ctx.lineWidth = 1;
                         ctx.beginPath();
                         ctx.moveTo(particles[i].x, particles[i].y);

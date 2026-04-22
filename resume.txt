@@ -1,0 +1,114 @@
+GAURAV RATNAWAT
+Berlin, Germany
++49-15292604891 | de.gratnawat@gmail.com | https://www.linkedin.com/in/ratnawatgaurav/
+Technical leader with 10+ years of experience in backend, distributed, and cloud systems.
+Skilled in leading engineering teams, designing scalable architectures, and delivering
+high-quality software using agile and CI/CD practices. Proven ability to mentor engineers and
+drive cross-team technical excellence.
+WORK EXPERIENCE
+N26 Gmbh, Berlin Germany
+Lead Software Engineer
+Sep 2022 - Present
+Thoughtworks, Gurgaon
+Tech Lead
+Mar 2020 - Sep 2022
+Q3 Technologies, Gurgaon
+Senior Developer
+Dec 2017 - Mar 2020
+Amdocs, Gurgaon
+Software Engineer
+May 2017 - Dec 2017
+Tata Consultancy Services, Gurgaon
+Engineer - Technology
+Oct 2015 - Apr 2017
+PROJECTS
+Transaction Data Platform – N26 Bank
+● Led the architecture and delivery of an event-driven Transaction Data Platform powering
+compliance, product, and regulatory use cases.
+● Owned end-to-end platform responsibility, from migration strategy to production stability and
+long-term evolution.
+● Built Kafka-based ingestion pipelines processing 500M+ transactions/month with <1s
+end-to-end latency.
+● Achieved 99.99% uptime through AWS-native failover and region-aware deployments.
+● Designed low-latency microservice APIs (P99 < 1s, ~1.5K RPS) on Kubernetes.
+● Delivered GDPR-compliant data deletion across 20+ systems and reduced MTTR by 30% via
+improved observability.
+● Mentored engineers, reviewed designs, and influenced architectural decisions across
+teams consuming the platform.
+Technologies: Kotlin, Java 17, Spring Boot 3, Kafka, PostgreSQL (Aurora + RDS), Redis, Lakehouse
+(Flink + S3 + Glue + Athena), Kubernetes, AWS, Opensearch, Datadog, GitHub Actions
+N26 Assistance Application Module
+● Contributed to a banking assistance system integrating multiple internal and external services.
+
+-- 1 of 3 --
+
+● Designed request routing logic based on user intent identification, improving response
+accuracy and system efficiency.
+● Automated end-to-end workflows, reducing manual intervention and operational overhead.
+Dealer Locator Service, Major Construction Equipment Manufacturer, USA
+● Developed 3 RESTful APIs for geocoding based on address, IP, and coordinates.
+● Improved database performance by introducing RDS read-replica auto-scaling, increasing TPS
+from 48 → 126.
+● Built custom CloudWatch metrics and 10+ production dashboards to monitor system health and
+traffic patterns.
+● Established CI/CD pipelines in Azure DevOps and added performance and integration tests,
+reducing pipeline runtime by 5 minutes.
+● Led client-facing technical discussions, performed 10+ production root-cause analyses, and
+onboarded 4 engineers.
+Technologies: Spring Boot, Microservices, Java 11, Postgres(PostGIS), Jooq, Karate, Gatling, Azure
+DevOps, AWS, RestAPI.
+Telematics IoT Project
+● Analyzed multiple IoT device specifications and translated requirements into user stories.
+● Customized the SiteWhere open-source IoT framework to support project-specific device
+workflows.
+SKILLS
+Practices 	Agile (Scrum, Kanban), Test-Driven Development
+(TDD), XP Practices
+Design Patterns 	Factory, Builder, Strategy, Adapter,
+Circuit Breaker, Retry, Bulkhead,
+CQRS, Saga
+Architectures 	Microservices, Event-Driven Architecture,
+Service-Oriented Architecture, Monolith,
+Distributed Systems, Streaming Architectures
+Programming Languages 	Kotlin, Java (11–21)
+Working Knowledge: Go, TypeScript (NestJS),
+Vue.js
+Frameworks 	Spring Boot, Quarkus, Hibernate, JOOQ,
+QueryDSL,
+Sitewhere IoT Framework
+Messaging & Streaming 	Kafka, Kafka Streams,
+AWS SQS, AWS Kinesis,
+ActiveMQ
+Databases & Data Platforms 	PostgreSQL, AWS Aurora, AWS RDS,
+MongoDB, Azure SQL Server,
+Lakehouse (S3, Glue, Athena)
+
+-- 2 of 3 --
+
+Cloud & Infrastructure 	AWS, Azure, GCP,
+Kubernetes, Docker,
+Infrastructure Resilience, Multi-Region
+Deployments
+Deployment & DevOps 	GitHub Actions, Argo CD, Azure DevOps, Jenkins,
+Git, SonarQube, Qodana
+Observability & Reliability 	Datadog, OpenSearch, CloudWatch,
+Metrics, Tracing, Alerting,
+SLA / SLO, MTTR Reduction
+Testing & Quality Engineering 	JUnit, Mockito,
+Karate (Integration & Contract Testing),
+Gatling, JMeter (Performance Testing)
+Security & Compliance 	GDPR Data Deletion, Data Lineage,
+PII Handling, Secure API Design,
+Audit-Ready Systems
+EDUCATION
+Bachelor of Technology in Computer Science and Engineering from RGTU, Bhopal (India) in 2015.
+CERTIFICATIONS
+Spoud Kafka Developer Training – Dec 2025 | Credential ID: f91eecd7-ddd6-4ca3-aa47-7fd1f1eb6a2a
+Microsoft Certified: Azure Fundamentals – Jul 2020
+Aviatrix Certified Engineer – Multi-Cloud Network Associate – Jun 2020
+Building Scalable Java Microservices with Spring Boot & Spring Cloud (Coursera) – Nov 2019 |
+Credential ID: NQB7U89X9FPS
+Introduction to Internet of Things (XEE100), Stanford University – May 2020 | Credential ID: X531415
+
+-- 3 of 3 --
+

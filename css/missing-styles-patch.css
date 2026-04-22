@@ -15,7 +15,7 @@
 
 .content-card {
     background: var(--bg-card);
-    border: 1px solid rgba(0, 255, 136, 0.2);
+    border: 1px solid rgba(15, 118, 110, 0.2);
     border-radius: 12px;
     overflow: hidden;
     transition: var(--transition-base);
@@ -28,7 +28,7 @@
 
 .terminal-card {
     background: var(--bg-card);
-    border: 1px solid rgba(0, 255, 136, 0.2);
+    border: 1px solid rgba(15, 118, 110, 0.2);
     border-radius: 12px;
     overflow: hidden;
 }
@@ -79,13 +79,13 @@
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid var(--primary-color);
-    box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+    box-shadow: 0 0 30px rgba(15, 118, 110, 0.3);
     transition: var(--transition-base);
 }
 
 .profile-image:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 40px rgba(0, 255, 136, 0.5);
+    box-shadow: 0 0 40px rgba(15, 118, 110, 0.5);
 }
 
 .profile-ring {
@@ -118,18 +118,18 @@
     gap: var(--spacing-sm);
     padding: var(--spacing-sm) var(--spacing-md);
     background: var(--bg-darker);
-    border: 1px solid rgba(0, 255, 136, 0.2);
+    border: 1px solid rgba(15, 118, 110, 0.2);
     border-radius: 8px;
     color: var(--text-primary);
     text-decoration: none;
     transition: var(--transition-base);
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 0.9rem;
 }
 
 .social-link:hover {
     border-color: var(--primary-color);
-    background: rgba(0, 255, 136, 0.1);
+    background: rgba(15, 118, 110, 0.1);
     transform: translateX(5px);
 }
 
@@ -147,6 +147,102 @@
 }
 
 /* ===================================
+   Relatable Touches - Hero & About
+   =================================== */
+
+.hero-eyebrow {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    text-transform: none;
+    letter-spacing: 0.04em;
+    margin-bottom: var(--spacing-sm);
+}
+
+.hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.badge-pill {
+    background: rgba(15, 118, 110, 0.08);
+    border: 1px solid rgba(15, 118, 110, 0.2);
+    color: var(--text-secondary);
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+}
+
+.now-card {
+    width: 100%;
+    background: var(--bg-card);
+    border: 1px solid rgba(15, 118, 110, 0.2);
+    border-radius: 16px;
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.now-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+.now-title {
+    font-weight: 600;
+}
+
+.now-status {
+    background: rgba(245, 158, 11, 0.15);
+    color: #8A4F00;
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+}
+
+.now-text {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.now-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.now-chip {
+    background: rgba(37, 99, 235, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    color: var(--text-secondary);
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-family: var(--font-sans);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.now-chip:hover,
+.now-chip.active {
+    background: rgba(37, 99, 235, 0.15);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.now-chip:focus-visible {
+    outline: 2px solid rgba(37, 99, 235, 0.4);
+    outline-offset: 2px;
+}
+
+/* ===================================
    Skills Section - Architecture Layers
    =================================== */
 
@@ -159,7 +255,7 @@
 
 .arch-layer {
     background: var(--bg-card);
-    border: 1px solid rgba(0, 255, 136, 0.2);
+    border: 1px solid rgba(15, 118, 110, 0.2);
     border-radius: 12px;
     padding: var(--spacing-lg);
     transition: var(--transition-base);
@@ -190,7 +286,7 @@
     gap: var(--spacing-sm);
     padding: var(--spacing-md);
     background: var(--bg-darker);
-    border: 1px solid rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(15, 118, 110, 0.1);
     border-radius: 8px;
     transition: var(--transition-base);
     cursor: pointer;
@@ -199,11 +295,11 @@
 .tech-badge:hover {
     border-color: var(--primary-color);
     transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0, 255, 136, 0.2);
+    box-shadow: 0 5px 20px rgba(15, 118, 110, 0.2);
 }
 
 .tech-badge[data-level="expert"] {
-    border-color: rgba(0, 255, 136, 0.4);
+    border-color: rgba(15, 118, 110, 0.4);
 }
 
 .tech-badge[data-level="intermediate"] {
@@ -265,7 +361,7 @@
 .flow-step:hover {
     border-color: var(--primary-color);
     color: var(--primary-color);
-    background: rgba(0, 255, 136, 0.1);
+    background: rgba(15, 118, 110, 0.1);
     transform: scale(1.1);
 }
 
@@ -273,7 +369,7 @@
     border-color: var(--primary-color);
     background: var(--primary-color);
     color: var(--bg-dark);
-    box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+    box-shadow: 0 0 20px rgba(15, 118, 110, 0.4);
 }
 
 .pipeline-nav-arrows {
@@ -312,7 +408,7 @@
     background: var(--primary-color);
     color: var(--bg-dark);
     transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+    box-shadow: 0 0 20px rgba(15, 118, 110, 0.4);
 }
 
 .pipeline-nav-btn:disabled {
@@ -384,7 +480,7 @@
     padding: var(--spacing-sm);
     background: var(--bg-darker);
     border-radius: 8px;
-    border: 1px solid rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(15, 118, 110, 0.1);
 }
 
 .impact-icon {
@@ -526,4 +622,3 @@
         display: none;
     }
 }
-

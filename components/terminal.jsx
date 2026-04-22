@@ -3,8 +3,6 @@
    typing `open` expands to a fullscreen CRT terminal with real commands:
    ls, cat <file>, help, clear, vim <file>, whoami, exit */
 
-const { useState, useEffect, useRef, useMemo } = React;
-
 const BOOT_LINES = [
   { t: 'sys', v: 'field-notebook v2.6.04 — gaurav@berlin' },
   { t: 'sys', v: 'kernel: linux 6.1 · shell: /bin/gsh · term: xterm-256color' },

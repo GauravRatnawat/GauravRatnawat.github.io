@@ -125,7 +125,7 @@ function App() {
       <div className="grain" />
       <div className="frame" />
       <Cursor />
-      <Nav active={active} />
+      <Nav active={active} theme={theme} setTheme={setTheme} />
       <main>
         <Hero />
         <Ticker />

@@ -751,6 +751,65 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; letter-spacing: -0.02em; }
 }
 .contact-grid .c .k { font-family: var(--mono); font-size: 10.5px; color: var(--ink-mute); letter-spacing: .18em; text-transform: uppercase; }
 .contact-grid .c .v { font-family: var(--mono); font-size: 13px; color: var(--ink); margin-top: 10px; word-break: break-all; }
+.contact-grid .c .v a { border-bottom: 1px solid transparent; transition: color .2s, border-color .2s; }
+.contact-grid .c .v a:hover { color: var(--accent); border-color: var(--accent); }
+
+.oss {
+  margin-top: 44px;
+}
+.oss-list {
+  margin-top: 18px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.oss-row {
+  display: grid;
+  grid-template-columns: 74px minmax(220px, 320px) 1fr 130px;
+  gap: 18px;
+  align-items: baseline;
+  padding: 16px 10px;
+  border-top: 1px dashed var(--rule-soft);
+}
+.oss-row:first-child { border-top: 0; }
+.oss-row .n {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+.oss-row .t a {
+  font-family: var(--serif);
+  font-size: 24px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  border-bottom: 1px solid transparent;
+  transition: color .2s, border-color .2s;
+}
+.oss-row .t a:hover { color: var(--accent); border-color: var(--accent); }
+.oss-row .d {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--ink-dim);
+  line-height: 1.45;
+}
+.oss-row .s {
+  justify-self: end;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.oss-more {
+  margin-top: 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .08em;
+  color: var(--ink-mute);
+}
+.oss-more a { color: var(--ink); border-bottom: 1px solid transparent; transition: color .2s, border-color .2s; }
+.oss-more a:hover { color: var(--accent); border-color: var(--accent); }
 
 .foot {
   margin-top: 40px;
@@ -831,6 +890,9 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; letter-spacing: -0.02em; }
   .skill-cat { grid-column: span 12; }
   .certs { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: repeat(2, 1fr); }
+  .oss-row { grid-template-columns: 62px 1fr; row-gap: 8px; }
+  .oss-row .d { grid-column: 1 / -1; }
+  .oss-row .s { grid-column: 2; justify-self: start; }
   .tweaks { width: calc(100% - 32px); bottom: 16px; right: 16px; }
 }
 

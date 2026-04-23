@@ -1,6 +1,6 @@
 GAURAV RATNAWAT
 Berlin, Germany
-+49-15292604891 | de.gratnawat@gmail.com | https://www.linkedin.com/in/ratnawatgaurav/
++49-15292604891 | contact@gauravratnawat.com | https://www.linkedin.com/in/ratnawatgaurav/
 Technical leader with 10+ years of experience in backend, distributed, and cloud systems.
 Skilled in leading engineering teams, designing scalable architectures, and delivering
 high-quality software using agile and CI/CD practices. Proven ability to mentor engineers and
@@ -111,4 +111,3 @@ Credential ID: NQB7U89X9FPS
 Introduction to Internet of Things (XEE100), Stanford University – May 2020 | Credential ID: X531415
 
 -- 3 of 3 --
-

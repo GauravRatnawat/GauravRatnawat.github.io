@@ -246,6 +246,45 @@ function Skills() {
   );
 }
 
+const PUBLIC_PROJECTS = [
+  {
+    name: 'claudetop',
+    desc: 'Terminal dashboard for Claude Code token usage and cost tracking.',
+    stack: 'JavaScript',
+    url: 'https://github.com/GauravRatnawat/claudetop',
+  },
+  {
+    name: 'journal-recorder-agent',
+    desc: 'Claude Code subagent that records coding sessions as searchable engineering notes.',
+    stack: 'Shell',
+    url: 'https://github.com/GauravRatnawat/journal-recorder-agent',
+  },
+  {
+    name: 'job-search-plugin',
+    desc: 'AI-powered Claude Code plugin for job discovery, fit scoring, and application prep.',
+    stack: 'Shell',
+    url: 'https://github.com/GauravRatnawat/job-search-plugin',
+  },
+  {
+    name: 'ai-review-plugin',
+    desc: 'IntelliJ plugin that reviews Git diffs with AI and renders findings inline.',
+    stack: 'Kotlin',
+    url: 'https://github.com/GauravRatnawat/ai-review-plugin',
+  },
+  {
+    name: 'murmur',
+    desc: 'Local-first AI meeting notes with audio capture, Whisper transcription, and LLM summaries.',
+    stack: 'Python',
+    url: 'https://github.com/GauravRatnawat/murmur',
+  },
+  {
+    name: 'rfc-async-job-problem-details',
+    desc: 'Internet-Draft extending RFC 9457 with reusable async job failure problem details.',
+    stack: 'Spec / HTML',
+    url: 'https://github.com/GauravRatnawat/rfc-async-job-problem-details',
+  },
+];
+
 function Contact() {
   return (
     <section id="contact">
@@ -258,13 +297,13 @@ function Contact() {
 
         <div className="contact-big">
           Let’s <span className="it">talk.</span><br/>
-          <a href="mailto:de.gratnawat@gmail.com">de.gratnawat@gmail.com</a>
+          <a href="mailto:contact@gauravratnawat.com">contact@gauravratnawat.com</a>
         </div>
 
         <div className="contact-grid">
           <div className="c">
             <div className="k">Email</div>
-            <div className="v">de.gratnawat@gmail.com</div>
+            <div className="v">contact@gauravratnawat.com</div>
           </div>
           <div className="c">
             <div className="k">Phone</div>
@@ -272,11 +311,33 @@ function Contact() {
           </div>
           <div className="c">
             <div className="k">LinkedIn</div>
-            <div className="v">linkedin.com/in/ratnawatgaurav</div>
+            <div className="v"><a href="https://www.linkedin.com/in/ratnawatgaurav" target="_blank" rel="noopener">linkedin.com/in/ratnawatgaurav</a></div>
+          </div>
+          <div className="c">
+            <div className="k">GitHub</div>
+            <div className="v"><a href="https://github.com/GauravRatnawat" target="_blank" rel="noopener">github.com/GauravRatnawat</a></div>
           </div>
           <div className="c">
             <div className="k">Location</div>
             <div className="v">Berlin, DE · UTC+1</div>
+          </div>
+        </div>
+
+        <div className="oss">
+          <Eyebrow>Public Projects</Eyebrow>
+          <div className="oss-list">
+            {PUBLIC_PROJECTS.map((p, i) => (
+              <article className="oss-row" key={p.name}>
+                <div className="n">P/{String(i + 1).padStart(2, '0')}</div>
+                <div className="t"><a href={p.url} target="_blank" rel="noopener">{p.name}</a></div>
+                <div className="d">{p.desc}</div>
+                <div className="s">{p.stack}</div>
+              </article>
+            ))}
+          </div>
+          <div className="oss-more">
+            Browse all repositories on{' '}
+            <a href="https://github.com/GauravRatnawat" target="_blank" rel="noopener">github.com/GauravRatnawat</a>
           </div>
         </div>
 

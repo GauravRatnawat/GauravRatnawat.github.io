@@ -1033,7 +1033,7 @@
 
         window.contact = function() {
             console.log('%c📧 Contact Information:', 'color: #0F766E; font-weight: bold;');
-            console.log('Email: de.gratnawat@gmail.com');
+            console.log('Email: contact@gauravratnawat.com');
             console.log('LinkedIn: https://www.linkedin.com/in/ratnawatgaurav/');
             console.log('Phone: +49-15510055601');
             console.log('Location: Berlin, Germany');
@@ -1421,7 +1421,7 @@
 
         console.log('%c🚀 Pipeline Portfolio v1.0', styles);
         console.log('%c💚 Like what you see? Let\'s connect!', 'color: #2563EB; font-size: 14px;');
-        console.log('%c📧 de.gratnawat@gmail.com', 'color: #F59E0B; font-size: 12px;');
+        console.log('%c📧 contact@gauravratnawat.com', 'color: #F59E0B; font-size: 12px;');
         console.log('%c\nPress H to scroll to top', 'color: #6B6B6B; font-size: 11px;');
         console.log('%cPress 1-5 to jump to sections', 'color: #6B6B6B; font-size: 11px;');
     }

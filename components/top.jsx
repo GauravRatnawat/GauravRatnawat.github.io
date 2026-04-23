@@ -54,17 +54,17 @@ function Nav({ active, theme, setTheme }) {
       <div className="clock">
         <span>Berlin · {time}</span>
         <button
-          onClick={() => setTheme(theme === ‘dark’ ? ‘paper’ : ‘dark’)}
+          onClick={() => setTheme(theme === 'dark' ? 'paper' : 'dark')}
           style={{
-            fontFamily: ‘var(--mono)’, fontSize: 11, letterSpacing: ‘.12em’,
-            textTransform: ‘uppercase’, padding: ‘5px 10px’,
-            border: ‘1px solid var(--rule)’, borderRadius: 2,
-            color: ‘var(--ink-dim)’, background: ‘transparent’,
-            cursor: ‘pointer’, transition: ‘color .2s, border-color .2s’,
+            fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '.12em',
+            textTransform: 'uppercase', padding: '5px 10px',
+            border: '1px solid var(--rule)', borderRadius: 2,
+            color: 'var(--ink-dim)', background: 'transparent',
+            cursor: 'pointer', transition: 'color .2s, border-color .2s',
           }}
-          onMouseEnter={e => { e.target.style.color = ‘var(--ink)’; e.target.style.borderColor = ‘var(--ink-mute)’; }}
-          onMouseLeave={e => { e.target.style.color = ‘var(--ink-dim)’; e.target.style.borderColor = ‘var(--rule)’; }}
-        >{theme === ‘dark’ ? ‘◐ paper’ : ‘◑ dark’}</button>
+          onMouseEnter={e => { e.target.style.color = 'var(--ink)'; e.target.style.borderColor = 'var(--ink-mute)'; }}
+          onMouseLeave={e => { e.target.style.color = 'var(--ink-dim)'; e.target.style.borderColor = 'var(--rule)'; }}
+        >{theme === 'dark' ? '◐ paper' : '◑ dark'}</button>
         <span className="live">● Available Q3 ‘26</span>
       </div>
     </nav>

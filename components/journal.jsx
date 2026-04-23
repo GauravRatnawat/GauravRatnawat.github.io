@@ -1,4 +1,4 @@
-/* ——— Posts (signals / LinkedIn) ——— */
+/* Posts (signals / LinkedIn) */
 function Posts() {
   const [posts, setPosts] = useState([]);
   const [active, setActive] = useState(null);
@@ -44,7 +44,7 @@ function Posts() {
     <section id="signals">
       <div className="wrap">
         <SectionHead
-          num="§ 04 — SIGNALS"
+          num="§ 04 / SIGNALS"
           title='Notes <span class="it">in public.</span>'
           right={`${posts.length} LinkedIn posts · auto-synced`}
         />
@@ -81,7 +81,7 @@ function Posts() {
                   </div>
                 )}
               </div>
-              <div className="p-arrow">{active === p.id ? '—' : '+'}</div>
+              <div className="p-arrow">{active === p.id ? 'x' : '+'}</div>
             </article>
           ))}
         </div>
@@ -97,14 +97,14 @@ function Posts() {
         )}
 
         <div className="posts-note">
-          <span className="dot" /> Synced from LinkedIn data export — {posts.length} posts, latest {fmt(posts[0]?.date || '')}.
+          <span className="dot" /> Synced from LinkedIn data export, {posts.length} posts, latest {fmt(posts[0]?.date || '')}.
         </div>
       </div>
     </section>
   );
 }
 
-/* ——— Journal moved to components/terminal.jsx (CRT terminal reader) ——— */
+/* Journal moved to components/terminal.jsx (CRT terminal reader) */
 // eslint-disable-next-line no-unused-vars
 function _LegacyJournal() {
   const [entries, setEntries] = useState([]);
@@ -165,7 +165,7 @@ function _LegacyJournal() {
     <section id="journal">
       <div className="wrap">
         <SectionHead
-          num="§ 05 — JOURNAL"
+          num="§ 05 / JOURNAL"
           title='Slow thoughts, <span class="it">written down.</span>'
           right={`${entries.length} entries · markdown`}
         />
@@ -195,7 +195,7 @@ function _LegacyJournal() {
 
             <div className="j-howto">
               <div className="eyebrow" style={{ marginBottom: 10 }}>How to write</div>
-              <p>Drop a <code>.md</code> file in <code>/journal/</code> with YAML frontmatter — title, date, tags, excerpt — then list it in <code>journal/index.js</code>. Or tap <em>+ New note</em> above to save a quick draft (stored locally).</p>
+              <p>Drop a <code>.md</code> file in <code>/journal/</code> with YAML frontmatter: title, date, tags, excerpt, then list it in <code>journal/index.js</code>. Or tap <em>+ New note</em> above to save a quick draft (stored locally).</p>
             </div>
           </aside>
 
@@ -213,7 +213,7 @@ function _LegacyJournal() {
                 </header>
                 <div className="j-body" dangerouslySetInnerHTML={{ __html: current.html }} />
                 <footer className="j-foot">
-                  <span>— Gaurav Ratnawat · Berlin</span>
+                  <span>Gaurav Ratnawat · Berlin</span>
                   <span>{current.file || '(local draft)'}</span>
                 </footer>
               </>

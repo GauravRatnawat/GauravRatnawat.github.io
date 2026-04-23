@@ -42,7 +42,7 @@ function Nav({ active, theme, setTheme }) {
     <nav className="nav">
       <div className="mono-mark">
         <span className="dot" />
-        <span>GR — Lead Engineer</span>
+        <span>GR · Lead Engineer</span>
       </div>
       <div className="menu">
         {items.map((it, i) => (
@@ -89,7 +89,7 @@ function Hero() {
           <div className="hero-meta">
             <div className="cell">
               <div className="k">Role</div>
-              <div className="v">Lead Software Engineer — <b>N26</b></div>
+              <div className="v">Lead Software Engineer at <b>N26</b></div>
             </div>
             <div className="cell">
               <div className="k">Location</div>
@@ -114,7 +114,7 @@ function Ticker() {
   const items = [
     'Kotlin', 'Java 21', 'Kafka', 'Kafka Streams', 'Spring Boot 3', 'Quarkus',
     'PostgreSQL', 'Aurora', 'Redis', 'Flink', 'AWS', 'Kubernetes',
-    'Event-Driven', 'CQRS · Saga', 'Datadog', 'P99 < 1s'
+    'Event Driven', 'CQRS · Saga', 'Datadog', 'P99 < 1s'
   ];
   const line = (k) => (
     <span key={k}>
@@ -140,18 +140,18 @@ function About() {
     <section id="about">
       <div className="wrap">
         <SectionHead
-          num="§ 01 — INDEX"
+          num="§ 01 / INDEX"
           title='Ten years <span class="it">designing</span> backends that<br/>outlive the hype cycle.'
           right="Philosophy / Principles"
         />
 
         <div className="about-grid">
           <div className="about-lead">
-            I build <em>event-driven platforms</em> for regulated products — banking, compliance, IoT — where <em>correctness</em> and <em>latency</em> are not negotiable.
+            I build <em>event driven platforms</em> for regulated products in banking, compliance, and IoT, where <em>correctness</em> and <em>latency</em> are not negotiable.
           </div>
           <div className="about-body">
-            <p>I lead backend and data platforms in regulated environments, owning architecture end-to-end: ingestion, streaming, APIs, observability, data lineage, and migration strategy.</p>
-            <p>Across fintech, consulting, SaaS, and telecom domains, I have learned that distributed systems fail at boundaries — contracts, ownership, idempotency, and recovery design matter most.</p>
+            <p>I lead backend and data platforms in regulated environments, owning architecture end to end: ingestion, streaming, APIs, observability, data lineage, and migration strategy.</p>
+            <p>Across fintech, consulting, SaaS, and telecom domains, I have learned that distributed systems fail at boundaries, and contracts, ownership, idempotency, and recovery design matter most.</p>
             <p>I care about mentoring, unglamorous documentation, and the long tail of production incidents that never make the roadmap.</p>
           </div>
         </div>
@@ -160,12 +160,12 @@ function About() {
           <div className="p">
             <div className="n">P/01</div>
             <h4>Correctness over cleverness.</h4>
-            <p>A boring, well-observed service beats a clever, opaque one. Every time.</p>
+            <p>A boring, well observed service beats a clever, opaque one. Every time.</p>
           </div>
           <div className="p">
             <div className="n">P/02</div>
             <h4>Seams are the product.</h4>
-            <p>The interesting work lives at boundaries — contracts, idempotency, backpressure, recovery. Design there first.</p>
+            <p>The interesting work lives at boundaries: contracts, idempotency, backpressure, and recovery. Design there first.</p>
           </div>
           <div className="p">
             <div className="n">P/03</div>

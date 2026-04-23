@@ -3,7 +3,7 @@ function ArchDiagram() {
   return (
     <div className="arch">
       <div style={{display:'flex', justifyContent:'space-between', marginBottom: 16, color:'var(--ink-mute)'}}>
-        <span>FIG. 01 — TRANSACTION DATA PLATFORM · HIGH-LEVEL</span>
+        <span>FIG. 01 / TRANSACTION DATA PLATFORM / HIGH LEVEL</span>
         <span>N26 / Berlin</span>
       </div>
       <svg viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg">
@@ -109,7 +109,7 @@ const CASES = [
     ],
     body: (
       <>
-        <p>Led architecture and delivery of an event-driven platform powering compliance, product, and regulatory use cases across the bank. Owned it end-to-end — from the migration strategy that got us off the monolith, to the on-call rotation that keeps it up.</p>
+        <p>Led architecture and delivery of an event driven platform powering compliance, product, and regulatory use cases across the bank. Owned it end to end, from the migration strategy that got us off the monolith to the on call rotation that keeps it up.</p>
         <p>Designed the Kafka ingestion pipeline, the low-latency read APIs, the enrichment topology, and the lakehouse sink for analytics. Built the GDPR data-deletion flow that spans 20+ downstream systems with audit-ready guarantees.</p>
       </>
     ),
@@ -136,7 +136,7 @@ const CASES = [
       { v: '↓', sup: '', k: 'manual overhead' },
     ],
     body: (
-      <p>Contributed to a banking assistance system integrating multiple internal and external services. Designed the request-routing logic that identifies user intent and forwards to the right backend — improving response accuracy and system efficiency. Automated end-to-end workflows to cut manual intervention.</p>
+      <p>Contributed to a banking assistance system integrating multiple internal and external services. Designed the request routing logic that identifies user intent and forwards to the right backend, improving response accuracy and system efficiency. Automated end to end workflows to cut manual intervention.</p>
     ),
     bullets: [
       'Designed request routing based on user-intent identification.',
@@ -158,7 +158,7 @@ const CASES = [
       { v: '−5', sup: ' min', k: 'pipeline time' },
     ],
     body: (
-      <p>Led the design and delivery of geocoding services for a major US construction equipment manufacturer — resolving dealers by address, IP, or coordinates. Owned the client-facing technical conversation, production RCAs, and onboarding of four engineers onto the platform.</p>
+      <p>Led the design and delivery of geocoding services for a major US construction equipment manufacturer, resolving dealers by address, IP, or coordinates. Owned the client facing technical conversation, production RCAs, and onboarding of four engineers onto the platform.</p>
     ),
     bullets: [
       'Built 3 RESTful geocoding APIs (address / IP / coordinates).',
@@ -181,7 +181,7 @@ const CASES = [
       { v: '↔', sup: '', k: 'custom workflows' },
     ],
     body: (
-      <p>Analyzed device specifications across multiple IoT hardware classes and translated them into user stories. Customized the open-source SiteWhere framework to support project-specific device workflows — a useful exercise in both domain modeling and framework archaeology.</p>
+      <p>Analyzed device specifications across multiple IoT hardware classes and translated them into user stories. Customized the open source SiteWhere framework to support project specific device workflows, a useful exercise in both domain modeling and framework archaeology.</p>
     ),
     bullets: [
       'Translated hardware specs into product requirements.',
@@ -232,7 +232,7 @@ function Cases() {
     <section id="cases">
       <div className="wrap">
         <SectionHead
-          num="§ 03 — CASES"
+          num="§ 03 / CASES"
           title='Selected <span class="it">works.</span>'
           right="Deep dives · 2018 → Now"
         />

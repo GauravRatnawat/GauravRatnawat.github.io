@@ -3,36 +3,36 @@ const WORK = [
     co: 'N26',
     loc: 'Berlin, Germany',
     title: 'Lead Software Engineer',
-    tag: 'Leading architecture and delivery for transaction data and backend platform capabilities in a pan-European bank.',
-    date: 'Sep 2022 — Present',
+    tag: 'Leading architecture and delivery for transaction data and backend platform capabilities in a pan European bank.',
+    date: 'Sep 2022 to Present',
   },
   {
     co: 'Thoughtworks',
     loc: 'Gurgaon, India',
     title: 'Tech Lead',
     tag: 'Led delivery for geolocation and platform services for an enterprise construction client in the US market.',
-    date: 'Mar 2020 — Sep 2022',
+    date: 'Mar 2020 to Sep 2022',
   },
   {
     co: 'Q3 Technologies',
     loc: 'Gurgaon, India',
     title: 'Senior Developer',
-    tag: 'Senior IC on multi-tenant SaaS. Designed APIs, integrations, and release pipelines.',
-    date: 'Dec 2017 — Mar 2020',
+    tag: 'Senior IC on multi tenant SaaS. Designed APIs, integrations, and release pipelines.',
+    date: 'Dec 2017 to Mar 2020',
   },
   {
     co: 'Amdocs',
     loc: 'Gurgaon, India',
     title: 'Software Engineer',
     tag: 'Telco billing and OSS systems. Java, Oracle, and a healthy respect for legacy data models.',
-    date: 'May 2017 — Dec 2017',
+    date: 'May 2017 to Dec 2017',
   },
   {
     co: 'Tata Consultancy Services',
     loc: 'Gurgaon, India',
-    title: 'Engineer — Technology',
-    tag: 'First engineering role. Enterprise Java, client-facing delivery, foundational rigor.',
-    date: 'Oct 2015 — Apr 2017',
+    title: 'Engineer, Technology',
+    tag: 'First engineering role. Enterprise Java, client facing delivery, foundational rigor.',
+    date: 'Oct 2015 to Apr 2017',
   },
 ];
 
@@ -41,7 +41,7 @@ function Work() {
     <section id="work">
       <div className="wrap">
         <SectionHead
-          num="§ 02 — WORK"
+          num="§ 02 / WORK"
           title='Five companies. <span class="it">One throughline.</span>'
           right="2015 → Present · 10 yrs"
         />

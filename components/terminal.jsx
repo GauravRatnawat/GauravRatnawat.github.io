@@ -1,12 +1,12 @@
-/* ——— Terminal Journal Reader ——— */
+/* Terminal Journal Reader */
 /* Section §05 shows a terminal preview. Clicking "open full screen" or
    typing `open` expands to a fullscreen CRT terminal with real commands:
    ls, cat <file>, help, clear, vim <file>, whoami, exit */
 
 const BOOT_LINES = [
-  { t: 'sys', v: 'field-notebook v2.6.04 — gaurav@berlin' },
+  { t: 'sys', v: 'field-notebook v2.6.04 / gaurav@berlin' },
   { t: 'sys', v: 'kernel: linux 6.1 · shell: /bin/gsh · term: xterm-256color' },
-  { t: 'sys', v: 'mounted /journal (45 entries) · read-only' },
+  { t: 'sys', v: 'mounted /journal (45 entries) · read only' },
   { t: 'sys', v: 'type `help` for commands · `ls` to list · `cat <n>` to read' },
 ];
 
@@ -30,7 +30,7 @@ function stripMdToTerminal(md) {
   out = out.replace(/^\s*(\d+)\. (.+)$/gm, '  $1. $2');
   // Blockquotes
   out = out.replace(/^> (.+)$/gm, '  ▎ $1');
-  // Inline code / bold / italic — strip markers
+  // Inline code / bold / italic: strip markers
   out = out.replace(/`([^`]+)`/g, '⟨$1⟩');
   out = out.replace(/\*\*([^*]+)\*\*/g, '$1');
   out = out.replace(/\*([^*]+)\*/g, '$1');
@@ -122,7 +122,7 @@ function Journal() {
         v: [
           String(e.id).padStart(3, '0'),
           fmt(e.meta.date),
-          (e.meta.tags?.[0] || '—').padEnd(12),
+          (e.meta.tags?.[0] || 'n/a').padEnd(12),
           '·',
           e.meta.title || 'Untitled',
           e.isDraft ? ' (draft)' : '',
@@ -142,9 +142,9 @@ function Journal() {
     }
     const header = [
       { cls: 'tm-cat-file', v: `── ${entry.file} ` + '─'.repeat(Math.max(0, 70 - entry.file.length - 4)) },
-      { cls: 'tm-meta', v: `date:    ${entry.meta.date || '—'}` },
+      { cls: 'tm-meta', v: `date:    ${entry.meta.date || 'n/a'}` },
       { cls: 'tm-meta', v: `title:   ${entry.meta.title || 'Untitled'}` },
-      { cls: 'tm-meta', v: `tags:    ${(entry.meta.tags || []).join(', ') || '—'}` },
+      { cls: 'tm-meta', v: `tags:    ${(entry.meta.tags || []).join(', ') || 'n/a'}` },
       { cls: 'tm-cat-file', v: '─'.repeat(70) },
       { cls: 'tm-body', v: '' },
     ];
@@ -153,7 +153,7 @@ function Journal() {
     const footer = [
       { cls: 'tm-body', v: '' },
       { cls: 'tm-cat-file', v: '─'.repeat(70) },
-      { cls: 'tm-muted', v: `— EOF · gaurav ratnawat, berlin · ${entry.meta.date || ''}` },
+      { cls: 'tm-muted', v: `EOF · gaurav ratnawat, berlin · ${entry.meta.date || ''}` },
     ];
     pushOut([...header, ...bodyLines, ...footer]);
   };
@@ -322,7 +322,7 @@ function Journal() {
     <section id="journal">
       <div className="wrap">
         <SectionHead
-          num="§ 05 — JOURNAL"
+          num="§ 05 / JOURNAL"
           title='Field notes, <span class="it">in the shell.</span>'
           right={`${entries.length} entries · /journal/`}
         />
@@ -332,15 +332,15 @@ function Journal() {
             <div className="tm-dots">
               <span className="d r" /><span className="d y" /><span className="d g" />
             </div>
-            <div className="tm-title">gaurav@berlin — field-notebook — 100×32</div>
+            <div className="tm-title">gaurav@berlin / field-notebook / 100x32</div>
             <div className="tm-hint">click to open ⌘↵</div>
           </div>
           <div className="tm-body tm-body-preview">
-            <div className="tm-line"><span className="tm-sys">field-notebook v2.6.04 — {entries.length} entries loaded</span></div>
+            <div className="tm-line"><span className="tm-sys">field-notebook v2.6.04 / {entries.length} entries loaded</span></div>
             <div className="tm-line"><Prompt inline /> ls</div>
             {previewEntries.map(e => (
               <div className="tm-line tm-ls" key={e.id}>
-                {String(e.id).padStart(3, '0')}  {fmt(e.meta.date)}  {(e.meta.tags?.[0] || '—').padEnd(12)}  ·  {e.meta.title}
+                {String(e.id).padStart(3, '0')}  {fmt(e.meta.date)}  {(e.meta.tags?.[0] || 'n/a').padEnd(12)}  ·  {e.meta.title}
               </div>
             ))}
             <div className="tm-line tm-muted">... {Math.max(0, all.length - 3)} more entries</div>
@@ -364,7 +364,7 @@ function Journal() {
             <div className="tm-dots">
               <span className="d r" onClick={() => setFullscreen(false)} /><span className="d y" /><span className="d g" />
             </div>
-            <div className="tm-title">gaurav@berlin — /home/gaurav/journal — {new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/Berlin' })}</div>
+            <div className="tm-title">gaurav@berlin /home/gaurav/journal {new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/Berlin' })}</div>
             <button className="tm-close" onClick={(e) => { e.stopPropagation(); setFullscreen(false); }}>ESC to close</button>
           </div>
           <div className="tm-body tm-body-fs" ref={bodyRef}>

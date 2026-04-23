@@ -3,7 +3,7 @@ const SKILLS = [
     cat: 'Languages', sig: 'S/01',
     items: [
       ['Kotlin', 'primary'],
-      ['Java (11–21)', 'primary'],
+      ['Java (11 to 21)', 'primary'],
       ['Go', 'working'],
       ['TypeScript · NestJS', 'working'],
       ['Vue.js', 'working'],
@@ -145,7 +145,7 @@ function Skills() {
   const headline = [
     { name: 'Spoud Kafka Developer Training', authority: 'Spoud', date: 'Dec 2025', license: 'f91eecd7-ddd6-4ca3-aa47-7fd1f1eb6a2a' },
     { name: 'Microsoft Certified: Azure Fundamentals', authority: 'Microsoft', date: 'Jul 2020' },
-    { name: 'Aviatrix Certified Engineer — Multi-Cloud Network Associate', authority: 'Aviatrix', date: 'Jun 2020' },
+    { name: 'Aviatrix Certified Engineer, Multi Cloud Network Associate', authority: 'Aviatrix', date: 'Jun 2020' },
     { name: 'Scalable Java Microservices · Spring Boot + Cloud', authority: 'Coursera', date: 'Nov 2019', license: 'NQB7U89X9FPS' },
     { name: 'Introduction to Internet of Things (XEE100)', authority: 'Stanford University', date: 'May 2020', license: 'X531415' },
     { name: 'B.Tech, Computer Science & Engineering', authority: 'RGTU, Bhopal', date: '2015' },
@@ -155,7 +155,7 @@ function Skills() {
     <section id="skills">
       <div className="wrap">
         <SectionHead
-          num="§ 06 — STACK"
+          num="§ 06 / STACK"
           title='The <span class="it">toolkit,</span> honestly labeled.'
           right={`${SKILLS.length} curated · ${liSkills.length} endorsed`}
         />
@@ -290,7 +290,7 @@ function Contact() {
     <section id="contact">
       <div className="wrap">
         <SectionHead
-          num="§ 05 — CONTACT"
+          num="§ 05 / CONTACT"
           title='Building something <span class="it">hard?</span>'
           right="Open to Staff / Principal · Berlin · Remote-EU"
         />

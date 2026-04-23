@@ -302,20 +302,12 @@ function Contact() {
 
         <div className="contact-grid">
           <div className="c">
-            <div className="k">Email</div>
-            <div className="v">contact@gauravratnawat.com</div>
-          </div>
-          <div className="c">
             <div className="k">Phone</div>
             <div className="v">+49 152 92604891</div>
           </div>
           <div className="c">
             <div className="k">LinkedIn</div>
             <div className="v"><a href="https://www.linkedin.com/in/ratnawatgaurav" target="_blank" rel="noopener">linkedin.com/in/ratnawatgaurav</a></div>
-          </div>
-          <div className="c">
-            <div className="k">GitHub</div>
-            <div className="v"><a href="https://github.com/GauravRatnawat" target="_blank" rel="noopener">github.com/GauravRatnawat</a></div>
           </div>
           <div className="c">
             <div className="k">Location</div>

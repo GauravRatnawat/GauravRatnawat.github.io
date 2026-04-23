@@ -3,14 +3,14 @@ const WORK = [
     co: 'N26',
     loc: 'Berlin, Germany',
     title: 'Lead Software Engineer',
-    tag: 'Architecting the Transaction Data Platform for a pan-European bank. 500M+ events/month, 99.99% uptime, GDPR-compliant by design.',
+    tag: 'Leading architecture and delivery for transaction data and backend platform capabilities in a pan-European bank.',
     date: 'Sep 2022 — Present',
   },
   {
     co: 'Thoughtworks',
     loc: 'Gurgaon, India',
     title: 'Tech Lead',
-    tag: 'Delivered geolocation services for a Fortune-500 US construction client. Tripled throughput with RDS auto-scaling; onboarded a team of 4.',
+    tag: 'Led delivery for geolocation and platform services for an enterprise construction client in the US market.',
     date: 'Mar 2020 — Sep 2022',
   },
   {

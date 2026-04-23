@@ -240,7 +240,7 @@ function Journal() {
       { cls: 'tm-body', v: 'gaurav ratnawat' },
       { cls: 'tm-muted', v: 'lead software engineer · berlin' },
       { cls: 'tm-muted', v: 'distributed systems · kafka · kotlin · aws' },
-      { cls: 'tm-muted', v: '10+ yrs · currently shipping 99.99% uptime at n26' },
+      { cls: 'tm-muted', v: '10+ yrs · backend platform engineering in regulated products' },
       { cls: 'tm-muted', v: '' },
       { cls: 'tm-muted', v: 'mail:     contact@gauravratnawat.com' },
       { cls: 'tm-muted', v: 'phone:    +49 152 92604891' },

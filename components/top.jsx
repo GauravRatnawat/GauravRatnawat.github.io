@@ -150,8 +150,8 @@ function About() {
             I build <em>event-driven platforms</em> for regulated products — banking, compliance, IoT — where <em>correctness</em> and <em>latency</em> are not negotiable.
           </div>
           <div className="about-body">
-            <p>Currently leading the Transaction Data Platform at N26, a bank serving 8 million customers across Europe. I own the architecture end-to-end: ingestion, streaming, APIs, observability, data lineage, and the migration path that got us here.</p>
-            <p>Before N26 I spent two years at Thoughtworks as a Tech Lead, shipping for a Fortune-500 construction client, and five years before that across Q3 Technologies, Amdocs, and TCS — where I learned that distributed systems fail at the seams, and good engineers obsess over those seams.</p>
+            <p>I lead backend and data platforms in regulated environments, owning architecture end-to-end: ingestion, streaming, APIs, observability, data lineage, and migration strategy.</p>
+            <p>Across fintech, consulting, SaaS, and telecom domains, I have learned that distributed systems fail at boundaries — contracts, ownership, idempotency, and recovery design matter most.</p>
             <p>I care about mentoring, unglamorous documentation, and the long tail of production incidents that never make the roadmap.</p>
           </div>
         </div>
@@ -160,7 +160,7 @@ function About() {
           <div className="p">
             <div className="n">P/01</div>
             <h4>Correctness over cleverness.</h4>
-            <p>A boring, well-observed service beats a clever, opaque one. Every time. Especially at 500M events/month.</p>
+            <p>A boring, well-observed service beats a clever, opaque one. Every time.</p>
           </div>
           <div className="p">
             <div className="n">P/02</div>
@@ -174,28 +174,6 @@ function About() {
           </div>
         </div>
 
-        <div style={{ marginTop: 48 }} className="metrics">
-          <div className="m">
-            <div className="k">Transactions / Month</div>
-            <div className="v">500<sup>M+</sup></div>
-            <div className="d">Processed through Kafka ingestion pipelines at N26.</div>
-          </div>
-          <div className="m">
-            <div className="k">Platform Uptime</div>
-            <div className="v">99.99<sup>%</sup></div>
-            <div className="d">AWS multi-region, failover-aware deployments.</div>
-          </div>
-          <div className="m">
-            <div className="k">API Latency (p99)</div>
-            <div className="v">&lt; 1<sup>s</sup></div>
-            <div className="d">At ~1.5K RPS on Kubernetes microservices.</div>
-          </div>
-          <div className="m">
-            <div className="k">MTTR Reduction</div>
-            <div className="v">−30<sup>%</sup></div>
-            <div className="d">Driven by observability, Datadog, OpenSearch.</div>
-          </div>
-        </div>
       </div>
     </section>
   );

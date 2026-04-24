@@ -306,6 +306,10 @@ function Contact() {
             <div className="v">+49 152 92604891</div>
           </div>
           <div className="c">
+            <div className="k">Book 1 to 1</div>
+            <div className="v"><a href="https://topmate.io/gaurav_ratnawat" target="_blank" rel="noopener">topmate.io/gaurav_ratnawat</a></div>
+          </div>
+          <div className="c">
             <div className="k">LinkedIn</div>
             <div className="v"><a href="https://www.linkedin.com/in/ratnawatgaurav" target="_blank" rel="noopener">linkedin.com/in/ratnawatgaurav</a></div>
           </div>

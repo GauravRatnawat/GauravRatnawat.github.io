@@ -232,7 +232,7 @@ function Cases() {
     <section id="cases">
       <div className="wrap">
         <SectionHead
-          num="§ 03 / CASES"
+          num="Entry 03 / Cases"
           title='Selected <span class="it">works.</span>'
           right="Deep dives · 2018 → Now"
         />

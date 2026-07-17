@@ -155,7 +155,7 @@ function Skills() {
     <section id="skills">
       <div className="wrap">
         <SectionHead
-          num="§ 06 / STACK"
+          num="Entry 06 / Stack"
           title='The <span class="it">toolkit,</span> honestly labeled.'
           right={`${SKILLS.length} curated · ${liSkills.length} endorsed`}
         />
@@ -290,9 +290,9 @@ function Contact() {
     <section id="contact">
       <div className="wrap">
         <SectionHead
-          num="§ 05 / CONTACT"
+          num="Entry 07 / Contact"
           title='Building something <span class="it">hard?</span>'
-          right="Open to Staff / Principal · Berlin · Remote-EU"
+          right="Lead Engineer @ IMTF · Berlin"
         />
 
         <div className="contact-big">
@@ -339,8 +339,8 @@ function Contact() {
 
         <div className="foot">
           <div>© {new Date().getFullYear()} Gaurav Ratnawat</div>
-          <div className="c">Typeset in Fraunces, Inter Tight & JetBrains Mono</div>
-          <div className="r">Hand-coded · No trackers · v.26.04</div>
+          <div className="c">Typeset in Besley, Public Sans & IBM Plex Mono</div>
+          <div className="r">Hand-coded · No trackers · v.26.07</div>
         </div>
       </div>
     </section>

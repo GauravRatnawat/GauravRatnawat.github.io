@@ -238,7 +238,7 @@ function Journal() {
   const runWhoami = () => {
     pushOut([
       { cls: 'tm-body', v: 'gaurav ratnawat' },
-      { cls: 'tm-muted', v: 'lead software engineer · berlin' },
+      { cls: 'tm-muted', v: 'lead engineer @ imtf · berlin' },
       { cls: 'tm-muted', v: 'distributed systems · kafka · kotlin · aws' },
       { cls: 'tm-muted', v: '10+ yrs · backend platform engineering in regulated products' },
       { cls: 'tm-muted', v: '' },
@@ -322,7 +322,7 @@ function Journal() {
     <section id="journal">
       <div className="wrap">
         <SectionHead
-          num="§ 05 / JOURNAL"
+          num="Entry 05 / Journal"
           title='Field notes, <span class="it">in the shell.</span>'
           right={`${entries.length} entries · /journal/`}
         />

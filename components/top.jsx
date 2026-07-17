@@ -15,7 +15,7 @@ function SectionHead({ num, title, right }) {
   );
 }
 
-function Nav({ active, theme, setTheme }) {
+function Nav({ active }) {
   const [time, setTime] = useState('');
   useEffect(() => {
     const tick = () => {
@@ -42,7 +42,7 @@ function Nav({ active, theme, setTheme }) {
     <nav className="nav">
       <div className="mono-mark">
         <span className="dot" />
-        <span>GR · Lead Engineer</span>
+        <span>GR · Ledger of Work</span>
       </div>
       <div className="menu">
         {items.map((it, i) => (
@@ -53,21 +53,76 @@ function Nav({ active, theme, setTheme }) {
       </div>
       <div className="clock">
         <span>Berlin · {time}</span>
-        <button
-          onClick={() => setTheme(theme === 'dark' ? 'paper' : 'dark')}
-          style={{
-            fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '.12em',
-            textTransform: 'uppercase', padding: '5px 10px',
-            border: '1px solid var(--rule)', borderRadius: 2,
-            color: 'var(--ink-dim)', background: 'transparent',
-            cursor: 'pointer', transition: 'color .2s, border-color .2s',
-          }}
-          onMouseEnter={e => { e.target.style.color = 'var(--ink)'; e.target.style.borderColor = 'var(--ink-mute)'; }}
-          onMouseLeave={e => { e.target.style.color = 'var(--ink-dim)'; e.target.style.borderColor = 'var(--rule)'; }}
-        >{theme === 'dark' ? '◐ paper' : '◑ dark'}</button>
-        <span className="live">● Available Q3 ‘26</span>
+        <span className="live">● Lead Engineer @ IMTF</span>
       </div>
     </nav>
+  );
+}
+
+/* The signature: an append-only ledger of events, always posting. */
+const LEDGER_EVENTS = [
+  ['txn.card.settled', 'cr'],
+  ['txn.sepa.ingested', 'dr'],
+  ['stream.offset.committed', 'cr'],
+  ['screening.alert.cleared', 'cr'],
+  ['gdpr.deletion.acked', 'dr'],
+  ['case.risk.scored', 'dr'],
+  ['txn.instant.posted', 'cr'],
+  ['audit.trail.appended', 'cr'],
+  ['consumer.rebalanced', 'dr'],
+  ['sla.p99.within.bounds', 'cr'],
+];
+
+function LiveLedger() {
+  const START_OFFSET = 84921;
+  const VISIBLE_ROWS = 7;
+  const APPEND_MS = 1600;
+
+  const makeRow = (offset) => {
+    const [ev, drcr] = LEDGER_EVENTS[offset % LEDGER_EVENTS.length];
+    const ms = 120 + ((offset * 37) % 740);
+    return { offset, ev, drcr, ms };
+  };
+
+  const [rows, setRows] = useState(() =>
+    Array.from({ length: VISIBLE_ROWS }, (_, i) => makeRow(START_OFFSET + i))
+  );
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const id = setInterval(() => {
+      setRows(prev => {
+        const next = makeRow(prev[prev.length - 1].offset + 1);
+        return [...prev.slice(1), next];
+      });
+    }, APPEND_MS);
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <div className="ledger" aria-label="Live event ledger, decorative">
+      <div className="ledger-head">
+        <span>Transaction ledger · append-only</span>
+        <span className="live-dot">posting</span>
+      </div>
+      <div className="ledger-cols">
+        <span>Offset</span><span>Event</span><span>Latency</span><span>Dr/Cr</span>
+      </div>
+      <div className="ledger-rows">
+        {rows.map((r, i) => (
+          <div className={'ledger-row' + (i === rows.length - 1 ? ' appended' : '')} key={r.offset}>
+            <span className="off">{String(r.offset).padStart(6, '0')}</span>
+            <span className="ev">{r.ev}</span>
+            <span className="ms">{r.ms} ms</span>
+            <span className={'drcr ' + r.drcr}>{r.drcr.toUpperCase()}</span>
+          </div>
+        ))}
+      </div>
+      <div className="ledger-foot">
+        <span>Balance</span>
+        <span><b>500M+ tx / month</b> · nothing lost</span>
+      </div>
+    </div>
   );
 }
 
@@ -75,62 +130,56 @@ function Hero() {
   return (
     <section id="hero">
       <div className="hero-status">
-        <div className="badge"><span className="g" /> Open to Staff & Principal roles</div>
-        <div style={{ marginTop: 10 }}>N° 001 / The Index</div>
+        <div className="badge"><span className="g" /> Lead Engineer · IMTF · Financial crime prevention</div>
       </div>
       <div className="wrap">
         <div className="hero-grid">
-          <h1 className="hero-title">
-            <span className="row"><span>Gaurav</span></span>
-            <span className="row"><span>Ratnawat<span style={{color:'var(--accent)'}}>.</span></span></span>
-            <span className="row"><span className="it">Systems at scale.</span></span>
-          </h1>
+          <div>
+            <p className="hero-name">Gaurav Ratnawat — <b>The Ledger of Work</b></p>
+            <h1 className="hero-title">
+              <span className="row"><span>Systems that</span></span>
+              <span className="row"><span><em>never</em> lose</span></span>
+              <span className="row"><span>a transaction.</span></span>
+            </h1>
 
-          <div className="hero-meta">
-            <div className="cell">
-              <div className="k">Role</div>
-              <div className="v">Lead Software Engineer at <b>N26</b></div>
-            </div>
-            <div className="cell">
-              <div className="k">Location</div>
-              <div className="v">Berlin, Germany · <b>UTC+1</b></div>
-            </div>
-            <div className="cell">
-              <div className="k">Focus</div>
-              <div className="v">Distributed systems, Kafka, <b>Kotlin/Java</b>, AWS</div>
-            </div>
-            <div className="cell">
-              <div className="k">Tenure</div>
-              <div className="v"><b>10+ yrs</b> backend · platform · cloud</div>
+            <div className="hero-meta">
+              <div className="cell">
+                <div className="k">Role</div>
+                <div className="v">Lead Engineer at <b>IMTF</b> · financial crime prevention</div>
+              </div>
+              <div className="cell">
+                <div className="k">Location</div>
+                <div className="v">Berlin, Germany · <b>CET</b></div>
+              </div>
+              <div className="cell">
+                <div className="k">Focus</div>
+                <div className="v">Distributed systems, Kafka, <b>Kotlin/Java</b>, AWS</div>
+              </div>
+              <div className="cell">
+                <div className="k">Previously</div>
+                <div className="v"><b>N26</b> · Thoughtworks · Amdocs · TCS</div>
+              </div>
             </div>
           </div>
+
+          <LiveLedger />
         </div>
       </div>
     </section>
   );
 }
 
+/* Balance brought forward: the career in one ruled line */
 function Ticker() {
-  const items = [
-    'Kotlin', 'Java 21', 'Kafka', 'Kafka Streams', 'Spring Boot 3', 'Quarkus',
-    'PostgreSQL', 'Aurora', 'Redis', 'Flink', 'AWS', 'Kubernetes',
-    'Event Driven', 'CQRS · Saga', 'Datadog', 'P99 < 1s'
-  ];
-  const line = (k) => (
-    <span key={k}>
-      {items.map((t, i) => (
-        <React.Fragment key={i}>
-          <span>{t}</span>
-          <span className="sep">✦</span>
-        </React.Fragment>
-      ))}
-    </span>
-  );
   return (
     <div className="ticker">
-      <div className="ticker-track">
-        {line('a')}{line('b')}
-      </div>
+      <span className="bf">Balance b/f</span>
+      <span><b>10+ yrs</b> backend</span>
+      <span><b>6</b> companies</span>
+      <span><b>500M+</b> tx/month handled</span>
+      <span><b>99.99%</b> uptime</span>
+      <span><b>P99 &lt; 1s</b> at 1.5K RPS</span>
+      <span>carried forward →</span>
     </div>
   );
 }
@@ -140,18 +189,18 @@ function About() {
     <section id="about">
       <div className="wrap">
         <SectionHead
-          num="§ 01 / INDEX"
-          title='Ten years <span class="it">designing</span> backends that<br/>outlive the hype cycle.'
+          num="Entry 01 / Index"
+          title='Ten years <span class="it">keeping</span> the books<br/>on distributed systems.'
           right="Philosophy / Principles"
         />
 
         <div className="about-grid">
           <div className="about-lead">
-            I build <em>event driven platforms</em> for regulated products in banking, compliance, and IoT, where <em>correctness</em> and <em>latency</em> are not negotiable.
+            I build <em>event driven platforms</em> for regulated products in banking, financial crime prevention, and compliance, where <em>correctness</em> and <em>latency</em> are not negotiable.
           </div>
           <div className="about-body">
             <p>I lead backend and data platforms in regulated environments, owning architecture end to end: ingestion, streaming, APIs, observability, data lineage, and migration strategy.</p>
-            <p>Across fintech, consulting, SaaS, and telecom domains, I have learned that distributed systems fail at boundaries, and contracts, ownership, idempotency, and recovery design matter most.</p>
+            <p>Across fintech, regtech, consulting, SaaS, and telecom domains, I have learned that distributed systems fail at boundaries, and contracts, ownership, idempotency, and recovery design matter most.</p>
             <p>I care about mentoring, unglamorous documentation, and the long tail of production incidents that never make the roadmap.</p>
           </div>
         </div>
@@ -179,4 +228,4 @@ function About() {
   );
 }
 
-Object.assign(window, { Nav, Hero, Ticker, About, SectionHead, Eyebrow });
+Object.assign(window, { Nav, Hero, Ticker, About, SectionHead, Eyebrow, LiveLedger });

@@ -44,7 +44,7 @@ function Posts() {
     <section id="signals">
       <div className="wrap">
         <SectionHead
-          num="§ 04 / SIGNALS"
+          num="Entry 04 / Signals"
           title='Notes <span class="it">in public.</span>'
           right={`${posts.length} LinkedIn posts · auto-synced`}
         />

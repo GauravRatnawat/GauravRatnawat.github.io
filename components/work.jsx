@@ -1,10 +1,17 @@
 const WORK = [
   {
+    co: 'IMTF',
+    loc: 'Berlin / Swiss regtech',
+    title: 'Lead Engineer',
+    tag: 'Leading engineering for financial crime prevention and compliance automation platforms serving regulated banks.',
+    date: 'Oct 2025 to Present',
+  },
+  {
     co: 'N26',
     loc: 'Berlin, Germany',
     title: 'Lead Software Engineer',
-    tag: 'Leading architecture and delivery for transaction data and backend platform capabilities in a pan European bank.',
-    date: 'Sep 2022 to Present',
+    tag: 'Led architecture and delivery for transaction data and backend platform capabilities in a pan European bank.',
+    date: 'Sep 2022 to Oct 2025',
   },
   {
     co: 'Thoughtworks',
@@ -41,9 +48,9 @@ function Work() {
     <section id="work">
       <div className="wrap">
         <SectionHead
-          num="§ 02 / WORK"
-          title='Five companies. <span class="it">One throughline.</span>'
-          right="2015 → Present · 10 yrs"
+          num="Entry 02 / Work"
+          title='Six companies. <span class="it">One throughline.</span>'
+          right="2015 → Present · 10+ yrs"
         />
 
         <div className="work">

@@ -1,0 +1,12 @@
+# Gaurav Ratnawat
+
+> Personal site of Gaurav Ratnawat, Lead Software Engineer. Portfolio, engineering journal, and open-source projects.
+
+## Projects
+
+- [journal-recorder](https://gauravratnawat.com/journal-recorder-agent/): auto-journal for Claude Code & Codex CLI — every AI coding session becomes a markdown journal entry, per project, Obsidian-ready, auto-pushed to GitHub. Details: https://gauravratnawat.com/journal-recorder-agent/llms.txt
+
+## Links
+
+- [Home](https://gauravratnawat.com/): portfolio and contact
+- [GitHub](https://github.com/GauravRatnawat): open-source work

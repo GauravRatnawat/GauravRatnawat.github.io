@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gauravratnawat.com/sitemap.xml
+Sitemap: https://gauravratnawat.com/journal-recorder-agent/sitemap.xml

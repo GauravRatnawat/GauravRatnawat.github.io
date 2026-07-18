@@ -65,7 +65,20 @@ function Posts() {
 
         <div className="posts">
           {visible.map((p, i) => (
-            <article className={'post' + (active === p.id ? ' open' : '')} key={p.id} onClick={() => setActive(active === p.id ? null : p.id)}>
+            <article
+              className={'post' + (active === p.id ? ' open' : '')}
+              key={p.id}
+              role="button"
+              tabIndex={0}
+              aria-expanded={active === p.id}
+              onClick={() => setActive(active === p.id ? null : p.id)}
+              onKeyDown={e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setActive(active === p.id ? null : p.id);
+                }
+              }}
+            >
               <div className="p-left">
                 <div className="p-num">N° {String(i+1).padStart(3, '0')}</div>
                 <div className="p-date">{fmt(p.date)}</div>

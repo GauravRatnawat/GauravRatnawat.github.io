@@ -103,7 +103,7 @@ function LiveLedger() {
     <div className="ledger" aria-label="Live event ledger, decorative">
       <div className="ledger-head">
         <span>Transaction ledger · append-only</span>
-        <span className="live-dot">posting</span>
+        <span className="live-dot">simulated feed</span>
       </div>
       <div className="ledger-cols">
         <span>Offset</span><span>Event</span><span>Latency</span><span>Dr/Cr</span>

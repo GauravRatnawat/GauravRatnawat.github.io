@@ -327,12 +327,18 @@ function Journal() {
           right={`${entries.length} entries · /journal/`}
         />
 
-        <div className="tm-preview" onClick={() => setFullscreen(true)}>
+        <div
+          className="tm-preview"
+          role="button"
+          tabIndex={0}
+          aria-label="Open fullscreen journal terminal"
+          onClick={() => setFullscreen(true)}
+          onKeyDown={e => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setFullscreen(true); }
+          }}
+        >
           <div className="tm-chrome">
-            <div className="tm-dots">
-              <span className="d r" /><span className="d y" /><span className="d g" />
-            </div>
-            <div className="tm-title">gaurav@berlin / field-notebook / 100x32</div>
+            <div className="tm-title">Field-Notebook · read-only</div>
             <div className="tm-hint">click to open ⌘↵</div>
           </div>
           <div className="tm-body tm-body-preview">
@@ -361,10 +367,7 @@ function Journal() {
         <div className="tm-fullscreen" onClick={() => inputRef.current?.focus()}>
           <div className="tm-scanlines" />
           <div className="tm-fs-chrome">
-            <div className="tm-dots">
-              <span className="d r" onClick={() => setFullscreen(false)} /><span className="d y" /><span className="d g" />
-            </div>
-            <div className="tm-title">gaurav@berlin /home/gaurav/journal {new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/Berlin' })}</div>
+            <div className="tm-title">Field-Notebook · /home/gaurav/journal · {new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/Berlin' })}</div>
             <button className="tm-close" onClick={(e) => { e.stopPropagation(); setFullscreen(false); }}>ESC to close</button>
           </div>
           <div className="tm-body tm-body-fs" ref={bodyRef}>

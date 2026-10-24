@@ -6,7 +6,7 @@
 const BOOT_LINES = [
   { t: 'sys', v: 'field-notebook v2.6.04 / gaurav@berlin' },
   { t: 'sys', v: 'kernel: linux 6.1 · shell: /bin/gsh · term: xterm-256color' },
-  { t: 'sys', v: 'mounted /journal (45 entries) · read only' },
+  { t: 'sys', v: 'mounted /journal · read only' },
   { t: 'sys', v: 'type `help` for commands · `ls` to list · `cat <n>` to read' },
 ];
 
@@ -55,12 +55,14 @@ function Journal() {
     try { return JSON.parse(localStorage.getItem('journal.drafts') || '[]'); } catch { return []; }
   });
   const [fullscreen, setFullscreen] = useState(false);
+  const [pendingCat, setPendingCat] = useState(null); // essay id to show on open
   const [history, setHistory] = useState([]); // { kind: 'cmd'|'out', cmd?, lines }
   const [input, setInput] = useState('');
   const [cmdLog, setCmdLog] = useState([]);
   const [cmdIdx, setCmdIdx] = useState(-1);
   const inputRef = useRef();
   const bodyRef = useRef();
+  const readFromTopRef = useRef(false);
 
   // Load entries
   useEffect(() => {
@@ -86,7 +88,10 @@ function Journal() {
 
   // Auto-scroll on history change
   useEffect(() => {
-    if (bodyRef.current) bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
+    if (!bodyRef.current) return;
+    // essay opened from the list: start reading at the top, not the EOF line
+    bodyRef.current.scrollTop = readFromTopRef.current ? 0 : bodyRef.current.scrollHeight;
+    if (history.length) readFromTopRef.current = false;
   }, [history, fullscreen]);
 
   // Focus input when fullscreen opens
@@ -95,6 +100,12 @@ function Journal() {
       setHistory([
         { kind: 'out', lines: BOOT_LINES.map(l => ({ cls: 'tm-sys', v: l.v })) },
       ]);
+      if (pendingCat) {
+        readFromTopRef.current = true;
+        pushCmd(`cat ${pendingCat}`);
+        runCat(String(pendingCat));
+        setPendingCat(null);
+      }
       setTimeout(() => inputRef.current?.focus(), 100);
     }
   }, [fullscreen]);
@@ -315,52 +326,47 @@ function Journal() {
     }
   };
 
-  // Section-preview mini terminal (3 entries + CTA)
-  const previewEntries = all.slice(0, 3);
+  const openEntry = (id) => { setPendingCat(id); setFullscreen(true); };
 
   return (
-    <section id="journal">
+    <section id="writing">
       <div className="wrap">
         <SectionHead
-          num="Entry 05 / Journal"
-          title='Field notes, <span class="it">in the shell.</span>'
-          right={`${entries.length} entries · /journal/`}
+          num="Entry 05 / Writing"
+          title='Long form, <span class="it">and short.</span>'
+          right={`${entries.length} essays · LinkedIn posts`}
         />
 
-        <div
-          className="tm-preview"
-          role="button"
-          tabIndex={0}
-          aria-label="Open fullscreen journal terminal"
-          onClick={() => setFullscreen(true)}
-          onKeyDown={e => {
-            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setFullscreen(true); }
-          }}
-        >
-          <div className="tm-chrome">
-            <div className="tm-title">Field-Notebook · read-only</div>
-            <div className="tm-hint">click to open ⌘↵</div>
-          </div>
-          <div className="tm-body tm-body-preview">
-            <div className="tm-line"><span className="tm-sys">field-notebook v2.6.04 / {entries.length} entries loaded</span></div>
-            <div className="tm-line"><Prompt inline /> ls</div>
-            {previewEntries.map(e => (
-              <div className="tm-line tm-ls" key={e.id}>
-                {String(e.id).padStart(3, '0')}  {fmt(e.meta.date)}  {(e.meta.tags?.[0] || 'n/a').padEnd(12)}  ·  {e.meta.title}
+        <Eyebrow>Essays</Eyebrow>
+        <div className="posts essays">
+          {entries.map(e => (
+            <article
+              className="post"
+              key={e.id}
+              role="button"
+              tabIndex={0}
+              onClick={() => openEntry(e.id)}
+              onKeyDown={ev => {
+                if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); openEntry(e.id); }
+              }}
+            >
+              <div className="p-left">
+                <div className="p-num">E/{String(e.id).padStart(2, '0')}</div>
+                <div className="p-date">{fmt(e.meta.date)}</div>
               </div>
-            ))}
-            <div className="tm-line tm-muted">... {Math.max(0, all.length - 3)} more entries</div>
-            <div className="tm-line"><Prompt inline /> <span className="tm-caret">_</span></div>
-          </div>
-          <div className="tm-cta">
-            <span>Open fullscreen terminal</span>
-            <span className="arrow">↗</span>
-          </div>
+              <div className="p-body">
+                <h3 className="p-title">{e.meta.title}</h3>
+                <p className="p-excerpt">{(e.meta.tags || []).map(t => '#' + t).join('  ')}</p>
+              </div>
+              <div className="p-arrow">↗</div>
+            </article>
+          ))}
         </div>
+        <button className="tm-open" onClick={() => setFullscreen(true)}>
+          Or browse them in the terminal <span>&gt;_</span>
+        </button>
 
-        <div className="tm-tips">
-          <div><span className="k">TIP</span> Type <code>help</code> to see commands · <code>ls</code> to list · <code>cat 1</code> to read entry 1 · <code>grep kafka</code> to search.</div>
-        </div>
+        <Posts />
       </div>
 
       {fullscreen && (

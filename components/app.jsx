@@ -1,12 +1,11 @@
 function App() {
-  const [active, setActive] = useState('about');
+  const [active, setActive] = useState(NAV_SECTIONS[0].id);
 
   useEffect(() => {
-    const sections = ['about','work','cases','signals','journal','skills','contact'];
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
     }, { rootMargin: '-40% 0px -50% 0px' });
-    sections.forEach(id => { const el = document.getElementById(id); if (el) obs.observe(el); });
+    NAV_SECTIONS.forEach(({ id }) => { const el = document.getElementById(id); if (el) obs.observe(el); });
     return () => obs.disconnect();
   }, []);
 
@@ -17,10 +16,10 @@ function App() {
       <main>
         <Hero />
         <Ticker />
-        <About />
-        <Work />
         <Cases />
-        <Posts />
+        <Work />
+        <About />
+        <Projects />
         <Journal />
         <Skills />
         <Contact />

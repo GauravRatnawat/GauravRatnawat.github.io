@@ -15,28 +15,28 @@ function SectionHead({ num, title, right }) {
   );
 }
 
+const NAV_SECTIONS = [
+  { id: 'cases', label: 'Cases' },
+  { id: 'work', label: 'Work' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'writing', label: 'Writing' },
+  { id: 'contact', label: 'Contact' },
+];
+
 function Nav({ active }) {
   const [time, setTime] = useState('');
   useEffect(() => {
     const tick = () => {
       const d = new Date();
-      const opts = { timeZone: 'Europe/Berlin', hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      const opts = { timeZone: 'Europe/Berlin', hour12: false, hour: '2-digit', minute: '2-digit' };
       setTime(d.toLocaleTimeString('en-GB', opts));
     };
     tick();
-    const id = setInterval(tick, 1000);
+    const id = setInterval(tick, 15000);
     return () => clearInterval(id);
   }, []);
 
-  const items = [
-    { id: 'about', label: 'Index' },
-    { id: 'work', label: 'Work' },
-    { id: 'cases', label: 'Cases' },
-    { id: 'signals', label: 'Signals' },
-    { id: 'journal', label: 'Journal' },
-    { id: 'skills', label: 'Stack' },
-    { id: 'contact', label: 'Contact' },
-  ];
+  const items = NAV_SECTIONS;
 
   return (
     <nav className="nav">
@@ -47,7 +47,7 @@ function Nav({ active }) {
       <div className="menu">
         {items.map((it, i) => (
           <a key={it.id} href={`#${it.id}`} className={active === it.id ? 'active' : ''}>
-            <span className="idx">0{i+1}</span>{it.label}
+            {it.label}
           </a>
         ))}
       </div>
@@ -120,7 +120,7 @@ function LiveLedger() {
       </div>
       <div className="ledger-foot">
         <span>Balance</span>
-        <span><b>500M+ tx / month</b> · nothing lost</span>
+        <span><b>Reconciled</b> · nothing lost</span>
       </div>
     </div>
   );
@@ -149,7 +149,7 @@ function Hero() {
               </div>
               <div className="cell">
                 <div className="k">Location</div>
-                <div className="v">Berlin, Germany · <b>CET</b></div>
+                <div className="v">Berlin, Germany · <b>CET/CEST</b></div>
               </div>
               <div className="cell">
                 <div className="k">Focus</div>
@@ -159,6 +159,12 @@ function Hero() {
                 <div className="k">Previously</div>
                 <div className="v"><b>N26</b> · Thoughtworks · Amdocs · TCS</div>
               </div>
+            </div>
+
+            <div className="hero-cta">
+              <a className="primary" href="mailto:contact@gauravratnawat.com">Email me</a>
+              <a href="https://topmate.io/gaurav_ratnawat" target="_blank" rel="noopener">Book a 1:1</a>
+              <a href="https://www.linkedin.com/in/ratnawatgaurav" target="_blank" rel="noopener">LinkedIn ↗</a>
             </div>
           </div>
 
@@ -175,7 +181,6 @@ function Ticker() {
     <div className="ticker">
       <span className="bf">Balance b/f</span>
       <span><b>10+ yrs</b> backend</span>
-      <span><b>6</b> companies</span>
       <span><b>500M+</b> tx/month handled</span>
       <span><b>99.99%</b> uptime</span>
       <span><b>P99 &lt; 1s</b> at 1.5K RPS</span>
@@ -189,7 +194,7 @@ function About() {
     <section id="about">
       <div className="wrap">
         <SectionHead
-          num="Entry 01 / Index"
+          num="Entry 03 / About"
           title='Ten years <span class="it">keeping</span> the books<br/>on distributed systems.'
           right="Philosophy / Principles"
         />
@@ -228,4 +233,4 @@ function About() {
   );
 }
 
-Object.assign(window, { Nav, Hero, Ticker, About, SectionHead, Eyebrow, LiveLedger });
+Object.assign(window, { Nav, Hero, Ticker, About, SectionHead, Eyebrow, LiveLedger, NAV_SECTIONS });

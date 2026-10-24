@@ -18,7 +18,7 @@ function ArchDiagram() {
         <rect x="0" y="0" width="900" height="220" fill="url(#dots)" opacity="0.5" />
 
         {/* producers */}
-        <g fontFamily="var(--mono)" fontSize="10" fill="var(--ink)">
+        <g fontFamily="var(--mono)" fontSize="13" fill="var(--ink)">
           <rect x="20" y="30" width="130" height="36" rx="2" fill="var(--bg)" stroke="var(--rule)"/>
           <text x="85" y="52" textAnchor="middle">Card Auth</text>
           <rect x="20" y="80" width="130" height="36" rx="2" fill="var(--bg)" stroke="var(--rule)"/>
@@ -30,28 +30,28 @@ function ArchDiagram() {
         {/* kafka */}
         <g>
           <rect x="210" y="60" width="110" height="110" rx="2" fill="var(--bg-elev)" stroke="var(--accent)" strokeWidth="1.2"/>
-          <text x="265" y="85" textAnchor="middle" fontFamily="var(--mono)" fontSize="10" fill="var(--accent)">KAFKA</text>
-          <text x="265" y="120" textAnchor="middle" fontFamily="var(--serif)" fontSize="20" fill="var(--ink)">500M/mo</text>
-          <text x="265" y="148" textAnchor="middle" fontFamily="var(--mono)" fontSize="9" fill="var(--ink-dim)">ingest · streams</text>
+          <text x="265" y="85" textAnchor="middle" fontFamily="var(--mono)" fontSize="13" fill="var(--accent)">KAFKA</text>
+          <text x="265" y="120" textAnchor="middle" fontFamily="var(--serif)" fontSize="19" fill="var(--ink)">500M/mo</text>
+          <text x="265" y="148" textAnchor="middle" fontFamily="var(--mono)" fontSize="9.5" fill="var(--ink-dim)">ingest · streams</text>
         </g>
 
         {/* services */}
-        <g fontFamily="var(--mono)" fontSize="10" fill="var(--ink)">
+        <g fontFamily="var(--mono)" fontSize="13" fill="var(--ink)">
           <rect x="380" y="40" width="150" height="42" rx="2" fill="var(--bg)" stroke="var(--rule)"/>
           <text x="455" y="58" textAnchor="middle">TX API · p99 &lt;1s</text>
-          <text x="455" y="72" textAnchor="middle" fill="var(--ink-mute)" fontSize="9">Spring Boot · K8s</text>
+          <text x="455" y="72" textAnchor="middle" fill="var(--ink-mute)" fontSize="11">Spring Boot · K8s</text>
 
           <rect x="380" y="95" width="150" height="42" rx="2" fill="var(--bg)" stroke="var(--rule)"/>
           <text x="455" y="113" textAnchor="middle">Enrichment</text>
-          <text x="455" y="127" textAnchor="middle" fill="var(--ink-mute)" fontSize="9">Kafka Streams</text>
+          <text x="455" y="127" textAnchor="middle" fill="var(--ink-mute)" fontSize="11">Kafka Streams</text>
 
           <rect x="380" y="150" width="150" height="42" rx="2" fill="var(--bg)" stroke="var(--rule)"/>
           <text x="455" y="168" textAnchor="middle">GDPR Deleter</text>
-          <text x="455" y="182" textAnchor="middle" fill="var(--ink-mute)" fontSize="9">20+ systems</text>
+          <text x="455" y="182" textAnchor="middle" fill="var(--ink-mute)" fontSize="11">20+ systems</text>
         </g>
 
         {/* sinks */}
-        <g fontFamily="var(--mono)" fontSize="10" fill="var(--ink)">
+        <g fontFamily="var(--mono)" fontSize="13" fill="var(--ink)">
           <rect x="590" y="30" width="140" height="36" rx="2" fill="var(--bg)" stroke="var(--rule)"/>
           <text x="660" y="52" textAnchor="middle">Aurora · Redis</text>
 
@@ -60,11 +60,11 @@ function ArchDiagram() {
 
           <rect x="590" y="130" width="140" height="36" rx="2" fill="var(--bg)" stroke="var(--rule)"/>
           <text x="660" y="152" textAnchor="middle">Lakehouse</text>
-          <text x="660" y="178" textAnchor="middle" fill="var(--ink-mute)" fontSize="9">Flink · S3 · Glue · Athena</text>
+          <text x="660" y="178" textAnchor="middle" fill="var(--ink-mute)" fontSize="11">Flink · S3 · Glue · Athena</text>
         </g>
 
         {/* consumers */}
-        <g fontFamily="var(--mono)" fontSize="10" fill="var(--ink-dim)">
+        <g fontFamily="var(--mono)" fontSize="13" fill="var(--ink-dim)">
           <rect x="770" y="30" width="110" height="36" rx="2" fill="var(--bg)" stroke="var(--rule-soft)" strokeDasharray="2 3"/>
           <text x="825" y="52" textAnchor="middle">Compliance</text>
           <rect x="770" y="80" width="110" height="36" rx="2" fill="var(--bg)" stroke="var(--rule-soft)" strokeDasharray="2 3"/>
@@ -96,6 +96,17 @@ function ArchDiagram() {
 const CASES = [
   {
     num: 'C/01',
+    client: 'IMTF · Berlin / Swiss regtech',
+    title: 'Financial Crime <span class="it">Prevention</span>',
+    role: 'Lead Engineer · Oct 2025 → Now',
+    stack: [],
+    body: (
+      <p>Leading engineering for financial crime prevention and compliance automation platforms that regulated banks rely on. A fuller write up follows once the work can be shared publicly.</p>
+    ),
+    bullets: [],
+  },
+  {
+    num: 'C/02',
     client: 'N26 Bank · Berlin',
     title: 'Transaction Data <span class="it">Platform</span>',
     role: 'Lead Engineer · Architect · Owner',
@@ -124,7 +135,7 @@ const CASES = [
     arch: true,
   },
   {
-    num: 'C/02',
+    num: 'C/03',
     client: 'N26 Bank · Berlin',
     title: 'Assistance <span class="it">Module</span>',
     role: 'Senior Contributor',
@@ -145,7 +156,7 @@ const CASES = [
     ],
   },
   {
-    num: 'C/03',
+    num: 'C/04',
     client: 'Fortune-500 Construction Equipment OEM · USA',
     title: 'Dealer Locator <span class="it">Service</span>',
     role: 'Tech Lead @ Thoughtworks',
@@ -170,7 +181,7 @@ const CASES = [
     ],
   },
   {
-    num: 'C/04',
+    num: 'C/05',
     client: 'Telematics IoT',
     title: 'Device <span class="it">Telemetry</span>',
     role: 'Senior Developer',
@@ -213,15 +224,19 @@ function Case({ c }) {
           </div>
         )}
 
-        <ul className="bullets">
-          {c.bullets.map((b, i) => <li key={i}>{b}</li>)}
-        </ul>
+        {c.bullets.length > 0 && (
+          <ul className="bullets">
+            {c.bullets.map((b, i) => <li key={i}>{b}</li>)}
+          </ul>
+        )}
 
         {c.arch && <ArchDiagram />}
 
-        <div className="stack">
-          {c.stack.map(t => <span key={t} className={'chip' + (c.hi?.includes(t) ? ' hi' : '')}>{t}</span>)}
-        </div>
+        {c.stack.length > 0 && (
+          <div className="stack">
+            {c.stack.map(t => <span key={t} className={'chip' + (c.hi?.includes(t) ? ' hi' : '')}>{t}</span>)}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -232,7 +247,7 @@ function Cases() {
     <section id="cases">
       <div className="wrap">
         <SectionHead
-          num="Entry 03 / Cases"
+          num="Entry 01 / Cases"
           title='Selected <span class="it">works.</span>'
           right="Deep dives · 2018 → Now"
         />

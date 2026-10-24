@@ -66,7 +66,6 @@ function Work() {
                 <span className="tag">{w.tag}</span>
               </div>
               <div className="r-date">{w.date}</div>
-              <div className="r-arrow">→</div>
             </div>
           ))}
         </div>

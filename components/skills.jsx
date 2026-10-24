@@ -4,18 +4,18 @@ const SKILLS = [
     items: [
       ['Kotlin', 'primary'],
       ['Java (11 to 21)', 'primary'],
-      ['Go', 'working'],
-      ['TypeScript · NestJS', 'working'],
-      ['Vue.js', 'working'],
+      ['Go', 'used'],
+      ['TypeScript · NestJS', 'used'],
+      ['Vue.js', 'used'],
     ],
   },
   {
     cat: 'Frameworks', sig: 'S/02',
     items: [
-      ['Spring Boot', 'daily'],
-      ['Quarkus', 'daily'],
-      ['Hibernate', 'daily'],
-      ['JOOQ', 'daily'],
+      ['Spring Boot', 'primary'],
+      ['Quarkus', 'used'],
+      ['Hibernate', 'used'],
+      ['JOOQ', 'used'],
       ['QueryDSL', 'used'],
       ['SiteWhere IoT', 'used'],
     ],
@@ -23,9 +23,9 @@ const SKILLS = [
   {
     cat: 'Messaging & Streams', sig: 'S/03',
     items: [
-      ['Kafka', 'expert'],
-      ['Kafka Streams', 'expert'],
-      ['AWS SQS', 'daily'],
+      ['Kafka', 'primary'],
+      ['Kafka Streams', 'primary'],
+      ['AWS SQS', 'used'],
       ['AWS Kinesis', 'used'],
       ['ActiveMQ', 'used'],
     ],
@@ -33,66 +33,66 @@ const SKILLS = [
   {
     cat: 'Databases & Data', sig: 'S/04',
     items: [
-      ['PostgreSQL', 'expert'],
-      ['AWS Aurora', 'expert'],
-      ['AWS RDS', 'daily'],
-      ['MongoDB', 'daily'],
+      ['PostgreSQL', 'primary'],
+      ['AWS Aurora', 'primary'],
+      ['AWS RDS', 'used'],
+      ['MongoDB', 'used'],
       ['Azure SQL Server', 'used'],
-      ['Lakehouse · S3 · Glue · Athena', 'daily'],
+      ['Lakehouse · S3 · Glue · Athena', 'used'],
     ],
   },
   {
     cat: 'Cloud & Infrastructure', sig: 'S/05',
     items: [
-      ['AWS', 'expert'],
-      ['Azure', 'daily'],
-      ['GCP', 'working'],
-      ['Kubernetes', 'expert'],
-      ['Docker', 'daily'],
-      ['Multi-Region', 'daily'],
+      ['AWS', 'primary'],
+      ['Azure', 'used'],
+      ['GCP', 'used'],
+      ['Kubernetes', 'primary'],
+      ['Docker', 'used'],
+      ['Multi-Region', 'used'],
     ],
   },
   {
     cat: 'DevOps & Quality', sig: 'S/06',
     items: [
-      ['GitHub Actions', 'daily'],
-      ['Argo CD', 'daily'],
+      ['GitHub Actions', 'used'],
+      ['Argo CD', 'used'],
       ['Azure DevOps', 'used'],
       ['Jenkins', 'used'],
-      ['SonarQube', 'daily'],
-      ['Karate · Gatling · JMeter', 'daily'],
+      ['SonarQube', 'used'],
+      ['Karate · Gatling · JMeter', 'used'],
     ],
   },
   {
     cat: 'Architectures', sig: 'S/07',
     items: [
-      ['Event-Driven', 'expert'],
-      ['Microservices', 'expert'],
-      ['Distributed Systems', 'expert'],
-      ['Streaming', 'expert'],
-      ['CQRS · Saga', 'daily'],
-      ['Service-Oriented', 'daily'],
+      ['Event-Driven', 'primary'],
+      ['Microservices', 'primary'],
+      ['Distributed Systems', 'primary'],
+      ['Streaming', 'primary'],
+      ['CQRS · Saga', 'used'],
+      ['Service-Oriented', 'used'],
     ],
   },
   {
     cat: 'Observability & SRE', sig: 'S/08',
     items: [
-      ['Datadog', 'expert'],
-      ['OpenSearch', 'daily'],
-      ['CloudWatch', 'daily'],
-      ['Tracing · Metrics · Alerting', 'daily'],
-      ['SLA / SLO', 'daily'],
-      ['MTTR reduction', 'daily'],
+      ['Datadog', 'primary'],
+      ['OpenSearch', 'used'],
+      ['CloudWatch', 'used'],
+      ['Tracing · Metrics · Alerting', 'used'],
+      ['SLA / SLO', 'used'],
+      ['MTTR reduction', 'used'],
     ],
   },
   {
     cat: 'Security & Compliance', sig: 'S/09',
     items: [
-      ['GDPR data deletion', 'expert'],
-      ['Data lineage', 'daily'],
-      ['PII handling', 'daily'],
-      ['Secure API design', 'daily'],
-      ['Audit-ready systems', 'daily'],
+      ['GDPR data deletion', 'primary'],
+      ['Data lineage', 'used'],
+      ['PII handling', 'used'],
+      ['Secure API design', 'used'],
+      ['Audit-ready systems', 'used'],
     ],
   },
 ];
@@ -143,11 +143,11 @@ function Skills() {
   }, [liCerts]);
 
   const headline = [
-    { name: 'Spoud Kafka Developer Training', authority: 'Spoud', date: 'Dec 2025', license: 'f91eecd7-ddd6-4ca3-aa47-7fd1f1eb6a2a' },
+    { name: 'Spoud Kafka Developer Training', authority: 'Spoud', date: 'Dec 2025' },
     { name: 'Microsoft Certified: Azure Fundamentals', authority: 'Microsoft', date: 'Jul 2020' },
     { name: 'Aviatrix Certified Engineer, Multi Cloud Network Associate', authority: 'Aviatrix', date: 'Jun 2020' },
-    { name: 'Scalable Java Microservices · Spring Boot + Cloud', authority: 'Coursera', date: 'Nov 2019', license: 'NQB7U89X9FPS' },
-    { name: 'Introduction to Internet of Things (XEE100)', authority: 'Stanford University', date: 'May 2020', license: 'X531415' },
+    { name: 'Scalable Java Microservices · Spring Boot + Cloud', authority: 'Coursera', date: 'Nov 2019' },
+    { name: 'Introduction to Internet of Things (XEE100)', authority: 'Stanford University', date: 'May 2020' },
     { name: 'B.Tech, Computer Science & Engineering', authority: 'RGTU, Bhopal', date: '2015' },
   ];
 
@@ -205,7 +205,7 @@ function Skills() {
             {headline.map((c, i) => (
               <div className="cert" key={i}>
                 <div className="sig">C/{String(i+1).padStart(2, '0')}</div>
-                <div className="t">{c.name} <span className="sub">{c.authority}{c.license ? ` · ${c.license}` : ''}</span></div>
+                <div className="t">{c.name} <span className="sub">{c.authority}</span></div>
                 <div className="d">{c.date}</div>
               </div>
             ))}
@@ -285,6 +285,34 @@ const PUBLIC_PROJECTS = [
   },
 ];
 
+function Projects() {
+  return (
+    <section id="projects">
+      <div className="wrap">
+        <SectionHead
+          num="Entry 04 / Projects"
+          title='Built in <span class="it">the open.</span>'
+          right={`${PUBLIC_PROJECTS.length} public repos`}
+        />
+        <div className="oss-list">
+          {PUBLIC_PROJECTS.map((p, i) => (
+            <article className="oss-row" key={p.name}>
+              <div className="n">P/{String(i + 1).padStart(2, '0')}</div>
+              <div className="t"><a href={p.url} target="_blank" rel="noopener">{p.name}</a></div>
+              <div className="d">{p.desc}</div>
+              <div className="s">{p.stack}</div>
+            </article>
+          ))}
+        </div>
+        <div className="oss-more">
+          Browse all repositories on{' '}
+          <a href="https://github.com/GauravRatnawat" target="_blank" rel="noopener">github.com/GauravRatnawat</a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Contact() {
   return (
     <section id="contact">
@@ -315,25 +343,7 @@ function Contact() {
           </div>
           <div className="c">
             <div className="k">Location</div>
-            <div className="v">Berlin, DE · UTC+1</div>
-          </div>
-        </div>
-
-        <div className="oss">
-          <Eyebrow>Public Projects</Eyebrow>
-          <div className="oss-list">
-            {PUBLIC_PROJECTS.map((p, i) => (
-              <article className="oss-row" key={p.name}>
-                <div className="n">P/{String(i + 1).padStart(2, '0')}</div>
-                <div className="t"><a href={p.url} target="_blank" rel="noopener">{p.name}</a></div>
-                <div className="d">{p.desc}</div>
-                <div className="s">{p.stack}</div>
-              </article>
-            ))}
-          </div>
-          <div className="oss-more">
-            Browse all repositories on{' '}
-            <a href="https://github.com/GauravRatnawat" target="_blank" rel="noopener">github.com/GauravRatnawat</a>
+            <div className="v">Berlin, DE · CET/CEST</div>
           </div>
         </div>
 
@@ -347,4 +357,4 @@ function Contact() {
   );
 }
 
-Object.assign(window, { Skills, Contact });
+Object.assign(window, { Skills, Projects, Contact });

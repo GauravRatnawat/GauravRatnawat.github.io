@@ -1,14 +1,17 @@
 GAURAV RATNAWAT
 Berlin, Germany
-+49-15292604891 | contact@gauravratnawat.com | https://www.linkedin.com/in/ratnawatgaurav/
+contact@gauravratnawat.com | https://www.linkedin.com/in/ratnawatgaurav/
 Technical leader with 10+ years of experience in backend, distributed, and cloud systems.
 Skilled in leading engineering teams, designing scalable architectures, and delivering
 high-quality software using agile and CI/CD practices. Proven ability to mentor engineers and
 drive cross-team technical excellence.
 WORK EXPERIENCE
+IMTF, Berlin Germany
+Lead Engineer
+Oct 2025 - Present
 N26 Gmbh, Berlin Germany
 Lead Software Engineer
-Sep 2022 - Present
+Sep 2022 - Oct 2025
 Thoughtworks, Gurgaon
 Tech Lead
 Mar 2020 - Sep 2022

@@ -2,6 +2,14 @@
 
 > Personal site of Gaurav Ratnawat, Lead Software Engineer. Portfolio, engineering journal, and open-source projects.
 
+## About
+
+- Lead Engineer at IMTF (Oct 2025 to present), financial crime prevention and compliance automation for regulated banks. Based in Berlin.
+- Previously Lead Software Engineer at N26 (2022 to 2025): led the event driven Transaction Data Platform, Kafka ingestion at 500M+ transactions/month, 99.99% uptime, p99 < 1s at ~1.5K RPS, GDPR deletion across 20+ systems.
+- Before that: Tech Lead at Thoughtworks, Q3 Technologies, Amdocs, TCS. 10+ years in backend and distributed systems.
+- Focus: Kafka, Kotlin/Java, Spring Boot, AWS, Kubernetes.
+- Plain text resume: https://gauravratnawat.com/resume.txt
+
 ## Projects
 
 - [journal-recorder](https://gauravratnawat.com/journal-recorder-agent/): auto-journal for Claude Code & Codex CLI — every AI coding session becomes a markdown journal entry, per project, Obsidian-ready, auto-pushed to GitHub. Details: https://gauravratnawat.com/journal-recorder-agent/llms.txt

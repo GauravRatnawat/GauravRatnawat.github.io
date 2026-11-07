@@ -1062,6 +1062,8 @@ section .wrap { margin: 0; }
 }
 .oss-row .t a:hover { color: var(--accent); }
 .oss-row .d { font-size: 13.5px; color: var(--ink-dim); }
+.project-links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 8px; }
+.project-links a { color: var(--accent); text-underline-offset: 3px; }
 .oss-row .s {
   font-family: var(--mono);
   font-size: 10.5px;

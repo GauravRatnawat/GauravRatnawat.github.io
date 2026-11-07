@@ -255,9 +255,17 @@ const PUBLIC_PROJECTS = [
   },
   {
     name: 'journal-recorder-agent',
-    desc: 'Claude Code subagent that records coding sessions as searchable engineering notes.',
-    stack: 'Shell',
+    desc: 'Save coding sessions from Claude, Codex, Cursor and Gemini as Markdown notes. Keep local or sync with private Git repo.',
+    stack: 'Python',
     url: 'https://github.com/GauravRatnawat/journal-recorder-agent',
+    website: 'https://gauravratnawat.com/journal-recorder-agent/',
+  },
+  {
+    name: 'decision-ledger-setup',
+    desc: 'Build private, searchable journal site from Markdown. Public guide covers recorder, private Git repo and Cloudflare setup.',
+    stack: 'Astro',
+    url: 'https://github.com/GauravRatnawat/decision-ledger-setup',
+    website: 'https://gauravratnawat.com/decision-ledger-setup/',
   },
   {
     name: 'job-search-plugin',
@@ -299,7 +307,15 @@ function Projects() {
             <article className="oss-row" key={p.name}>
               <div className="n">P/{String(i + 1).padStart(2, '0')}</div>
               <div className="t"><a href={p.url} target="_blank" rel="noopener">{p.name}</a></div>
-              <div className="d">{p.desc}</div>
+              <div className="d">
+                {p.desc}
+                {p.website && (
+                  <div className="project-links">
+                    <a href={p.website} target="_blank" rel="noopener">Website</a>
+                    <a href={p.url} target="_blank" rel="noopener">Source</a>
+                  </div>
+                )}
+              </div>
               <div className="s">{p.stack}</div>
             </article>
           ))}

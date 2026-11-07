@@ -41,6 +41,16 @@ test('Recorder and Ledger rows show Website and Source links', () => {
   }
 });
 
+test('Job Search row shows public website and source links', () => {
+  const row = projectRows().find(row => text(row).includes('job-search-plugin'));
+  assert.ok(row, 'Job Search row must exist');
+  const links = nodes(row).filter(node => node.type === 'a');
+  assert.equal(links.find(link => text(link).trim() === 'Website')?.props.href,
+    'https://gauravratnawat.com/job-search-plugin/');
+  assert.equal(links.find(link => text(link).trim() === 'Source')?.props.href,
+    'https://github.com/GauravRatnawat/job-search-plugin');
+});
+
 test('More public tools show page and source links in nine project rows', () => {
   const rows = projectRows();
   assert.equal(rows.length, 9);

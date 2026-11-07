@@ -287,6 +287,7 @@ const PUBLIC_PROJECTS = [
     desc: 'AI-powered Claude Code plugin for job discovery, fit scoring, and application prep.',
     stack: 'Shell',
     url: 'https://github.com/GauravRatnawat/job-search-plugin',
+    website: 'https://gauravratnawat.com/job-search-plugin/',
   },
   {
     name: 'ai-review-plugin',

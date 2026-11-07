@@ -252,6 +252,21 @@ const PUBLIC_PROJECTS = [
     desc: 'Terminal dashboard for Claude Code token usage and cost tracking.',
     stack: 'JavaScript',
     url: 'https://github.com/GauravRatnawat/claudetop',
+    website: 'https://gauravratnawat.com/claudetop/',
+  },
+  {
+    name: 'claude-cost-optimizer',
+    desc: 'Set up Claude Code tools for lower token use, cost tracking and shared workflows.',
+    stack: 'Python',
+    url: 'https://github.com/GauravRatnawat/claude-cost-optimizer',
+    website: 'https://gauravratnawat.com/claude-cost-optimizer/',
+  },
+  {
+    name: 'neuralengine',
+    desc: 'Prompt diff tool. Compare LLM prompts, outputs, token counts and costs side by side.',
+    stack: 'TypeScript',
+    url: 'https://github.com/GauravRatnawat/neuralengine',
+    website: 'https://neuralengine-six.vercel.app/',
   },
   {
     name: 'journal-recorder-agent',
